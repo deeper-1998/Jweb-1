@@ -369,6 +369,7 @@ footer {
     padding-top: 25px;
     font-size: 1.3rem;
     background-color: #202020;
+    transition: margin 0.5s
 }
 
 .footLogoMenu {
@@ -622,6 +623,7 @@ footer {
 
     footer {
         height: 150px;
+        margin-top: 70px
     }
 
     .snsCopy {
