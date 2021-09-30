@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Discription" content="gma_header_footer">
+    <meta name="Author" content="team">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/facilitiesIntro.css" type="text/css">
+    <title>경기도미술관</title>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="confix">
+                <div class="siteJoin">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>    
+                </div><!--siteJoin-->
+                <div class="logoMenu">
+                    <h1><a href="facilitiesIntro.html"><img src="./images/main_logo.svg" alt="mian_logo"></a></h1>
+                    <nav class="headerMenu">
+                        <ul class="gnb">
+                            <li><a href="#">소개</a></li>
+                            <li><a href="#">전시</a></li>
+                            <li><a href="#">교육/행사</a></li>
+                            <li><a href="#">아카이브</a></li>
+                            <li><a href="#">커뮤니티</a></li>
+                        </ul>
+                    </nav>
+                    <div class="headMenuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="langBtn noDrag" onclick="langBtn()">
+                        <span id="langKor" class="kor">KOR</span>
+                        <span id="langEng" class="eng">ENG</span>
+                        <span id="togleBtn" class="togleBtn"></span>
+                    </div><!--langBtn-->
+                </div><!--logoMenu-->
+            </div><!--confix-->
+        </header>
+
+        <main>
+            <section>
+                <div class="topArea">
+                    <div class="confix">
+                        <div class="topHeading">
+                            <h2>편의시설</h2>
+                        </div><!--topHeading-->
+                        <form action="#" method="POST" class="searchBox2">
+                            <select class="select" id="choice" name="choice" size="1">
+                                <option value="#" selected>전체</option>
+                                <option value="#">전시</option>
+                                <option value="#">교육</option>
+                                <option value="#">기타 </option>
+                            </select>
+                            <label id="search" class="blind">search</label>
+                            <input type="search" name="search" class="search" autocomplete="off" placeholder="검색어를 입력하세요">
+                            <button class="searchBtn" value="search"></button>
+                        </form><!-- searchBox -->
+                        
+                        <ul class="menuList vBox">
+                            <li>소개</li>
+                            <li><img src="./images/next_w.svg" alt="화살표"></li>
+                            <li>편의시설</li>
+                        </ul>
+                    </div><!--confix-->
+                </div><!--topArea-->
+
+                <!-- 메인 컨텐츠 영역 소스 이 사이에 넣어주세요 -->
+                <div class="confix">
+                    <div class="category">
+                        <ul id="mainTap">
+                            <li>뮤지엄샵</li>
+                            <li>카페</li>
+                            <li>강당</li>
+                            <li>세미나실</li>
+                        </ul>
+                    </div><!-- category -->
+                    <section class="introBox tapSection">
+                        <h2>뮤지엄샵</h2>
+                        <img src="images/mShop_1.jpg" alt="뮤지엄샵이미지">
+                        <div class="selectArea">
+                            <ul id="selectImg" class="selectImg">
+                                <li><img src="images/mShop_1.jpg" alt="뮤지엄샵이미지"></li>
+                                <li><img src="images/mShop_2.jpg" alt="뮤지엄샵이미지"></li>
+                                <li><img src="images/mShop_3.jpg" alt="뮤지엄샵이미지"></li>
+                                <li><img src="images/mShop_4.jpg" alt="뮤지엄샵이미지"></li>
+                            </ul>
+                        </div>
+                        <div class="textBox">
+                            <h3>뮤지엄샵</h3>
+                            <p>
+                                경기도미술관 뮤지엄숍에서는 미술관의 아트상품 아카이브전시를 감상할 수 있으며 미술관 소장품을 활용한 다양한 굿즈, 세계명화, 트렌디한 공예도자기, 패션잡화, 아이디어 기발한 생활문구 신제품, 키즈 토이 등 아름다운 디자인과 실용적인 아트상품, 학술연구자료 전시 도록 등 만날 수 있습니다.
+                            </p>
+                            <div class="floorMap">
+                                <img src="images/1st_shop.png" alt="뮤지엄샵지도">
+                                <div class="mapBg popBtn"><span>자세히보기 +</span></div>
+                            </div>
+                            <div class="infoArea">
+                                <ul class="introInfo">
+                                    <li>
+                                        <h4>위치</h4>
+                                        <div class="infoText"><strong>경기도미술관 1층</strong></div>
+                                    </li>
+                                    <li>
+                                        <h4>문의전화</h4>
+                                        <div class="infoText"><strong>010-481-7013</strong></div>
+                                    </li>
+                                    <li>
+                                        <h4>운영안내</h4>
+                                        <div class="infoText"><strong>월요일 휴무(단, 공휴일 제외), 매년 1월 1일, 설날, 추석 당일 휴무 화요일~일요일 10:00 ~ 18:00</strong></div>
+                                    </li>
+                                </ul>
+                                <span class="zoomMapBt">내부 지도 확인하기  ></span>
+                            </div>
+                        </div>
+                    </section><!--introBox-->
+
+
+                    <section class="introBox tapSection">
+                        <h2>카페</h2>
+                        <img src="images/cafe_1.jpg" alt="카페이미지">
+                        <div class="selectArea">
+                            <ul id="selectImg" class="selectImg">
+                                <li><img src="images/cafe_1.jpg" alt="카페이미지"></li>
+                                <li><img src="images/cafe_2.jpg" alt="카페이미지"></li>
+                                <li><img src="images/cafe_3.jpg" alt="카페이미지"></li>
+                                <li><img src="images/cafe_4.jpg" alt="카페이미지"></li>
+                            </ul>
+                        </div>
+                        <div class="textBox">
+                            <h3>카페</h3>
+                            <p>
+                                호수 전망의 경기도미술관 카페테리아에서 여유로운 휴식과 다양한 메뉴를 즐겨보세요. 전시 관람 후 카페테리아에서 갖는 힐링의 시간은 사계절 자연의 변화를 느끼며 모임과 다채로운 문화 활동이 가능합니다. 갓 구운 프리미엄 와플, 하겐다즈 아이스크림, 열대 과일 쥬스, 커피&티, 케이크 등 새로운 디저트의 세계로 안내합니다.
+                            </p>
+                            <div class="floorMap">
+                                <img src="images/1st_cafe.png" alt="카페지도">
+                                <div class="mapBg"><span>자세히보기 +</span></div>
+                            </div>
+                            <div class="infoArea">
+                                <ul class="introInfo">
+                                    <li>
+                                        <h4>위치</h4>
+                                        <div class="infoText"><strong>경기도미술관 1층 로비</strong></div>
+                                    </li>
+                                    <li>
+                                        <h4>운영안내</h4>
+                                        <div class="infoText"><strong>월요일~일요일 10:00 ~ 18:00(연중무휴)</strong></div>
+                                    </li>
+                                </ul>
+                                <span class="zoomMapBt">내부 지도 확인하기  ></span>
+                            </div>
+                        </div>
+                    </section><!--introBox-->
+
+
+                    <section class="introBox tapSection">
+                        <h2>강당</h2>
+                        <img src="images/auditorium_1.jpg" alt="강당이미지">
+                        <div class="selectArea">
+                            <ul id="selectImg" class="selectImg">
+                                <li><img src="images/auditorium_1.jpg" alt="강당이미지"></li>
+                                <li><img src="images/auditorium_2.jpg" alt="강당이미지"></li>
+                                <li><img src="images/auditorium_3.jpg" alt="강당이미지"></li>
+                                <li><img src="images/auditorium_4.jpeg" alt="강당이미지"></li>
+                            </ul>
+                        </div>
+                        <div class="textBox">
+                            <h3>강당</h3>
+                            <p>
+                                경기도미술관 강당은 공연, 회의, 강의 등의 목적으로 단체 이용 중심으로 운영되며, 정원은 약 140 명(면적 : 288㎡)입니다. 단체 이용에 지장이 없는 범위에서 개별 이용자에게 대관이 가능합니다.
+                            </p>
+                            <div class="floorMap">
+                                <img src="images/1st_auditorium.png" alt="강당지도">
+                                <div class="mapBg"><span>자세히보기 +</span></div>
+                            </div>
+                            <div class="infoArea">
+                                <ul class="introInfo">
+                                    <li>
+                                        <h4>위치</h4>
+                                        <div class="infoText"><strong>경기도미술관 1층</strong></div>
+                                    </li>
+                                    <li>
+                                        <h4>문의전화</h4>
+                                        <div class="infoText"><strong>010-481-7013</strong></div>
+                                    </li>
+                                    <li>
+                                        <h4>운영안내</h4>
+                                        <div class="infoText"><strong>월요일 휴무(단, 공휴일 제외), 매년 1월 1일, 설날, 추석 당일 휴무 화요일~일요일 10:00 ~ 18:00</strong></div>
+                                    </li>
+                                </ul>
+                                <span class="zoomMapBt">내부 지도 확인하기  ></span>
+                            </div>
+                        </div>
+                    </section><!--introBox-->
+
+                    <section class="introBox tapSection">
+                        <h2>세미나실</h2>
+                        <img src="images/seminar_1.jpg" alt="세미나실이미지">
+                        <div class="selectArea">
+                            <ul id="selectImg" class="selectImg">
+                                <li><img src="images/seminar_1.jpg" alt="세미나실이미지"></li>
+                                <li><img src="images/seminar_2.jpg" alt="세미나실이미지"></li>
+                                <li><img src="images/seminar_3.jpg" alt="세미나실이미지"></li>
+                                <li><img src="images/seminar_4.jpg" alt="세미나실이미지"></li>
+                            </ul>
+                        </div>
+                        <div class="textBox">
+                            <h3>세미나실</h3>
+                            <p>
+                                경기도미술관 세미나실은 회의, 강의 등의 목적으로 단체 이용 중심으로 운영되며, 수용인원은 약 45명(면적 : 100㎡)입니다. 단체 이용에 지장이 없는 범위에서 개별 이용자에게 대관이 가능합니다.
+                            </p>
+                            <div class="floorMap">
+                                <img src="images/1st_seminar.png" alt="세미나실지도">
+                                <div class="mapBg"><span>자세히보기 +</span></div>
+                            </div>
+                            <div class="infoArea">
+                                <ul class="introInfo">
+                                    <li>
+                                        <h4>위치</h4>
+                                        <div class="infoText"><strong>경기도미술관 1층</strong></div>
+                                    </li>
+                                    <li>
+                                        <h4>문의전화</h4>
+                                        <div class="infoText"><strong>010-481-7013</strong></div>
+                                    </li>
+                                    <li>
+                                        <h4>운영안내</h4>
+                                        <div class="infoText"><strong>월요일 휴무(단, 공휴일 제외), 매년 1월 1일, 설날, 추석 당일 휴무 화요일~일요일 10:00 ~ 18:00</strong></div>
+                                    </li>
+                                </ul>
+                                <span class="zoomMapBt">내부 지도 확인하기  ></span>
+                            </div>
+                        </div>
+                    </section><!--introBox-->
+                </div><!--confix-->
+
+                <!-- 메인 컨텐츠 영역 소스 이 사이에 넣어주세요 -->
+            </section>
+        </main>
+
+        <footer>
+            <div class="confix">
+                <div class="footLogoMenu vBox">
+                    <a class="footLogo" href="header_footer.html"><img src="./images/main_logo.svg" alt="foot_logo"></a>
+                    <nav class="footMenu">
+                        <ul>
+                            <li><a href="#">개인정보취급방침</a></li>
+                            <li><a href="#">정보공개청구</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">경영공시</a></li>
+                        </ul>
+                    </nav>
+                    <div id="orgBg" class="org" style="height: 40px;">
+                        <button id="orgBtn" class="orgBtn" onclick="orgOpen()">
+                            <span>관련기관</span>
+                            <span>+</span>
+                        </button>
+                        <ul class="siteList">
+                            <li><a href="#">경기문화재단</a></li>
+                            <li><a href="#">경기문화재연구원</a></li>
+                            <li><a href="#">경기도박물관</a></li>
+                            <li><a href="#">백남준아트센터</a></li>
+                            <li><a href="#">실학박물관</a></li>
+                            <li><a href="#">전곡선사박물관</a></li>
+                            <li><a href="#">경기도어린이박물관</a></li>
+                            <li><a href="#">경기북부어린이박물관</a></li>
+                        </ul>
+                    </div><!--org-->
+                </div><!--footLogoMenu-->
+
+                <div class="snsCopy">
+                    <ul class="otherSite">
+                        <li><a href="https://www.ggcf.kr/"><img src="./images/ggcf.svg" alt="ggcf"></a></li>
+                        <li><a href="https://www.gg.go.kr/"><img src="./images/gg.svg" alt="gg"></a></li>
+                    </ul>
+                    <div class="copyAddr">
+                        <span>(재)경기문화재단 경기도미술관</span>
+                        <address>(15385) 경기도 안산시 단원구 동산로 268 (초지동)</address>
+                        <span>COPYRIGHT &copy; GGCF. ALL RIGHTS RESERVED.</span> 
+                    </div><!--copyAddr-->
+                    <div class="sns">
+                        <ul class="snsList">
+                            <li><a href="https://www.facebook.com/ggmoma/"><img src="./images/facebook.png" alt="facebook"></a></li>
+                            <li><a href="https://blog.naver.com/gyeonggimoma"><img src="./images/naver.png" alt="naver"></a></li>
+                            <li><a href="https://www.youtube.com/user/ggcfkr"><img src="./images/youtube.png" alt="youtube"></a></li>
+                        </ul>
+                    </div><!--sns-->
+                </div><!--snsCopy-->
+            </div><!--confix-->
+        </footer>
+    </div>
+    <script src="js/facilitiesIntro.js"></script>
+</body>
+</html>
