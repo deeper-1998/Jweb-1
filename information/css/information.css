@@ -504,7 +504,7 @@ footer {
 }
 
 .sns li img {
-    width: 31px;
+    width: 35px;
 }
 
 
@@ -547,7 +547,6 @@ footer {
 
     .headMenuBtn {
         display: block;
-        margin-right: 1.111111111111111%;
     }    
     
     .logoMenu {
