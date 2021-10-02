@@ -590,7 +590,7 @@ footer {
 /* ===== 768px 이하 ===== */
 @media (max-width: 768px) {
     .confix {
-        padding: 0 3%;
+        padding: 0 4%;
     }
     html {
         font-size: 10px;
