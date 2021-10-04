@@ -2,7 +2,12 @@
 
 @font-face {
   font-family: NanumSquareRound;
-  src: url('https://deeper-1998.github.io/Jweb-1/font/NanumSquareRoundR.ttf');
+  src: url('https://deeper-1998.github.io/Jweb-1/fonts/NanumSquareRoundR.ttf');
+}
+
+@font-face {
+  font-family: GyeonggiTitle;
+  src: url('https://deeper-1998.github.io/Jweb-1/fonts/GyeonggiTitle');
 }
 
 
