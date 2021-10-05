@@ -4,6 +4,10 @@
     src:url('https://deeper-1998.github.io/Jweb-1/fonts/GyeonggiTitle.ttf'); 
 }
 
+@font-face{ font-family:'NanumSquareRound'; 
+    src:url('https://deeper-1998.github.io/Jweb-1/fonts/NanumSquareRound.ttf'); 
+}
+
 
 
 * {
