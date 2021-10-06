@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="Discription" content="join">
+    <meta name="Author" content="team">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/join.css" type="text/css">
+    <title>경기도미술관</title>
+</head>
+<body>
+    <div class="wrap">
+       <div class="leftBg">
+            <div class="mainLogo">
+                <h1><a href="#"><img src="images/join_logo.svg" alt="메인로고"></a></h1>
+            </div>
+       </div> 
+        <div class="formArea">
+            <div class="rightForm">
+                <div class="join">
+                    <form action="#" name="join" method="POST">
+                        <fieldset>
+                            <legend>회원가입</legend>
+                            <div class="langBtn noDrag" onclick="langBtn()">
+                                <span id="langKor" class="kor">KOR</span>
+                                <span id="langEng" class="eng">ENG</span>
+                                <span id="togleBtn" class="togleBtn"></span>
+                            </div>
+                            <!--langBtn-->
+                            <p>
+                                경기도 미술관에 오신 것을 환영합니다.<br>
+                                가입하시면 다양한 서비스를 이용하실 수 있습니다.
+                            </p>
+                            <ul class="userInfo">
+                                <li>
+                                    <input type="text" id="userId" placeholder="이메일 아이디">
+                                    <button class="userCheck">본인인증</button>
+                                    <!--모르겠습니다ㅏ아아아아!!!!  아이디 입력시 배경색 파란색으로 변경-->
+                                </li>
+                                <li>
+                                    <input type="password" id="userPw" placeholder="비밀번호">
+                                </li>
+                                <li>
+                                    <input type="password" id="userPwCheck" placeholder="비밀번호 확인">
+                                </li>
+                            </ul>
+                            <label class="joinCheck">
+                                <input type="checkbox" name="joinCheck"><strong>모두 동의합니다.</strong>
+                                <a href="#">약관 확인하기</a><br>
+                                <span>회원약관(필수), 개인정보 수집 및 이용(필수), 홍보 및 마케팅에 관하여(선택) </span>
+                            </label>
+                            <button type="submit">다음 단계</button>
+                            <div class="goLogin">
+                                <strong>이미 가입되어 있으신가요?<a href="../login/login.html">로그인 하기</a></strong>
+                            </div>
+                        </fieldset>
+                    </form>
+                    <div class="snsJoin">
+                        <h2>SNS 계정으로도 가입이 가능합니다.</h2>
+                        <ul class="snsList">
+                            <li><a href="#"><img src="images/naver.svg" alt="네이버"></a></li>
+                            <li><a href="#"><img src="images/kakao.svg" alt="카카오"></a></li>
+                            <li><a href="#"><img src="images/facebook.svg" alt="페이스북"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function langBtn() { // 언어토글버튼
+            let langBtn = document.getElementById("togleBtn");
+            let langKor = document.getElementById("langKor");
+            let langEng = document.getElementById("langEng");
+            if (langBtn.style.transform == "translateX(-36px)") {
+                langBtn.style.transform = "translateX(0px)"
+                langKor.style.opacity = "1"
+                langEng.style.opacity = "0"
+            } else {
+                langBtn.style.transform = "translateX(-36px)"
+                langKor.style.opacity = "0"
+                langEng.style.opacity = "1"
+            }
+        }
+    </script>
+</body>
+</html>
