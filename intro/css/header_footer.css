@@ -348,6 +348,8 @@ input::-webkit-search-results-decoration{
 }
 
 .outsideIntro p {
+    position: relative;
+    z-index: 1;
     float: left;
     width: 48%;
 }
@@ -396,10 +398,23 @@ input::-webkit-search-results-decoration{
     width: 100%;
 }
 
+.outtro a {
+    display: none;
+    position: absolute;
+    bottom: 225px;
+    left: 0;
+    width: 160px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #00aeef;
+}
+
 .outtro p {
     float: left;
-    width: 38%;
-    margin-top: 50px;
+    width: 45%;
+    margin-top: 40px;
 }
 
 .outtro img {
@@ -408,10 +423,11 @@ input::-webkit-search-results-decoration{
 }
 
 .constructInfo {
-    float: left;
-    width: 100%;
+    position: absolute;
+    bottom: 0;
+    width: 48%;
     margin-top: 35px;
-    padding: 40px;
+    padding: 20px;
     border-radius: 15px;
     background-color: #edf7fe;
 }
@@ -423,11 +439,11 @@ input::-webkit-search-results-decoration{
 
 .constructInfoList li {
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .constructInfoList li>h3 {
     float: left;
-    width: 100px;
+    width: 20%;
     font-size: 1.6rem;
     font-weight: 500;
 }
@@ -588,38 +604,7 @@ footer {
 
 
 
-/* 1450px 추가 중단점 */
-@media (max-width:1470px) {
 
-    .constructInfoList {
-        position: absolute;
-        width: 48%;
-    }
-
-    .constructInfoList li {
-        width: 100%;
-    }
-
-    .insideIntro a {
-        display: none;
-    }
-
-    .outtro a {
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        width: 160px;
-        height: 45px;
-        line-height: 45px;
-        text-align: center;
-        border-radius: 5px;
-        background-color: #00aeef;
-    }
-
-    footer {
-        margin-top: 450px;
-    }
-}
 
 
 
@@ -699,13 +684,32 @@ footer {
 
     .insideIntro p {
         width: 50%;
-        padding: 0 20px 20px;
+        padding: 0 0 0 20px;
     }
 
     .outtro p {
         width: 50%;
-        padding: 20px;
+        padding: 20px 20px 0 0;
         margin-top: 0;
+    }
+
+    .insideIntro a {
+        display: none;
+    }
+
+    .outtro a {
+        display: block;
+    }
+
+    .constructInfo {
+        position: static;
+        padding: 20px calc((100% - 500px) / 2) ;
+        float: left;
+        width: 100%;
+    }
+
+    .constructInfo ul {
+        width: 500px;
     }
 
     .footLogo {
@@ -768,10 +772,12 @@ footer {
 
     .outsideIntro a {
         bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .outsideIntro {
-        margin-bottom: 150px;
+        margin-bottom: 100px;
     }
 
     .insideIntro img {
@@ -782,11 +788,13 @@ footer {
     .insideIntro p {
         width: 100%;
         padding: 0;
-        margin-bottom: 35px;
+        margin-bottom: 100px;
     }
 
     .outtro a {
-        bottom: -70px;
+        top: -70px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .outtro img {
@@ -803,8 +811,8 @@ footer {
         padding: 20px;
     }
 
-    .constructInfoList {
-        width: 80%;
+    .constructInfo ul {
+        width: 100%;
     }
 
     .constructInfoList li>h3 {
@@ -815,7 +823,7 @@ footer {
         width: 70%;
     }
 
-    address {
+    .constructInfoList address {
         display: inline-block;
         width: 70%;
     }
