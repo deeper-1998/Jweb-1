@@ -1010,6 +1010,10 @@ footer {
         top: 0;
     }
 
+    .howGoal>ul>li img {
+        width: 65px;
+    }
+
     .howGoal>ul>li {
         float: none;
         width: 100%;
@@ -1043,6 +1047,7 @@ footer {
 
     .historyList>ul {
         width: 100%;
+        padding-left: 20px;
     }
 
     .historyList>ul li {
@@ -1067,16 +1072,33 @@ footer {
         width: calc(100% - 50px);
     }
 
-    .historyList>ul ul {
-        display: block;
+    .historyLine {
+        left: 10px;
+        width: 450px;
+        transform: translate(-50%) rotate(90deg);
     }
 
-    .historyLine {
-        display: none;
+    .selectHistory {
+        width: 85px;
     }
 
     .showHistory {
-        display: none;
+        top: 40px;
+        left: 110px;
+        width: calc(100% - 120px);
+        transform: translateX(0);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .showHistory li:last-child {
+        margin-bottom: 0;
+    }
+
+    .showHistory strong {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
     }
 
     .selectYear {
