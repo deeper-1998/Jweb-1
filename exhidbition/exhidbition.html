@@ -53,7 +53,15 @@
                     <div class="backBlur"></div>
                     <div class="slideArea">
                         <div class="confix">
-                            <!--이미지 삽입 예정-->
+                            <div class="slideOverflow vBox">
+                                <ul class="slideList vBox" id="slideList">
+                                    <li><img src="./images/banner_1.png" alt="배너이미지"></li>
+                                    <li><img src="./images/banner_2.png" alt="배너이미지"></li>
+                                    <li><img src="./images/banner_3.png" alt="배너이미지"></li>
+                                    <li><img src="./images/banner_4.jpg" alt="배너이미지"></li>
+                                    <li><img src="./images/banner_5.jpg" alt="배너이미지"></li>
+                                </ul>
+                            </div>
                         </div><!--confix-->
                     </div><!--slideArea-->  
                 </div><!--slideBanner-->
@@ -191,38 +199,6 @@
             </div><!--confix-->
         </footer>
     </div>
-    <script>
-         function langBtn() { // 언어토글버튼
-            const langBtn = document.getElementById("togleBtn");
-            const langKor = document.getElementById("langKor");
-            const langEng = document.getElementById("langEng");
-            if (langBtn.style.transform == "translateX(-36px)") {
-                langBtn.style.transform = "translateX(0px)"
-                langKor.style.opacity = "1"
-                langEng.style.opacity = "0"
-            } else {
-                langBtn.style.transform = "translateX(-36px)"
-                langKor.style.opacity = "0"
-                langEng.style.opacity = "1"
-            }
-        }
-
-        function orgOpen() { // 관련기관 펼치고닫기
-            const orgBg = document.getElementById("orgBg");
-            const orgBtn = document.getElementById("orgBtn");
-            if (orgBg.style.height == "40px") {
-                orgBg.style.height = "330px";
-                orgBg.style.backgroundColor = "#23262a";
-                orgBtn.style.borderRadius = "0 0 10px 10px";
-                orgBtn.style.transition = "border-radius 0s 0s";
-            } else {
-                orgBg.style.height = "40px";
-                orgBg.style.backgroundColor = "#202020";
-                orgBtn.style.borderRadius = "10px 10px 10px 10px";
-                orgBtn.style.transition = "border-radius 0s 0.4s";
-            }
-
-        }
-    </script>
+    <script src="js/exhidbition.js"></script>
 </body>
 </html>
