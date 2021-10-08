@@ -1,0 +1,454 @@
+@charset "utf-8";
+
+.wrap {
+    width: 100%;
+}
+
+
+/* 1320px 12컬럼 그리드시스템 */
+.confix {
+    position: relative;
+    width: 1320px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 15px;
+    /* background-color: gold; */
+}
+
+
+/* float 해제 가상박스 */
+.vBox::after, .vBox::before {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+
+/* ====================header area==================== */
+header {
+    position: absolute;
+    width: 100%;
+    min-width: 1320px;
+    height: 174px;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6) 33px,
+            rgba(0, 0, 0, 0) 34px,
+            rgba(0, 0, 0, 0.6) 35px,
+            rgba(0, 0, 0, 0.0) 100%
+          ); 
+    z-index: 2;
+}
+
+.siteJoin {
+    width: 100%;
+    height: 33px;
+    margin-bottom: 5px;
+}
+
+.siteJoin ul {
+    float: right;
+    width: 123px;
+    margin-top: 10px;
+}
+
+.siteJoin ul li {
+    float: left;
+}
+
+.siteJoin ul li a {
+    font-size: 1.3rem;
+    padding: 0 18px;
+    line-height: 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.siteJoin ul li:first-child a {
+    padding-left: 0;
+}
+
+.siteJoin ul li:last-child a {
+    padding-right: 0;
+    border-right: none;
+}
+
+.logoMenu {
+    position: relative;
+    width: 100%;
+}
+
+.logoMenu h1 {
+    float: left;
+}
+
+.logoMenu h1 img {
+    width: 160px;
+}
+
+.headerMenu {
+    position: absolute;
+    width: 560px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 25px;
+}
+
+.headerMenu .gnb {
+    display: flex;
+    justify-content: space-between ;
+}
+
+.headerMenu li {
+    float: left;
+    font-size: 2.4rem;
+}
+
+.langBtn {
+    position: relative;
+    float: right;
+    width: 61px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 1px solid #f0e9ea;
+    background: none;
+}
+
+.langBtn span {
+    font-size: 1.3rem;
+}
+
+.langBtn .kor {
+    position: absolute;
+    left: 8px;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.langBtn .eng {
+    position: absolute;
+    right: 8px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.togleBtn {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    transition: transform 0.5s;
+    border: none;
+    background-color: #f0e9ea;
+}
+
+
+/* ====================main area==================== */
+main {
+    width: 100%;
+}
+
+main h2 {
+    line-height: normal;
+}
+
+.slideBanner{
+    position: relative;
+    width: 100%;
+    min-width: 1320px;
+    height: 665px;
+    z-index: 1;
+    margin-bottom: 136px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/peace_again.png);
+}
+
+.backBlur {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.slideArea {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 245px;
+    background-color: #4d2378;
+}
+
+.menuList {
+    margin-top: 30px;
+    font-size: 1.4rem;
+}
+
+/* ========== 이곳에 메인영역 css 작성해주세요 ========== */
+
+.exhidbition {
+    margin-bottom: 145px;
+}
+
+.exhidbitionText {
+    position: relative;
+    float: left;
+    width: 770px;
+}
+
+.exhidbitionText h2 {
+    font-size: 4.5rem;
+    margin: 10px 0 28px 0 ;
+}
+
+.headText {
+    margin-bottom: 45px;
+}
+
+.audioGuide {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+    text-align: center;
+}
+
+.audioIcon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 8px;
+    line-height: 100px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.audioIcon img {
+    width: 75px;
+    vertical-align: middle;
+}
+
+.audioGuide strong {
+    font-size: 1.6rem;
+    color: #ed5705;
+}
+
+.headText strong:first-child {
+    font-size: 1.7rem;
+    color: #01aded;
+}
+
+.exhidbitionText .dateInfo {
+    font-size: 2.0rem;
+}
+
+.exhidbitionText p {
+    font-size: 1.6rem;
+}
+
+.exhidbitionInfo {
+    float: right;
+    width: 440px;
+    height: 720px;
+    padding: 37px;
+    font-size: 1.6rem;
+    border-radius: 15px;
+    background-color: #edf7fe;
+}
+
+.exhidbitionInfo h3 {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.exhidbitionInfo li {
+    margin-bottom: 43px;
+}
+
+
+/* ============ 작품미리보기 ============ */
+
+
+.exhidbitionPreview h2 {
+    margin-bottom: 25px;
+}
+
+.exhidbitionPreview ul {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding-top: 13px;
+    border-top: 1px solid #a7a7a7;
+}
+
+.exhidbitionPreview ul li {
+    overflow: hidden;
+    width: 300px;
+    height: 310px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.exhidbitionPreview ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.exhidbitionPreview ul li img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* ========== 이곳에 메인영역 css 작성해주세요 ========== */
+
+
+
+
+
+/* ========== footer ========== */
+footer {
+    width: 100%;
+    min-width: 1320px;
+    height: 200px;
+    line-height: 2rem;
+    margin-top: 120px;
+    padding-top: 25px;
+    font-size: 1.3rem;
+    background-color: #202020;
+}
+
+.footLogoMenu {
+    position: relative;
+}
+
+.footLogoMenu .footLogo {
+    width: 190px;
+    height: 65px;
+}
+
+.footLogoMenu>a {
+    float: left;
+    margin-right: 30px;
+}
+
+.footMenu li {
+    float: left;
+    line-height: 13px;
+    margin-top: 28px;
+    padding: 0 30px;
+    border-right: 1px solid #6f6f6f;
+}
+
+.footMenu li a {
+    font-weight: bold;
+    color: #fff;
+}
+
+.footMenu li:first-child {
+    padding-left: 0;
+}
+
+.footMenu li:last-child {
+    border-right: 0;
+}
+
+.org {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    float: right;
+    width: 190px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    transition: height 0.5s;
+    background-color: #202020;
+}
+
+
+.orgBtn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #6f6f6f;
+    border-radius: 10px 10px 10px 10px;
+    background: none;
+}
+
+.org span {
+    color: #eee7e8;
+}
+
+.org span:first-child {
+    padding-right: 100px;
+}
+
+.siteList {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    height: 290px;
+    border: 1px solid #6f6f6f;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.siteList li {
+    padding: 15px 0 0 15px;
+}
+
+.siteList>li>a {
+    color: #ddd5d7;
+}
+
+.otherSite {
+    float: left;
+}
+
+.otherSite li {
+    float: left;
+}
+
+.otherSite img {
+    width: 80px;
+    margin-right: 15px;
+}
+
+.otherSite img:last-child {
+    margin-right: 28px;
+}
+
+.snsCopy .copyAddr {
+    float: left;
+}
+
+.snsCopy p {
+    color: #6f6f6f;
+}
+
+
+
+.snsList {
+    float: right;
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns li {
+    float: left;
+    margin-top: 21px;
+}
+
+.sns li img {
+    width: 31px;
+}
+
