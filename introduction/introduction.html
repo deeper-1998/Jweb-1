@@ -189,7 +189,7 @@
                     <div class="historyList">
                         <ul>
                             <li>
-                                <h3>1997년</h3>
+                                <h3 class="selectYear">1997년</h3>
                                 <ul>
                                     <li class="vBox">
                                         <strong>3월</strong>
@@ -207,7 +207,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="selectYear">
+                            <li>
                                 <h3>2003년</h3>
                                 <ul>
                                     <li class="vBox">
@@ -323,12 +323,8 @@
                     <div class="showHistory">
                         <ul>
                             <li>
-                                <strong>7월</strong>
-                                <span>기공식</span>
-                            </li>
-                            <li>
-                                <strong>4월</strong>
-                                <span>경기도미술관 로드맵 수립</span>
+                                <strong>3월</strong>
+                                <span>경기도미술관 건립 추진계획 수립</span>
                             </li>
                         </ul>
                     </div>
@@ -390,38 +386,6 @@
             </div><!--confix-->
         </footer>
     </div>
-    <script>
-         function langBtn() { // 언어토글버튼
-            const langBtn = document.getElementById("togleBtn");
-            const langKor = document.getElementById("langKor");
-            const langEng = document.getElementById("langEng");
-            if (langBtn.style.transform == "translateX(-36px)") {
-                langBtn.style.transform = "translateX(0px)"
-                langKor.style.opacity = "1"
-                langEng.style.opacity = "0"
-            } else {
-                langBtn.style.transform = "translateX(-36px)"
-                langKor.style.opacity = "0"
-                langEng.style.opacity = "1"
-            }
-        }
-
-        function orgOpen() { // 관련기관 펼치고닫기
-            const orgBg = document.getElementById("orgBg");
-            const orgBtn = document.getElementById("orgBtn");
-            if (orgBg.style.height == "40px") {
-                orgBg.style.height = "330px";
-                orgBg.style.backgroundColor = "#23262a";
-                orgBtn.style.borderRadius = "0 0 10px 10px";
-                orgBtn.style.transition = "border-radius 0s 0s";
-            } else {
-                orgBg.style.height = "40px";
-                orgBg.style.backgroundColor = "#202020";
-                orgBtn.style.borderRadius = "10px 10px 10px 10px";
-                orgBtn.style.transition = "border-radius 0s 0.4s";
-            }
-
-        }
-    </script>
+    <script src="./js/introduction.js"></script>
 </body>
 </html>

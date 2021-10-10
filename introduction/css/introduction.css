@@ -524,6 +524,7 @@ input::-webkit-search-results-decoration{
 
 .history h3 {
     font-weight: normal;
+    cursor: pointer;
 }
 
 
@@ -552,10 +553,10 @@ input::-webkit-search-results-decoration{
 
 .historyLine {
     position: absolute;
-    top: 50%;
+    top: 60px;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px;
+    transform: translateX(-50%);
+    width: 840px;
     height: 4px;
     margin: 0 auto;
     background-image: url(../images/dotted_border.svg);
@@ -575,15 +576,17 @@ input::-webkit-search-results-decoration{
 .selectHistory {
     position: absolute;
     left: 0;
-    width: 23.5%;
+    width: 1%;
     height: 4px;
+    transition: width 0.5s;
+    z-index: 9999;
     background-color: #00aeef;
 }
 
 .selectHistory span:first-child {
     position: absolute;
     display: inline-block;
-    left: -2px;
+    left: 0px;
     bottom: -3px;
     width: 10px;
     height: 10px;
@@ -609,10 +612,7 @@ input::-webkit-search-results-decoration{
 }
 
 .showHistory {
-    position: absolute;
-    top: 250px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 50px;
     padding: 28px 80px;
     border-radius: 50px;
     background-color: #edf7fe;
@@ -624,7 +624,8 @@ input::-webkit-search-results-decoration{
 }
 
 .showHistory strong {
-    margin-right: 30px;
+    display: block;
+    margin-bottom: 10px;
     font-weight: bold;
 }
 
@@ -639,7 +640,7 @@ footer {
     width: 100%;
     height: 200px;
     line-height: 2rem;
-    margin-top: 290px;
+    margin-top: 150px;
     padding-top: 25px;
     font-size: 1.3rem;
     background-color: #202020;
@@ -882,11 +883,11 @@ footer {
     }
 
     .historyLine {
-        width: 100%;
+        width: 92%;
     }
 
     .selectHistory {
-        width: 21%;
+        width: 1%;
     }
     
     .footLogo {
@@ -1046,6 +1047,7 @@ footer {
     }
 
     .historyList>ul {
+        flex-direction: column;
         width: 100%;
         padding-left: 20px;
     }
@@ -1073,16 +1075,19 @@ footer {
     }
 
     .historyLine {
+        top: 50%;
         left: 10px;
-        width: 450px;
+        width: 460px;
         transform: translate(-50%) rotate(90deg);
     }
 
     .selectHistory {
-        width: 85px;
+        width: 1%;
     }
 
+
     .showHistory {
+        position: absolute;
         top: 40px;
         left: 110px;
         width: calc(100% - 120px);
@@ -1103,7 +1108,7 @@ footer {
 
     .selectYear {
         border: none;
-        color: #585858;
+        padding-bottom: 0;
     }
 
     footer {
