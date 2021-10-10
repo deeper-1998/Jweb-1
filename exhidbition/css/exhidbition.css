@@ -235,11 +235,16 @@ main h2 {
 }
 
 .slideList li { 
-    width: 200px;
+    width: 12%;
+    max-width: 200px;
     float: left;
-    margin-right: 50px;
+    margin-right: 3%;
     padding-top: 100px;
     transition: all 1s;
+}
+
+.slideList li:last-child {
+    margin-right: 0;
 }
 
 .slideList li img {
@@ -249,7 +254,7 @@ main h2 {
 .slideBar {
     position: absolute;
     top: -100px;
-    right: 0;
+    right: 30px;
     width: 200px;
 }
 
@@ -610,7 +615,11 @@ footer {
     }
 
     .slideBanner {
-        height: 400px;
+        height: 52vw;
+    }
+
+    .slideList li  {
+        padding-top: 4%;
     }
 
     .exhidbitionText {
@@ -672,6 +681,23 @@ footer {
     .slideBanner {
         height: 300px;
         margin-bottom: 80px;
+    }
+
+    .slideList {
+        min-width: 550px;
+        width: 1380px;
+    }
+
+    .slideList li  {
+        margin-right: 3vw;
+        padding-top: 25px;
+        width: 110px;
+    }
+
+    .slideOverflow {
+        bottom: 60px;
+        height: 400px;
+        overflow: hidden;
     }
 
     .exhidbitionText h2 {

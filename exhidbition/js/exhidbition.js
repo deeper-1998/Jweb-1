@@ -35,23 +35,44 @@ const slideListImg = slideList.children;
 const slideBg = document.querySelector(".slideBanner");
 const slideStick = document.querySelector(".slideStick");
 const slideBtn = document.querySelector(".slideBtn");
+const slideArea = document.querySelector(".slideArea");
+
+const colorArr = ["#4d2378", "#42cd3e", "#b0b0b0", "#01476b", "#6289c7"];
 let stickMove = 0;
+let i = 0;
 const stickMoveAvg = (150 - 40) / (slideListImg.length - 1);
 
-slideListImg[0].style.width = "500px";
+slideListImg[0].style.maxWidth = "500px";
+if(window.innerWidth > 767) {
+    slideListImg[0].style.width = "25%";
+} else {
+    slideListImg[0].style.width = "207px";
+}
+
 slideListImg[0].style.paddingTop = "0";
 slideListImg[0].style.boxShadow = "5px 5px 10px rgba(0, 0, 0, 0.3)";
 
 
+console.log(slideListImg[0].style.width);
 function slideInterval() {
-    slideList.style.left = "-550px";
+    slideListImg[0].style.marginRight = "0";
+    slideList.style.left = "-" + (slideListImg[0].offsetWidth) + "px";
     slideListImg[1].style.boxShadow = "5px 5px 10px rgba(0, 0, 0, 0.3)";
-    slideListImg[1].style.width = "500px";
+    slideListImg[1].style.maxWidth = "500px";
+    if(window.innerWidth > 767) {
+        slideListImg[1].style.width = "25%";
+    } else {
+        slideListImg[1].style.width = "207px";
+    }
     slideListImg[1].style.paddingTop = "0";
     
     if(stickMove < 110) {
+        i++;
+        slideArea.style.backgroundColor = colorArr[i];
         stickMove += stickMoveAvg;
     } else {
+        i = 0;
+        slideArea.style.backgroundColor = colorArr[i];
         stickMove = 0;
     }
 
@@ -60,8 +81,22 @@ function slideInterval() {
     
     slideBg.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + slideListImg[1].firstChild.src + ")"
     setTimeout(function() {
-        slideListImg[0].style.paddingTop = "100px";
-        slideListImg[0].style.width = "200px";
+        slideListImg[0].style.marginRight = "3%";
+        if(window.innerWidth > 1080) {
+            slideListImg[0].style.paddingTop = "100px";    
+        } else if (window.innerWidth > 767) {
+            slideListImg[0].style.paddingTop = "4%";
+        } else {
+            slideListImg[0].style.marginRight = "3vw";
+            slideListImg[0].style.paddingTop = "25px";
+        }
+        slideListImg[0].style.maxWidth = "200px";
+        if(window.innerWidth > 767) {
+            slideListImg[0].style.width = "12%";
+        } else {
+            slideListImg[0].style.width = "110px";
+        }
+        
         slideListImg[0].style.boxShadow = "none";
         slideList.appendChild(slideListImg[0]);
         slideList.style.transition = "none";
