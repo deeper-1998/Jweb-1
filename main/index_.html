@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Discription" content="gma_header_footer">
+    <meta name="Author" content="team">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/index_style.css" type="text/css">
+    <title>경기도미술관</title>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="bg">
+                <div class="bgside"></div>
+                <div class="bgCenter"></div>
+                <div class="bgside"></div>
+            </div>
+            <div class="confix">
+                
+                <div class="siteJoin">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">회원가입</a></li>
+                    </ul>    
+                </div><!--siteJoin-->
+                <div class="logoMenu">
+                    <h1>
+                        <a href="header_footer.html"><img src="./images/main_logo.svg" alt="mian_logo"></a>
+                        <a href="header_footer.html"><img src="./images/main_simbol.svg" alt="main_logo"></a>
+                    </h1>
+                    <nav class="headerMenu">
+                        <ul class="gnb">
+                            <li><a href="#">소개</a></li>
+                            <li><a href="#">전시</a></li>
+                            <li><a href="#">교육/행사</a></li>
+                            <li><a href="#">아카이브</a></li>
+                            <li><a href="#">커뮤니티</a></li>
+                        </ul>
+                    </nav>
+                    <div class="headMenuBtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="langBtn noDrag" onclick="langBtn()">
+                        <span id="langKor" class="kor">KOR</span>
+                        <span id="langEng" class="eng">ENG</span>
+                        <span id="togleBtn" class="togleBtn"></span>
+                    </div><!--langBtn-->
+                </div><!--logoMenu-->
+            </div><!--confix-->
+        </header>
+
+        <main>
+            <section>
+                <h2 class="hiddenTxt">main container</h2>
+                <div class="topAreaBg">
+                    
+    
+                    <div class="bgBlur">
+                    </div><!-- bgBlur -->
+                    <div class="posterBg">
+                    </div> <!-- posterBg -->
+                                      
+                </div><!-- topAreaBg -->
+                
+                 
+                <section class="topAreaWrap">
+                    <h2 class="hiddenTxt">메인 슬라이드</h2>
+
+
+
+                    <div class="slidePosterArea"><!-- 슬라이드 영역 -->
+                        <div id="frontPoser"> <!-- 슬라이드에서 선택된 포스터 -->
+                            <img src="./images/DMZ_art_project_main.png" alt="DMZ_다시평화">
+                        </div>
+                        <div id="backPoser"><!-- 슬라이드 포스터들 -->
+                            <img src="./images/diffraction_main.png" alt="다각선">
+                            <img src="./images/conrpus_gestus_vox_main.png" alt="몸.짓.말">
+                            <img src="./images/binge_watching_main.png" alt="빈지워칭">
+                            <img src="./images/event_museum_School_main.png" alt="내가만든전시">
+                        </div>
+                    </div><!-- slidePosterArea -->
+                    
+
+                    <div class="confix">
+                        <div class="topArea">
+                            
+                            <div class="topHeading">
+                                <h3>#DMZAP손짓챌린지</h3>
+                                <p>2021.5.20 ~ 2021.11.21</p>
+                                <a href="#"><span class="moreViewBtn">자세히보기</span></a>
+                            </div><!--topHeading-->
+                            
+                                
+                        </div><!-- topArea -->  
+                    </div><!--confix--> 
+                </section><!--topAreaWrap  --> 
+
+
+
+                <!-- 메인 컨텐츠 영역 소스 이 사이에 넣어주세요 -->
+                <section> <!--class="bottomAreaWrap" -->
+                    <h2 class="hiddenTxt">contents</h2>
+                    <div class="confix">
+                        <div class="bottomArea">
+                            
+                            <section class="leftInfoArea">
+                                <div class="infoHeading">
+                                    <h3>공지사항</h3>
+                                    <a href="../sub/notice/notice.html" class="infoMoreView">
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div><!-- infoHeading -->
+                                <ul class="noticeList vBox">
+                                    <li>
+                                        <div class="noticeListWrap">
+                                            <div class="important">중요</div>
+                                            <div class="noticeListTitle">경기도미술관 주출입구 변경 및 임시출입구 안내</div>
+                                        </div>
+                                        <span class="date">21.09.21</span>
+                                    </li>
+                                    <li>
+                                        <div class="noticeListWrap">
+                                            <div class="important">중요</div>
+                                            <div class="noticeListTitle">추석연휴 휴관일 안내</div>
+                                        </div>
+                                        <span class="date">21.09.21</span>
+                                    </li>
+                                    <li>
+                                        <div class="noticeListWrap">
+                                            <div class="important">중요</div>
+                                            <div class="noticeListTitle">2021년 경기도미술관 전시 및 문화자원봉사 교육강사 모집[긴급]</div>
+                                        </div>
+                                        <span class="date">21.09.21</span>
+                                    </li>
+                                    <li>
+                                        <div class="noticeListWrap">
+                                            <div class="important normal"></div>
+                                            <div class="noticeListTitle">2021 한국·스페인 특별전 전시 연계 프로그램 "Step by Step 스페인 문화와 언어 배우기!"</div>
+                                        </div>
+                                        <span class="date">21.09.21</span>
+                                    </li>
+                                </ul>
+
+                                <div class="infoHeading info">
+                                    <h3>관람안내</h3>
+                                    <a href="#" class="infoMoreView">
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div><!-- infoHeading -->
+                                <div class="blueBg">
+                                    <ul class="infoList">
+                                        <li class="vBox">
+                                            <h3>관람시간</h3>
+                                            <div class="infoText">
+                                                <strong class="color_1aa5dd">10:00 - 18:00</strong>
+                                                <span>관람종료 1시간 전까지 입장 가능합니다.</span>
+                                            </div>
+                                        </li>
+                                        <li class="vBox">
+                                            <h3>휴관일</h3>
+                                            <div class="infoText">
+                                                <strong class="color_1aa5dd">매주 월요일<span class="color_1aa5dd">(공휴일 제외)</span></strong>
+                                                <span>매년 1월 1일 / 설날, 추석 당일</span>
+                                            </div>
+                                        </li>
+                                        <li class="vBox">
+                                            <h3>관람료</h3>
+                                            <div class="infoText">
+                                                <strong class="color_1aa5dd">무료</strong>
+                                                <span>
+                                                    특별기획전의 경우 전시에 따라 관람료가 달라질 수 있습니다.
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li class="vBox">
+                                            <h3>안내문의</h3>
+                                            <div class="infoText">
+                                                <p>031-481-7000</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+        
+                                
+                            </section><!-- leftInfoArea --> 
+
+                            <section class="rightSwipeArea">
+                                <h3 class="hiddenTxt">배너영역</h3>
+                                <div class="infoHeading program">
+                                    <h3>프로그램</h3>
+                                    <a href="#" class="infoMoreView">
+                                        <span></span>
+                                        <span></span>
+                                    </a>
+                                </div><!-- infoHeading -->
+                                
+                                <ul class="bannerSwipeWrap">
+                                    <li class="bannerlistWrap">
+                                        <ul>
+                                            <li class="bannerlist event">
+                                                <span class="listTag">이벤트</span>
+                                                <a href="#" alt="G뮤지엄숍 공식오픈"></a> 
+                                            </li>
+                                            <li class="bannerlist docent">
+                                                <span class="listTag">도슨트</span>
+                                                <a href="#" alt="오디오 가이드">
+                                                </a>
+                                            </li>
+                                            <li class="bannerlist edu">
+                                                <span class="listTag">교육</span>
+                                                <a href="#" alt="미술관 마실가자 포스터">
+                                                </a>
+                                            </li>
+                                            <li class="bannerlist material">
+                                                <span class="listTag">자료</span>
+                                                <a href="#" alt="미술자료실">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li><!-- bannerlistWrap -->
+                                    <li class="bannerlistWrap">
+                                        <ul>
+                                            <li class="bannerlist">
+                                                <span class="listTag event">이벤트</span>
+                                                <a href="#" style="background:url(./images/gMuseum_shop_320.jpg)no-repeat top center" alt="G뮤지엄숍 공식오픈"></a>  
+                                            </li>
+                                            <li class="bannerlist">
+                                                <span class="listTag docent">도슨트</span>
+                                                <a href="#" style="background:url(./images/docent_ill_320.jpg)no-repeat top center" alt="오디오 가이드">
+                                                </a>
+                                            </li>
+                                            <li class="bannerlist">
+                                                <span class="listTag edu">교육</span>
+                                                <a href="#" style="background:url(./images/edu_wednes_club_320.jpg)no-repeat left center" alt="미술관 마실가자 포스터">
+                                                </a>
+                                            </li>
+                                            <li class="bannerlist">
+                                                <span class="listTag material">자료</span>
+                                                <a href="#" style="background:url(./images/gmoma_library_320.jpg)no-repeat top center; border: 1px solid #ccc;" alt="미술자료실">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- bannerlistWrap -->
+                                    <li class="bannerlistWrap">    
+                                        <ul>
+                                            <li class="bannerlist">
+                                                <span class="listTag event">이벤트</span>
+                                                <a href="#" style="background:url(./images/gMuseum_shop_320.jpg)no-repeat top center" alt="G뮤지엄숍 공식오픈"></a>  
+                                            </li>
+                                            <li class="bannerlist">
+                                                <span class="listTag docent">도슨트</span>
+                                                <a href="#" style="background:url(./images/docent_ill_320.jpg)no-repeat top center" alt="오디오 가이드">
+                                                </a>
+                                            </li>
+                                            <li class="bannerlist">
+                                                <span class="listTag edu">교육</span>
+                                                <a href="#" style="background:url(./images/edu_wednes_club_320.jpg)no-repeat left center" alt="미술관 마실가자 포스터">
+                                                </a>
+                                            </li>
+                                            <li class="bannerlist">
+                                                <span class="listTag material">자료</span>
+                                                <a href="#" style="background:url(./images/gmoma_library_320.jpg)no-repeat top center; border: 1px solid #ccc;" alt="미술자료실">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <!-- bannerlistWrap -->
+                                </ul><!-- bannerSwipeWrap -->
+                                
+                            </section><!-- rightSwipeArea -->
+                               
+                                
+                        </div><!-- bottomArea --> 
+                    </div><!--confix-->    
+                </section><!--bottomAreaWrap  --> 
+                <!-- 메인 컨텐츠 영역 소스 이 사이에 넣어주세요 -->
+            </section>
+        </main>
+
+        <footer>
+            <div class="confix">
+                <div class="footLogoMenu vBox">
+                    <a class="footLogo" href="header_footer.html"><img src="./images/main_logo.svg" alt="foot_logo"></a>
+                    <nav class="footMenu">
+                        <ul>
+                            <li><a href="#">개인정보취급방침</a></li>
+                            <li><a href="#">정보공개청구</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">경영공시</a></li>
+                        </ul>
+                    </nav>
+                    <div id="orgBg" class="org" style="height: 40px;">
+                        <button id="orgBtn" class="orgBtn" onclick="orgOpen()">
+                            <span>관련기관</span>
+                            <span>+</span>
+                        </button>
+                        <ul class="siteList">
+                            <li><a href="#">경기문화재단</a></li>
+                            <li><a href="#">경기문화재연구원</a></li>
+                            <li><a href="#">경기도박물관</a></li>
+                            <li><a href="#">백남준아트센터</a></li>
+                            <li><a href="#">실학박물관</a></li>
+                            <li><a href="#">전곡선사박물관</a></li>
+                            <li><a href="#">경기도어린이박물관</a></li>
+                            <li><a href="#">경기북부어린이박물관</a></li>
+                        </ul>
+                    </div><!--org-->
+                </div><!--footLogoMenu-->
+
+                <div class="snsCopy">
+                    <ul class="otherSite">
+                        <li><a href="https://www.ggcf.kr/"><img src="./images/ggcf.svg" alt="ggcf"></a></li>
+                        <li><a href="https://www.gg.go.kr/"><img src="./images/gg.svg" alt="gg"></a></li>
+                    </ul>
+                    <div class="copyAddr">
+                        <span>(재)경기문화재단 경기도미술관</span>
+                        <address>(15385) 경기도 안산시 단원구 동산로 268 (초지동)</address>
+                        <span>COPYRIGHT &copy; GGCF. ALL RIGHTS RESERVED.</span> 
+                    </div><!--copyAddr-->
+                    <div class="sns">
+                        <ul class="snsList">
+                            <li><a href="https://www.facebook.com/ggmoma/"><img src="./images/facebook.png" alt="facebook"></a></li>
+                            <li><a href="https://blog.naver.com/gyeonggimoma"><img src="./images/naver.png" alt="naver"></a></li>
+                            <li><a href="https://www.youtube.com/user/ggcfkr"><img src="./images/youtube.png" alt="youtube"></a></li>
+                        </ul>
+                    </div><!--sns-->
+                </div><!--snsCopy-->
+            </div><!--confix-->
+        </footer>
+    </div>
+    <script>
+         function langBtn() { // 언어토글버튼
+            const langBtn = document.getElementById("togleBtn");
+            const langKor = document.getElementById("langKor");
+            const langEng = document.getElementById("langEng");
+            if (langBtn.style.transform == "translateX(-36px)") {
+                langBtn.style.transform = "translateX(0px)"
+                langKor.style.opacity = "1"
+                langEng.style.opacity = "0"
+            } else {
+                langBtn.style.transform = "translateX(-36px)"
+                langKor.style.opacity = "0"
+                langEng.style.opacity = "1"
+            }
+        }
+
+        function orgOpen() { // 관련기관 펼치고닫기
+            const orgBg = document.getElementById("orgBg");
+            const orgBtn = document.getElementById("orgBtn");
+            if (orgBg.style.height == "40px") {
+                orgBg.style.height = "330px";
+                orgBg.style.backgroundColor = "#23262a";
+                orgBtn.style.borderRadius = "0 0 10px 10px";
+                orgBtn.style.transition = "border-radius 0s 0s";
+            } else {
+                orgBg.style.height = "40px";
+                orgBg.style.backgroundColor = "#202020";
+                orgBtn.style.borderRadius = "10px 10px 10px 10px";
+                orgBtn.style.transition = "border-radius 0s 0.4s";
+            }
+
+        }
+    </script>
+</body>
+</html>
