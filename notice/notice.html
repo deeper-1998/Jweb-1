@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Discription" content="gma_notice">
+    <meta name="Author" content="team">
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/notice.css" type="text/css">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/jquery.js"></script>
+    <title>경기도미술관</title>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="confix">
+                <!-- <div class="headerBg"> -->
+                    <div class="siteJoin">
+                        <ul>
+                            <li><a href="#">로그인</a></li>
+                            <li><a href="#">회원가입</a></li>
+                        </ul>    
+                    </div><!--siteJoin-->
+                    <div class="logoMenu">
+                        <h1>
+                            <a href="header_footer.html"><img src="./images/main_logo.svg" alt="mian_logo"></a>
+                            <a href="header_footer.html"><img src="./images/main_simbol.svg" alt="main_logo"></a>
+                        </h1>
+                        <nav class="headerMenu">
+                            <ul class="gnb">
+                                <li><h2><a href="#">소개</a></h2></li>
+                                <li><h2><a href="#">전시</a></h2></li>
+                                <li><h2><a href="#">교육/행사</a></h2></li>
+                                <li><h2><a href="#">아카이브</a></h2></li>
+                                <li><h2><a href="#">커뮤니티</a></h2></li>
+                            </ul>
+                        </nav>
+                        <div class="headMenuBtn">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="langBtn" onclick="langBtn()">
+                            <span id="langKor" class="kor">KOR</span>
+                            <span id="langEng" class="eng">ENG</span>
+                            <button id="togleBtn" class="togleBtn"></button>
+                        </div><!--langBtn-->
+                    </div><!--logoMenu-->
+                <!-- </div> -->
+            </div><!--confix-->
+        </header>
+
+
+        <main>
+            <section><!-- container section -->
+                <h1 class="hiddenTxt">notice</h1>
+                <div class="topArea">
+                    <div class="confix">
+                        <div class="topHeading">
+                            <h2>공지사항</h2>
+                        </div><!--topHeading-->
+                        <form action="#" method="POST" class="searchBox2">
+                            <select class="select" id="choice" name="choice" size="1">
+                                <option value="#" selected>전체</option>
+                                <option value="#">전시</option>
+                                <option value="#">교육</option>
+                                <option value="#">시설이용</option>
+                            </select>
+                            <label id="search" class="blind">search</label>
+                            <input type="search" name="search" class="search" placeholder="검색어를 입력하세요">
+                            <button class="searchBtn" type="search" value="search"></button>
+                        </form><!-- searchBox -->
+                        
+                        <ul class="menuList vBox">
+                            <li>커뮤니티</li>
+                            <li><img src="./images/next_w.svg" alt="화살표"></li>
+                            <li>공지사항</li>
+                        </ul>
+                    </div><!--confix-->
+                </div><!--topArea-->
+
+                <section class="noticeWrap">
+                    <h2 class="hiddenTxt">notice</h2>
+                    <div class="confix">
+                        <div class="category vBox">
+                            <ul id="mainTap">
+                                <li>전체</li>
+                                <li>전시</li>
+                                <li>교육</li>
+                                <li>시설이용</li>
+                            </ul>
+                        </div><!-- category -->
+                        <section class="tapSection">
+                            <p class="total">총 17건</p>
+                            <ul class="noticeList">
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important">중요</div>
+                                        <div class="noticeListTitle">경기도미술관 10월 공휴일 운영 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important">중요</div>
+                                        <div class="noticeListTitle">경기도미술관 불용품 매각 재공고</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important">중요</div>
+                                        <div class="noticeListTitle">경기문화재단 공식 온라인스토어 “G뮤지엄숍” 오픈</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">2021 경기도 예술인, 단체 전수조사</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">2021년 경기도미술관 전시 및 문화자원봉사 교육강사 모집[긴급]</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">2021 경기도 예술인, 단체 전수조사</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">뮤지엄숍 운영재개</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">2021년 경기문화재단 제 14차 기간제 근로자 채용 공고</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">사회적 거리두기 4단계 격상에 따른 관람인원 조정</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">경기도미술관 주출입구 변경 및 임시출입구 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                            </ul><!-- publishList -->
+                        </section><!-- tapSection-->
+                        <section class="tapSection">
+                            <p class="total">총 27건</p>
+                            <ul class="noticeList">
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important">중요</div>
+                                        <div class="noticeListTitle">전시 오디오가이드(무료) 사용 방법 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important">중요</div>
+                                        <div class="noticeListTitle">[전시 연장] MOVE SOMA 1_드로잉 소장품 연장 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important">중요</div>
+                                        <div class="noticeListTitle">Summer in 경기도 미술관_한여름의 스페인 행사 연기 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important">중요</div>
+                                        <div class="noticeListTitle">'몸주제전_당신의 안녕' 참여작가 공연 및 특강</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">대체공휴일 정상운영 및 휴관일 변경 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">[연장] '류인-파란에서 부활로' 및 '푸룻푸룻뮤지엄: 87일간의 피크닉' 전시 연장 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">'일상의 창의적 시도'展 (예술아카데미 경기도미술관 회원전)</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">'올림픽레이저 워터스크린 2001' 상영재개</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">사회적 거리두기 4단계 격상에 따른 관람인원 조정</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">"素畵-한국근현대드로잉"전시 도슨트 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                            </ul><!-- publishList -->
+                        </section><!-- tapSection-->
+                        <section class="tapSection">
+                            <p class="total">총 27건</p>
+                            <ul class="noticeList">
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important">중요</div>
+                                        <div class="noticeListTitle">2021년 9월 특강 '프랑스 미술 여행'</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important">중요</div>
+                                        <div class="noticeListTitle">[교육] 어린이 드로잉 아카데미(3~4학년) 가을학기 추가 모집 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">"素畵-한국근현대드로잉"전시 도슨트 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">2021년 7월 소마특강 '러시아 미술관 탐방-모스크바 트레치아코프 미술관'</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">2021 한국·스페인 특별전 전시 연계 프로그램 "Step by Step 스페인 문화와 언어 배우기!"</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">2021년 4월 소마특강 '스페인 미술·문화 여행'</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">[연장] '류인-파란에서 부활로' 및 '푸룻푸룻뮤지엄: 87일간의 피크닉' 교육행사 연장 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">2021 중학교 자유학기제'우리는 미술관 창의해결사'(수),'진짜 궁금한 조각이야기'(금) 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">2021 봄학기 조각탐험대("열림"편) 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">2021 성인 정규프로그램 '소마아트파운데이션' 신규 수강생 모집</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                            </ul><!-- publishList -->
+                        </section><!-- tapSection-->    
+                        <section class="tapSection">
+                            <p class="total">총 35건</p>
+                            <ul class="noticeList">
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important">중요</div>
+                                        <div class="noticeListTitle">전시 오디오가이드(무료) 사용 방법 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important">중요</div>
+                                        <div class="noticeListTitle">[전시 연장] MOVE SOMA 1_드로잉 소장품 연장 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important">중요</div>
+                                        <div class="noticeListTitle">Summer in 경기도 미술관_한여름의 스페인 행사 연기 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important">중요</div>
+                                        <div class="noticeListTitle">'몸주제전_당신의 안녕' 참여작가 공연 및 특강</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">대체공휴일 정상운영 및 휴관일 변경 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">[연장] '류인-파란에서 부활로' 및 '푸룻푸룻뮤지엄: 87일간의 피크닉' 전시 연장 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">'일상의 창의적 시도'展 (예술아카데미 경기도미술관 회원전)</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">'올림픽레이저 워터스크린 2001' 상영재개</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">사회적 거리두기 4단계 격상에 따른 관람인원 조정</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                                <li>
+                                    <div class="noticeListWrap">
+                                        <div class="important normal"></div>
+                                        <div class="noticeListTitle">"素畵-한국근현대드로잉"전시 도슨트 안내</div>
+                                    </div>
+                                    <span class="date">2021.09.21</span>
+                                </li>
+                            </ul><!-- publishList -->
+                        </section><!-- tapSection-->        
+                        
+                        
+                        <ul class="pageNumber">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                            <li>5</li>
+                            <!-- <li><img src="images/" alt="다음"></li> -->
+                            <div class="pageSelect"></div>
+                        </ul><!-- pageNumber -->
+                    </div><!-- confix -->
+                </section><!-- noticeWrap -->
+            </section><!-- container section -->
+        </main>
+
+        <footer>
+            <div class="confix">
+                <div class="footLogoMenu vBox">
+                    <a class="footLogo" href="header_footer.html"><img src="./images/main_logo.svg" alt="foot_logo"></a>
+                    <nav class="footMenu">
+                        <ul>
+                            <li><a href="#">개인정보취급방침</a></li>
+                            <li><a href="#">정보공개청구</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">경영공시</a></li>
+                        </ul>
+                    </nav>
+                    <div id="orgBg" class="org" style="height: 40px;">
+                        <button id="orgBtn" class="orgBtn" onclick="orgOpen()">
+                            <span>관련기관</span>
+                            <span>+</span>
+                        </button>
+                        <ul class="siteList">
+                            <li><a href="#">경기문화재단</a></li>
+                            <li><a href="#">경기문화재연구원</a></li>
+                            <li><a href="#">경기도박물관</a></li>
+                            <li><a href="#">백남준아트센터</a></li>
+                            <li><a href="#">실학박물관</a></li>
+                            <li><a href="#">전곡선사박물관</a></li>
+                            <li><a href="#">경기도어린이박물관</a></li>
+                            <li><a href="#">경기북부어린이박물관</a></li>
+                        </ul>
+                    </div><!--org-->
+                </div><!--footLogoMenu-->
+
+                <div class="snsCopy">
+                    <ul class="otherSite">
+                        <li><a href="https://www.ggcf.kr/"><img src="./images/ggcf.svg" alt="ggcf"></a></li>
+                        <li><a href="https://www.gg.go.kr/"><img src="./images/gg.svg" alt="gg"></a></li>
+                    </ul>
+                    <div class="copyAddr">
+                        <span>(재)경기문화재단 경기도미술관</span>
+                        <address>(15385) 경기도 안산시 단원구 동산로 268 (초지동)</address>
+                        <span>COPYRIGHT &copy; GGCF. ALL RIGHTS RESERVED.</span> 
+                    </div><!--copyAddr-->
+                    <div class="sns">
+                        <ul class="snsList">
+                            <li><a href="https://www.facebook.com/ggmoma/"><img src="./images/facebook.png" alt="facebook"></a></li>
+                            <li><a href="https://blog.naver.com/gyeonggimoma"><img src="./images/naver.png" alt="naver"></a></li>
+                            <li><a href="https://www.youtube.com/user/ggcfkr"><img src="./images/youtube.png" alt="youtube"></a></li>
+                        </ul>
+                    </div><!--sns-->
+                </div><!--snsCopy-->
+            </div><!--confix-->
+        </footer>
+        <script src="js/facilitiesIntro.js"></script>
+</body>
+</html>
