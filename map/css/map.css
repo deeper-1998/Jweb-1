@@ -188,6 +188,7 @@ header {
 /* ====================main area==================== */
 main {
     width: 100%;
+    height: auto;
 }
 
 main h2 {
@@ -231,6 +232,7 @@ main h2 {
 }
 
 .searchBox2 {
+    visibility: hidden;
     background-color: rgb(255, 255, 255);
     width: 450px;
     height: 30px;
@@ -373,6 +375,11 @@ input::-webkit-search-results-decoration{
         border: 1px solid #a7a7a7;
         border-radius: 2px;
     }
+        
+    
+        .postCode {
+            margin-left: 15px;
+        }
 
     .mapInfo li small {
         display: inline-block;
@@ -421,73 +428,61 @@ input::-webkit-search-results-decoration{
 
 /* ============================오시는 길 start============================== */
 /* ==========탭 start========= */
-.publicTransitWrap {
+.transportWrap {
         clear: both;
         width: 100%;
     }
-    
-    .publicCategory {
-        margin-top: 60px;
+
+        /* tap */
+        .category {
+            width: 100%;
+            border-bottom: 1px solid gray;
+            margin-bottom: 30px;
+        }
+
+        .category ul {
+            position: relative;
+            float: left;
+            width: 100%;
+            max-width: 568px;
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+
+        .category li{
+            float: left;
+            width: 30%;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            color: #c7c7c7;
+            font-family: 'GyeonggiTitle';
+            font-weight: 600;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .category li:first-child{
+            color: #585858;
+        }
+
+        .tapSection {
+            position: relative;
+        }
+
+/* ==========탭 end========= */
+/* ==========교통 공통 ======== */
+    .publicTransit, .myCar {
+        clear: both;
+        display: flex;
+        width: 100%;
+        height: auto;
     }
 
-        .category {
-            position: relative;
-            width: 100%;
-            height: 60px;
-            border-bottom: 1px solid #c7c7c7;
-        }
-        
-        
-            .category ul {
-                float: left;
-                margin-bottom: 55px;
-            }
-        
-                .category li{
-                    float: left;
-                    width: 160px;
-                    height: 60px;
-                    line-height: 60px;
-                    text-align: center;
-                    color: #c7c7c7;
-                    font-family: 'GyeonggiTitle';
-                    font-weight: 600;
-                    font-size: 2rem;
-                    cursor: pointer;
-                }
-            
-                .category li:first-child{
-                    color: #585858;
-                }
-        
-            .category>.categorySelect {
-                position: absolute;
-                top: 58px;
-                left: 0;
-                width: 160px;
-                height: 3px;
-                border-radius: 50px;
-                background-color: #00adef;
-                transition: left 0.3s;
-            }
-/* ==========탭 end========= */
-/* ==========지하철, 버스 공통 ======== */
-        .publicTransit {
-            clear: both;
-            display: flex;
-            width: 100%;
-        
-        }
-
-        .publicTransit h3{
+        h3{
             font-size: 2rem;
             font-weight: 600;
             margin-bottom: 25px;
-        }
-
-        .publicTransit p{
-            line-height: 2.5rem;
-            font-size: 1.6rem;
         }
 
         .listCircle {
@@ -498,35 +493,48 @@ input::-webkit-search-results-decoration{
             border-radius: 50px;
             background-color: #a7a7a7;
         }
+        
+        .blueBox {
+            line-height: 2.5rem;
+            font-size: 1.6rem;
+            padding: 15px 35px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            border-radius: 15px;
+            background-color: #edf7fe;
+        }
 
+        .whiteBox>p {
+            line-height: 2.5rem;
+            font-size: 1.6rem;
+            padding: 5px 20px;
+            margin-bottom: 40px;
+            background-color: #fff;
+        }
 
         .blueTxt {
             color: #00adef;
         }
 
+        small  {
+                line-height: 2.0rem;
+                font-size: 1.4rem;
+                color: #a49c9e;
+            }
+    
 
 
 /* ==========지하철 start========= */       
     .publicTransit>.subwayWrap {
-            width: 65%; 
+            width: 55%; 
             height: auto;
     }
 
         .subwayWrap .subwayCase {
             width: 93%;
+            line-height: 2.5rem;
+            font-size: 1.6rem;
         }
-
-            .subwayCase .subwayCaseTitle {
-                line-height: 20px;
-                margin-bottom: 10px;
-            }
-
-            .blueBox {
-                padding: 25px 35px;
-                margin-bottom: 40px;
-                border-radius: 15px;
-                background-color: #edf7fe;
-            }
 
             .subwayCase:last-child .blueBox {
                 margin-bottom: 0;
@@ -534,7 +542,7 @@ input::-webkit-search-results-decoration{
 
                 .blueBox .subwayNumBox {
                     color: #fff;
-                    font-size: 14px;
+                    font-size: 1.4rem;
                     font-family: 'GyeonggiTitle';
                     padding: 3px 8px;
                     border-radius: 50px;
@@ -553,32 +561,32 @@ input::-webkit-search-results-decoration{
                     margin-top: 10px;
                 }
 
-
-
-
-
-
-
 /* ==========버스 start========= */  
         .publicTransit .busWrap {
             display: block;
-            width: 40%;
+            width: 45%;
             height: auto;
+            text-align: left;
             border-left: 1px solid #e4e4e4;
-        
         }
+
             .busWrap .busWrapBox {
                 padding-left: 9%;
             }
-                .busWrapBox li>p {
+                .busWrapBox li {
+                    font-size: 1.6rem;
                     margin-bottom: 33px;
                 }
-                .busWrapBox li:last-child>p {
+                .busWrapBox li:last-child {
                     margin-bottom: 0;
                 }
 
                     .busWrapBox li .strong {
-                        font-size: 18px;
+                        font-size: 1.8rem;
+                    }
+
+                    .busWrapBox li:last-child .blueBox {
+                        margin-bottom: 0;
                     }
 
                     .busWrapBox li .busNumBox {
@@ -600,16 +608,82 @@ input::-webkit-search-results-decoration{
                     }
 
 
-        
+
+.myCar {
+    margin-bottom: 50px;
+}
+/* ==========국도 start========= */       
+.myCar>.nationalHighwayWrap {
+    width: 50%; 
+    height: auto;
+}
+
+    .nationalHighwayWrap .nationalHighwayCase {
+        width: 93%;
+        line-height: 2.5rem;
+        font-size: 1.6rem;
+    }
+
+        .nationalHighwayCase:last-child .whiteBox>p {
+            margin-bottom: 0;
+        }
 
 
+/* ==========고속도로 start========= */  
+.myCar .expresswayWrap {
+    display: block;
+    width: 50%;
+    height: auto;
+    text-align: left;
+    border-left: 1px solid #e4e4e4;
+}
 
+    .expresswayWrap .expresswayWrapBox {
+        padding-left: 9%;
+    }
+        .expresswayWrapBox li {
+            font-size: 1.6rem;
+            margin-bottom: 33px;
+            margin-bottom: 0;
+        }
 
+            .expresswayWrapBox li:last-child .whiteBox>p {
+                margin-bottom: 0;
+            }
 
+.parking {
+    padding: 20px 40px;
+}
 
+.parking>img {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 14px 20px 4px 0;
+}
+
+.parking>h3 {
+    margin: 10px 0;
+}
+
+.parking>p {
+    line-height: 2.5rem;
+}
+
+.parkingNum {
+    /* display: inline-block; */
+    font-size: 1.6rem;
+    color: #fff;
+    font-family: 'GyeonggiTitle';
+    font-weight: 400;
+    padding: 3px 8px;
+    /* border-radius: 50px; */
+    background-color: #477acc;             
+}
 
 /* ========== footer ========== */
 footer {
+    clear: both;
     width: 100%;
     height: 200px;
     line-height: 2rem;
@@ -817,11 +891,6 @@ footer {
         display: none;
     }
 
-
-
-
-
-
 /* =========메인========== */
 
     /* map */
@@ -836,7 +905,7 @@ footer {
         float: left;
         width: 100%;
         height: auto; 
-        min-height: 180px;
+        min-height: 130px;
        
     }
 
@@ -861,8 +930,13 @@ footer {
     }
 
     .mapInfo li>p {
-        width: 500px;
+        width: 80%;
+        min-width: 253px;
     }
+
+        .mapInfo li small {
+            width: 100%;
+        }
 
     .mapInfo li:nth-child(2)>h3 {
         display: none;
@@ -917,6 +991,39 @@ footer {
         }
 
 
+
+    /* 국도 start */       
+    .myCar {       
+        flex-wrap: wrap; 
+    }
+    .myCar>.nationalHighwayWrap {
+        width: 100%; 
+    }
+
+        .nationalHighwayWrap .nationalHighwayCase {
+            width: 100%;
+        }
+        
+        .nationalHighwayCase:last-child .whiteBox {
+                margin-bottom: 70px;
+        }
+
+    /*고속도로 start */        
+    .myCar .expresswayWrap {
+        width: 100%;
+        border-top: 1px solid #e4e4e4;
+        border-left: 0;
+        padding-top: 50px;
+    }
+        .expresswayWrap .expresswayWrapBox {
+            padding-left: 0;
+        }
+        
+        .expresswayWrap .expresswayWrapBox>ul {
+            padding-left: 0px;
+        }
+
+
 /* ===========푸터========== */
     footer {
         margin-top: 100px;
@@ -958,6 +1065,52 @@ footer {
 
     .topHeading {
         padding-top: 90px;
+    }
+
+    .mapInfo li{
+        margin-bottom: 20px;
+    }
+    .mapInfo li:last-child{
+        margin-bottom: 0;
+    }
+
+    .mapInfo li:nth-child(2)>h3 {
+        display:inline-block;
+    }
+
+    .mapInfo li>.loadLinkWrap {
+        position:static;
+        width: 80%;
+    }
+    
+    .category li{
+        width: 50%;
+    }
+
+    .publicTransit>.subwayWrap{
+        text-align: center;
+    }
+
+    .busWrapBox {
+        text-align: center;
+    }
+
+    .myCar>.nationalHighwayWrap{
+        text-align: center;
+    }
+
+    .expresswayWrapBox {
+        text-align: center;
+    }
+
+    .listCircle {
+        display: none;
+    }
+
+    .parkingNum {
+        display: inline-block; 
+        height: 22px;
+        line-height: 18px;           
     }
 
     .footLogoMenu {
