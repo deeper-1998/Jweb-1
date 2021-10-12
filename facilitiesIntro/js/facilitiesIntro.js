@@ -150,11 +150,9 @@ function imgMouseHover(e) {
 
 function imgMouseClick(e) {
     const changImg = this.parentNode.previousSibling.previousSibling;
-    console.log(changImg);
     if(e.target.parentNode.tagName == "LI") {
         changImg.src = e.target.src;
         clickImg = e.target.parentNode;
-        console.log(clickImg);
     }
 
 }
@@ -202,20 +200,29 @@ window.addEventListener("resize", function() {
 
 // 팝업창 이벤트 핸들러 
 const popBtn = document.querySelector(".popBtn");
+let scrollY;
 
 function popupImg(e) {
+    scrollY = window.scrollY;
+    window.addEventListener("scroll", noScroll, false);
     const popupArea = document.querySelector(".popBg");
-    console.log(popupArea);
     popupArea.style.display = "block";
     popupArea.style.top = window.pageYOffset + "px";
     document.body.className = "hidden";
     popupArea.addEventListener("click", function() {
+        window.removeEventListener("scroll", noScroll);
         popupArea.style.display = "none";
         document.body.className = "";
     }, false)
 }
 
+//스크롤방지   
+function noScroll() {
+    window.scrollTo(0, scrollY);
+}
+
 popBtn.addEventListener("click", popupImg, false);
+// 팝업창 이벤트 핸들러 
 
 
 // 요소 생성 함수

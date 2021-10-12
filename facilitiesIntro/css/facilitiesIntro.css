@@ -28,9 +28,6 @@
 /* 드래그 방지 */
 .noDrag {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
 
-/* 스크롤 방지 */
-.hidden {height:100%; min-height:100%; overflow:hidden}
-
 
 
 /* ====================header area==================== */
@@ -623,6 +620,25 @@ footer {
 
 .sns li img {
     width: 35px;
+}
+
+.popBg {
+    position: absolute;
+    top: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popMapBg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 600px;
+    background-color: #fff;
 }
 
 
