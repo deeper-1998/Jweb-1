@@ -43,19 +43,19 @@ const topHeadingList = document.querySelectorAll(".topHeading");
 
 i = 0;
 while(i < posterList.length) {
-    posterList[i].addEventListener("load", function() {
+    // posterList[i].addEventListener("load", function() {
         let j = 0;
         let imgNumber;
-        let colorNumber
-        const thisImg = this;
+        let colorNumber;
+        const thisImg = posterList[i];
         while(j < posterList.length) {
-            if(this == posterList[j]) {
+            if(posterList[i] == posterList[j]) {
                 colorNumber = imgNumber = j;
                 
             }
             j++;
         }
-        setInterval(function() {
+        let slideShow = setInterval(function() {
             if(imgNumber == 0) {
                 imgNumber = 4;
             } else {
@@ -100,8 +100,8 @@ while(i < posterList.length) {
                 thisImg.style.width = "21%";
                 thisImg.style.zIndex = "70";
             }
-        }, 5000)
+        }, 3000)
            
-    }, false)
+    // }, false)
     i++;
 }
