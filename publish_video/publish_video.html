@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Discription" content="gma_header_footer">
+    <meta name="Author" content="team">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/publish_video.css" type="text/css">
+    <title>경기도미술관</title>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="confix">
+                <div class="siteJoin">
+                    <ul>
+                        <li><a href="../sub/login/login.html">로그인</a></li>
+                        <li><a href="../sub/join/join.html">회원가입</a></li>
+                    </ul>    
+                </div><!--siteJoin-->
+                <div class="logoMenu">
+                    <h1>
+                        <a href="../../index.html"><img src="./images/main_logo.svg" alt="mian_logo"></a>
+                        <a href="../../index.html"><img src="./images/main_simbol.svg" alt="main_logo"></a>
+                    </h1>
+                    <nav class="headerMenu">
+                        <ul class="gnb" onmouseover="menuHover()" onmouseleave="menuLeave()">
+                            <li>
+                                <a href="../sub/introduction/introduction.html">소개</a>
+                                <ul class="subMenu">
+                                    <li><a href="../sub/introduction/introduction.html">인사말</a></li>
+                                    <li><a href="../sub/construct_intro/construct_intro.html">건축소개</a></li>
+                                    <li><a href="../sub/facilitiesIntro/facilitiesIntro.html">편의시설</a></li>
+                                    <li><a href="../sub/map/map.html">오시는길</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sub/exhidbition.exhidbition.html">전시</a>
+                                <ul class="subMenu">
+                                    <li><a href="../sub/exhidbition.exhidbition.html">현재 전시</a></li>
+                                    <li><a href="../sub/last_exhibition/last_exhibition.html">지난 전시</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sub/education/education.html">교육/행사</a>
+                                <ul class="subMenu">
+                                    <li><a href="../sub/education/education.html">교육</a></li>
+                                    <li><a href="../sub/event/event.html">행사</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sub/collection/collection.html">아카이브</a>
+                                <ul class="subMenu">
+                                    <li><a href="../sub/collection/collection.html">소장품</a></li>
+                                    <li><a href="..sub/publish_video/publish_video.html">자료</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sub/notice/notice.html">커뮤니티</a>
+                                <ul class="subMenu">
+                                    <li><a href="../sub/notice/notice.html">공지사항</a></li>
+                                    <li><a href="..sub/information/information.html">관람안내</a></li>
+                                    <li><a href="..sub/FAQ/FAQ.html">자주하는 질문</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="headMenuBtn" onclick="mediaMenuHover()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="langBtn noDrag" onclick="langBtn()">
+                        <span id="langKor" class="kor">KOR</span>
+                        <span id="langEng" class="eng">ENG</span>
+                        <span id="togleBtn" class="togleBtn"></span>
+                    </div><!--langBtn-->
+                </div><!--logoMenu-->
+                <div class="mediaMenu">
+                    <div class="logoClose">
+                        <div class="menuboxLogo">
+                            <a href="header_footer.html"><img src="./images/main_simbol.svg" alt="main_logo"></a>
+                        </div>
+                        <div class="menuClose" onclick="mediaMenuLeave()">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div><!--logoClose-->
+                    <div class="menuForm">
+                        <form action="#" method="POST" class="menuSearch">
+                            <select class="selectInMenu" id="choiceInMenu" name="choice" size="1">
+                                <option value="#" selected>전체</option>
+                                <option value="#">제목</option>
+                                <option value="#">내용</option>
+                            </select>
+                            <label id="searchInMenu" class="blindInMenu">search</label>
+                            <input type="search" name="search" class="searchInMenu" autocomplete="off" placeholder="검색어를 입력하세요">
+                            <button class="searchBtnInMenu" value="search"></button>
+                        </form><!-- menuSearch -->
+                        <div class="loginJoin">
+                            <a href="./sub/login/login.html">로그인</a>
+                            <a href=".sub/join/join.html">회원가입</a>
+                        </div>
+                    </div><!--menuForm-->
+                    <nav class="menuBoxWrap">
+                        <ul class="mediaGnb">
+                            <li>
+                                <p>소개</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../sub/introduction/introduction.html">
+                                        인사말
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/construct_intro/construct_intro.html">
+                                        건축소개
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/facilitiesIntro/facilitiesIntro.html">
+                                        편의시설
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/map/map.html">
+                                        오시는길
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>전시</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../sub/exhidbition.exhidbition.html">
+                                        현재 전시
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/last_exhibition/last_exhibition.html">
+                                        지난 전시
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>교육/행사</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../sub/education/education.html">
+                                        교육
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/event/event.html">
+                                        행사
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>아카이브</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../sub/collection/collection.html">
+                                        소장품
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/publish_video/publish_video.html">
+                                        자료
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>커뮤니티</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../sub/notice/notice.html">
+                                        공지사항
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/information/information.html">
+                                        관람안내
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/FAQ/FAQ.html">
+                                        자주하는 질문
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="infoOrg">
+                        <div class="infoOrgBox">
+                            <div class="infoOrgBtn">
+                                <p>이용약관</p>
+                                <p>+</p>
+                            </div>
+                            <ul class="infoOrgList">
+                                <li><a href="#">개인정보취급방침</a></li>
+                                <li><a href="#">정보공개청구</a></li>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">경영공시</a></li>
+                            </ul>
+                        </div><!--infoMb-->
+                        <div class="infoOrgBox">
+                            <div class="infoOrgBtn">
+                                <p>관련기관</p>
+                                <p>+</p>
+                            </div>
+                            <ul class="infoOrgList">
+                                <li><a href="https://www.ggcf.kr/" target="_blank">경기문화재단</a></li>
+                                <li><a href="https://gjicp.ggcf.kr/" target="_blank">경기문화재연구원</a></li>
+                                <li><a href="https://musenet.ggcf.kr/" target="_blank">경기도박물관</a></li>
+                                <li><a href="https://njp.ggcf.kr/" target="_blank">백남준아트센터</a></li>
+                                <li><a href="https://silhak.ggcf.kr/" target="_blank">실학박물관</a></li>
+                                <li><a href="https://jgpm.ggcf.kr/" target="_blank">전곡선사박물관</a></li>
+                                <li><a href="https://gcm.ggcf.kr/" target="_blank">경기도어린이박물관</a></li>
+                                <li><a href="https://www.ggcf.kr/ngcm" target="_blank">경기북부어린이박물관</a></li>
+                            </ul>
+                        </div><!--orgMb-->    
+                    </div><!--infoOrg-->
+                </div><!--mediaMenu-->
+            </div><!--confix-->
+        </header>
+
+        <main>
+            <section>
+                <div class="topArea">
+                    <div class="confix">
+                        <div class="topHeading">
+                            <h2>자료</h2>
+                        </div><!--topHeading-->
+                        <form action="#" method="POST" class="searchBox2">
+                            <select class="select" id="choice" name="choice" size="1">
+                                <option value="#" selected>전체</option>
+                                <option value="#">제목</option>
+                                <option value="#">교육</option>
+                            </select>
+                            <label id="search" class="blind">search</label>
+                            <input type="search" name="search" class="search" autocomplete="off" placeholder="검색어를 입력하세요">
+                            <button class="searchBtn" value="search"></button>
+                        </form><!-- searchBox -->
+                        
+                        <ul class="menuList vBox">
+                            <li>아카이브</li>
+                            <li><img src="./images/next_w.svg" alt="화살표"></li>
+                            <li>자료</li>
+                        </ul>
+                    </div><!--confix-->
+                </div><!--topArea-->
+
+                <div class="container">
+                    <div class="confix">
+                        <div class="category vBox">
+                            <ul id="mainTap">
+                                <li>발간자료</li>
+                                <li>영상</li>
+                            </ul>
+                        </div><!-- category -->
+                    </div><!-- confix -->
+
+                    <section class="tapSection">
+                        <div class="confix">
+                            <p class="total">총 17건</p>
+                            <ul class="publishList">
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish1.jpg" alt="poster1">
+                                        </div><!--poster-->
+                                        <p class="posterName">경기도미술관<br>
+                                        문화자원봉사자 양성교육 10주년 기념 자료</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish2.jpg" alt="poster2">
+                                        </div><!--poster-->
+                                        <p class="posterName">김익현 《머리 비행》</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish3.jpg" alt="poster3">
+                                        </div><!--poster-->
+                                        <p class="posterName">두리안 GX룸</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish4.jpg" alt="poster4">
+                                        </div><!--poster-->
+                                        <p class="posterName">시점時點·시점視點 - 1980년대 소집단<br>
+                                            미술운동 아카이브(자료해제집)</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish5.jpg" alt="poster5">
+                                        </div><!--poster-->
+                                        <p class="posterName">시점時點·시점視點 – 1980년대 소집단<br>
+                                            미술운동 아카이브(아카이브북)</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish6.jpg" alt="poster6">
+                                        </div><!--poster-->
+                                        <p class="posterName">시점時點·시점視點 – 1980년대 소집단<br>
+                                            미술운동 아카이브</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish7.jpg" alt="poster7">
+                                        </div><!--poster-->
+                                        <p class="posterName">PICK ME : 재료 사용</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish8.jpg" alt="poster8">
+                                        </div><!--poster-->
+                                        <p class="posterName">《이야기 사이_Stories & Dreams》 이야기책</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish9.jpg" alt="poster9">
+                                        </div><!--poster-->
+                                        <p class="posterName">경기 아카이브_지금, (아카이브북)</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish10.jpg" alt="poster10">
+                                        </div><!--poster-->
+                                        <p class="posterName">경기 아카이브_지금,</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish11.jpg" alt="poster11">
+                                        </div><!--poster-->
+                                        <p class="posterName">우리는 모두 집을 떠난다</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish12.png" alt="poster12">
+                                        </div><!--poster-->
+                                        <p class="posterName">코끼리, 그림자, 바람</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish13.jpg" alt="poster13">
+                                        </div><!--poster-->
+                                        <p class="posterName">올여름, 우리가족은 서프라이징<br>
+                                            현대미술 달인(결과자료집)</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish14.jpg" alt="poster14">
+                                        </div><!--poster-->
+                                        <p class="posterName">2019 경기도미술관<br>
+                                            도슨트 및 문화자원봉사자<br>
+                                            양성교육 프로그램 자료집</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish15.jpg" alt="poster15">
+                                        </div><!--poster-->
+                                        <p class="posterName">아시안 웨이브 2019 : 추더이(CHU TEH-I)</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish16.jpg" alt="poster16">
+                                        </div><!--poster-->
+                                        <p class="posterName">GMoMA 공공미술 2015-2018 : 함께 할래</p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="icon">
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/add.png" alt="addIcon">
+                                                    <p class="iconTxt">내 목록에 담기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/add_blue.png" alt="addBlue">
+                                                    <p class="blueTxt">내 목록에 담기</p>
+                                                </div>
+                                            </div>
+                                            <div class="iconBox">
+                                                <div class="whiteIcon">
+                                                    <img src="./images/share.png" alt="shareIcon">
+                                                    <p class="iconTxt">공유하기</p>    
+                                                </div>
+                                                <div class="blueIcon">
+                                                    <img src="./images/share_blue.png" alt="shareBlue">
+                                                    <p class="blueTxt">공유하기</p>
+                                                </div>
+                                            </div>
+                                        </div><!--icon-->
+                                        <div class="poster">
+                                            <img src="./images/publish17.jpg" alt="poster17">
+                                        </div><!--poster-->
+                                        <p class="posterName">헤어날 수 없는 : Hard-boiled & Toxic</p>
+                                    </a>
+                                </li>
+                            </ul><!--publishList-->
+                        </div><!--confix-->
+                    </section><!--tapSection-->
+
+                    <section class="tapSection">
+                        <div class="confix">
+                            <p class="total">총 23건</p>
+                            <ul class="videoList">
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube-nocookie.com/embed/P5loxDP2U8o?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">경기도미술관을 소개합니다! - 아트숍/플로팅 라이브러리/조각 공원</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2021.09.23</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">51</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/riH8Tu-yH4s?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">경기도미술관에 같이 가요! - 경기도미술관 가는 법/《빈지 워칭;14284"</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2021.09.23</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">43</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/sjMFgY_Hb5c?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 《진주 잠수부》 _ 전시 소개 영상</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2021.06.01</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">62</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/LGt5bhQT-30?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 2020 청년작가전 III 퀀텀점프_ '박관택' 작가 인터뷰</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2021.02.24</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">70</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/jGu7E1WcVVc?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 《흰 밤 검은 낮》 _ 겨울나무 사람들</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2021.02.02</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">174</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/BRW1w_kfQy0?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 《흰 밤 검은 낮》 _ 함께 추는 춤</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2021.02.02</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">221</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/lPzbG7VMVNE?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 《흰 밤 검은 낮》 _ 흰 도시</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2021.02.02</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">247</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/B-JlJLMqvFY?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[전시인사이드 EP.08] 경기도미술관_《흰 밤 검은 낮》</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2021.01.08</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">222</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/P8r7NhjUySM?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 2020 청년작가전 III 퀀텀점프_ 어제모레</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2021.01.07</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">64</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/D4Ux17GnE_U?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 2020 경기도미술관 다.시.보.기</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2020.12.17</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">171</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/ZRR2mjSADig?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 2020 청년작가전 Ⅱ 《머리 비행》 김익현 작가 인터뷰</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2020.09.08</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">270</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                    <iframe src="https://www.youtube.com/embed/xk2TlSMPEZs?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 2020 청년작가전Ⅱ 《머리 비행》 전시 티저영상</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2020.09.08</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">288</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/npjsd9a9u1U?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 《그림,그리다》 #종합편</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2020.07.13</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">318</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/I9FH0YeWdic?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 《그림,그리다》 #행위편 - 하종현, 박경률, 안지산 작가</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2020.07.13</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">261</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/at5kQxoFifI?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 《그림,그리다》 #순간편 - 정직성, 공성훈, 빈우혁 작가</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2020.07.13</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">209</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/EMRgvN2OpT0?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 《그림,그리다》 #사람편 - 정정엽, 이동기 작가</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2020.07.13</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">287</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/Yk_6mVZknis?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 《그림,그리다 #사물편 - 이영미, 정희민 작가</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2020.07.13</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">305</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/IuNvrSTMiTo?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 《우리와 당신들》의 전시작품 '이웃들'</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2020.07.13</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">324</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/fsIufeW5rGw?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 《우리와 당신들》의 전시작품 '윌슨'</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2020.07.13</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">310</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/1DxbcW8IjfA?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 《우리와 당신들》의 전시작품 '여러모로 최적의 상태' Ⅱ</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2020.07.10</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">294</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/ouSkdqvyedE?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">[경기도미술관] 《우리와 당신들》의 전시작품 '여러모로 최적의 상태' Ⅰ</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2020.06.15</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">335</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/lI2Qzjch_DI?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">퀀텀점프 2019 릴레이 《밤물결》 - 박미라 작가 인터뷰</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2020.01.06</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">352</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="video">
+                                        <iframe src="https://www.youtube.com/embed/KdIYN-Wq1OA?autoplay=0&amp;showinfo=0" title="YouTube video player" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="#">
+                                        <div class="videoTxt">
+                                            <p class="videoTitle">퀀텀점프 2019 릴레이 《이상한 계절》 - 정재희 작가</p>
+                                            <div class="videoInfo">
+                                                <img src="./images/update.png" alt="update">
+                                                <p class="updateDay">2019.11.04</p>
+                                                <img src="./images/view.png" alt="view">
+                                                <p class="viewNum">364</p>
+                                            </div><!--videoInfo-->
+                                        </div><!--videoTxt-->
+                                    </a>
+                                </li>
+                            </ul><!--videoList-->
+                        </div><!--confix-->
+                    </section><!--tapSection-->
+                </div><!--container-->
+            </section>
+
+            <div class="sideBtn">
+                <!-- <div class="quickBtnBox">
+                    <div class="quickBtn">
+                        <img src="./images/toparrow.png" alt="topBtn">
+                    </div>
+                    <p>오디오 가이드</p>
+                </div>quickBtnBox -->
+                <div class="quickBtnBox topBtn">
+                    <div class="quickBtn">
+                        <img src="./images/toparrow.png" alt="topBtn">
+                    </div>
+                    <p>TOP</p>
+                </div><!--quickBtnBox-->
+            </div><!--sideBtn-->
+        </main>
+
+        <footer>
+            <div class="confix">
+                <div class="footLogoMenu vBox">
+                    <a class="footLogo" href="header_footer.html"><img src="./images/main_logo.svg" alt="foot_logo"></a>
+                    <nav class="footMenu">
+                        <ul>
+                            <li><a href="#">개인정보취급방침</a></li>
+                            <li><a href="#">정보공개청구</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">경영공시</a></li>
+                        </ul>
+                    </nav>
+                    <div id="orgBg" class="org" style="height: 40px;">
+                        <button id="orgBtn" class="orgBtn" onclick="orgOpen()">
+                            <span>관련기관</span>
+                            <span>+</span>
+                        </button>
+                        <ul class="siteList">
+                            <li><a href="https://www.ggcf.kr/" target="_blank">경기문화재단</a></li>
+                            <li><a href="https://gjicp.ggcf.kr/" target="_blank">경기문화재연구원</a></li>
+                            <li><a href="https://musenet.ggcf.kr/" target="_blank">경기도박물관</a></li>
+                            <li><a href="https://njp.ggcf.kr/" target="_blank">백남준아트센터</a></li>
+                            <li><a href="https://silhak.ggcf.kr/" target="_blank">실학박물관</a></li>
+                            <li><a href="https://jgpm.ggcf.kr/" target="_blank">전곡선사박물관</a></li>
+                            <li><a href="https://gcm.ggcf.kr/" target="_blank">경기도어린이박물관</a></li>
+                            <li><a href="https://www.ggcf.kr/ngcm" target="_blank">경기북부어린이박물관</a></li>
+                        </ul>
+                    </div><!--org-->
+                </div><!--footLogoMenu-->
+
+                <div class="snsCopy">
+                    <ul class="otherSite">
+                        <li><a href="https://www.ggcf.kr/"><img src="./images/ggcf.svg" alt="ggcf"></a></li>
+                        <li><a href="https://www.gg.go.kr/"><img src="./images/gg.svg" alt="gg"></a></li>
+                    </ul>
+                    <div class="copyAddr">
+                        <span>(재)경기문화재단 경기도미술관</span>
+                        <address>(15385) 경기도 안산시 단원구 동산로 268 (초지동)</address>
+                        <span>COPYRIGHT &copy; GGCF. ALL RIGHTS RESERVED.</span> 
+                    </div><!--copyAddr-->
+                    <div class="sns">
+                        <ul class="snsList">
+                            <li><a href="https://www.facebook.com/ggmoma/"><img src="./images/facebook.png" alt="facebook"></a></li>
+                            <li><a href="https://blog.naver.com/gyeonggimoma"><img src="./images/naver.png" alt="naver"></a></li>
+                            <li><a href="https://www.youtube.com/user/ggcfkr"><img src="./images/youtube.png" alt="youtube"></a></li>
+                        </ul>
+                    </div><!--sns-->
+                </div><!--snsCopy-->
+            </div><!--confix-->
+        </footer>
+        <div class="menuBgBlur"></div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/facilitiesIntro.js"></script>
+</body>
+</html>
