@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: GyeonggiTitle;
+    src: url(../font/Title_Medium.woff);
+}
+@font-face {
+    font-family: NanumSquareRound;
+    src: url(../font/NanumSquareRoundR.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'NanumSquareRound';
+    font-size: 10px;
+    color: #585858;
+}
+
+.topArea, header, footer {
+    color: #fff;
+}
+
+main p {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    letter-spacing: 0.01rem;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color: #585858;
+}
+
+.topArea a, header a, footer a {
+    color: #fff;
+}
+
+h1 {
+    margin-top: 5px;
+}
+
+h2 {
+    font-family: 'GyeonggiTitle';
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+}
+h3 {
+    font-family: 'GyeonggiTitle';
+    font-size: 2rem;
+}
+
+strong {
+    font-weight: normal;
+}
+
+header, nav, section, article, main, footer, figure {
+    display: block;
+}
+
+address {
+    font-style: normal;
+}

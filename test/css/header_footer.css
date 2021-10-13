@@ -1,0 +1,1550 @@
+@charset "utf-8";
+
+.wrap {
+    width: 100%;
+}
+
+
+/* 1320px 12컬럼 그리드시스템 */
+.confix {
+    position: relative;
+    width: 83.54430379746835%;
+    max-width: 1320px;
+    min-width: 1060px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 1.136363636363636%;
+}
+
+
+/* float 해제 가상박스 */
+.vBox::after, .vBox::before {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+/* 드래그 방지 */
+.noDrag {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
+
+
+
+
+
+/* ====================header area==================== */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 174px;
+    background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6) 33px,
+            rgba(0, 0, 0, 0) 34px,
+            rgba(0, 0, 0, 0.6) 35px,
+            rgba(0, 0, 0, 0.0) 100%
+          ); 
+    z-index: 2;
+    transition: top 0.5s;
+}
+
+.siteJoin {
+    position: relative;
+    width: 100%;
+    height: 33px;
+    margin-bottom: 5px;
+}
+
+.siteJoin ul {
+    float: right;
+    width: 123px;
+    margin-top: 10px;
+}
+
+.siteJoin ul li {
+    float: left;
+}
+
+.siteJoin ul li a {
+    font-size: 1.3rem;
+    padding: 0 18px;
+    line-height: 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.siteJoin ul li:first-child a {
+    padding-left: 0;
+}
+
+.siteJoin ul li:last-child a {
+    padding-right: 0;
+    border-right: none;
+}
+
+.logoMenu {
+    position: relative;
+    width: 100%;
+}
+
+.logoMenu h1 {
+    float: left;
+}
+
+.logoMenu h1 img {
+    width: 160px;
+}
+
+.logoMenu h1 a:nth-child(2) {
+    display: none;
+}
+
+/* 메인 메뉴 */
+.mediaMenu {
+    display: none;
+}
+
+.menuBgBlur {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.headerMenu {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 25px;
+}
+
+.headerMenu .gnb {
+    display: flex;
+    height: 70px;
+    /* height: 275px; */
+    justify-content: space-between;
+    text-align: center;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+
+.headerMenu .gnb>li {
+    float: left;
+    width: 20%;
+    vertical-align: top;
+    font-size: 2.4rem;
+}
+
+.headerMenu .gnb>li>a {
+    display: block;
+    /* height: 70px; */
+    padding: 25px 0;
+    font-family: 'GyeonggiTitle';
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.headerMenu .gnb .subMenu {
+    width: 100%;
+    padding-top: 15px;
+    border-top: 1px solid #bdbdbf;
+}
+
+.headerMenu .gnb .subMenu>li {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.headerMenu .gnb .subMenu>li:last-child {
+    margin-bottom: 0;
+}
+
+.headerMenu .gnb .subMenu>li>a {
+    display: block;
+    padding: 10px 0;
+}
+
+.headerMenu .gnb .subMenu>li>a:hover {
+    color: #00adef;
+}
+
+.headMenuBtn {
+    display: none;
+    float: right;
+    width: 22px;
+    margin-top: 22px;
+    cursor: pointer;
+}
+
+.headMenuBtn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin-bottom: 7px;
+    background-color: #d0cfd0;
+}
+
+.langBtn {
+    position: relative;
+    float: right;
+    width: 61px;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 1px solid #f0e9ea;
+    background: none;
+}
+
+.langBtn span {
+    font-size: 1.3rem;
+}
+
+.langBtn .kor {
+    position: absolute;
+    left: 8px;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.langBtn .eng {
+    position: absolute;
+    right: 8px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.togleBtn {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    transition: transform 0.5s;
+    border: none;
+    background-color: #f0e9ea;
+}
+
+
+/* ====================main area==================== */
+main {
+    width: 100%;
+}
+
+main h2 {
+    font-size: 2.6rem;
+}
+
+.topArea {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 346px;
+    z-index: 1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/mainImg.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    transition: height 0.5s;
+}
+
+.topHeading {
+    width: 110px;
+    margin: 0 auto;
+    padding-top: 205px;
+    text-align: center;
+    transition: padding 0.5s;
+}
+
+.menuList {
+    margin-top: 30px;
+    font-size: 1.4rem;
+}
+
+.menuList li {
+    float: left;
+    padding-right: 5px;
+}
+
+.menuList li:nth-child(2)>img {
+    width: 10px;
+    padding-top: 3px;
+}
+
+.searchBox2 {
+    background-color: rgb(255, 255, 255);
+    width: 450px;
+    height: 30px;
+    line-height: 35px;
+    margin: 0 auto;
+    margin-top: 35px;
+    border-radius: 50px;
+    border-left: 0;
+    outline: none;
+}
+
+input::-ms-clear,
+input::-ms-reveal{
+    display:none;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    display:none;
+}
+
+.searchBox2 .blind {
+    font-size: 0;
+}
+
+.searchBox2 .select {
+    width: 70px;
+    height: 25px;
+    margin: 0 20px;
+    border: 0;
+    outline: none;
+}
+
+.searchBox2 .search {
+    width: 250px;
+    height: 25px;
+    margin: 0;
+    border: 0;
+    border-left: 0;
+    outline: none;
+}
+
+.searchBox2 button{
+    float: right;
+    cursor: pointer;
+}
+
+.searchBtn {
+    width: 15px;
+    height: 15px;
+    margin: 6px 13px 0 0;
+    background: url(../images/search_icon.png) no-repeat center top / cover;
+    border: none;
+}
+
+/* ========== 이곳에 메인영역 css 작성해주세요 ========== */
+.greetings h2 {
+    font-size: 3.4rem;
+    text-align: center;
+    color: #a7a7a7;
+}
+
+.greetings {
+    position: relative;
+    margin-bottom: 235px;
+}
+
+.greetingsText {
+    position: relative;
+    width: 90%;
+    margin-top: 65px;
+    padding: 60px 220px 60px 60px;
+    border-radius: 15px;
+    background-color: #edf7fe;
+}
+
+.greetingsText .dateName {
+    position: absolute;
+    bottom: 50px;
+    right: 220px;
+    text-align: right;
+    font-size: 1.6rem;
+}
+
+.greetingsText .dateName span:first-child {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.greetings p {
+    margin-bottom: 40px;
+}
+
+.greetingsText .personPhoto {
+    position: absolute;
+    bottom: 0;
+    right: -116px;
+    width: 330px;
+}
+
+.quotesDeco {
+    position: absolute;
+}
+
+.quotesDeco:first-child {
+    top: -45px;
+    left: 30px;
+}
+
+.quotesDeco:last-child {
+    bottom: -45px;
+    right: 180px;
+    transform: rotate(180deg);
+}
+
+.mission {
+    padding-bottom: 150px;
+    margin-bottom: 135px;
+    background: url(../images/mission_Bg.png) no-repeat bottom center;
+}
+
+.mission h2 {
+    margin: 0 auto;
+    padding: 14px 0;
+    margin-bottom: 40px;
+    font-size: 3.4rem;
+    text-align: center;
+    color: #7b7b7b;
+}
+
+.missionImg {
+    position: relative;
+    margin-bottom: 240px;
+}
+
+.verticalBorder {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) rotate(90deg);
+    bottom: -90px;
+    width: 20%;
+    height: 4px;
+    background-image: url(../images/dotted_border.svg);
+}
+
+.missionImg strong {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'GyeonggiTitle';
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.missionImg strong img {
+    margin: 14px 0;
+}
+
+.missionImg strong span {
+    line-height: 3rem;
+}
+
+.missionImg>img {
+    width: 100%;
+}
+
+.missionGoal {
+    width: 410px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.missionGoal ul {
+    width: 100%;
+}
+
+.missionGoal li {
+    margin-bottom: 22px;
+}
+
+.missionGoal img {
+    width: 24px;
+    margin-top: 15px;
+}
+
+.howGoal {
+    position: relative;
+    width: 650px;
+    margin: 80px auto 0;
+}
+
+.howGoal h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.4rem;
+    color: #585858;
+    background: none;
+}
+
+.howGoal>ul>li {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+}
+
+.howGoal>ul>li:nth-child(even) {
+    float: right;
+}
+
+
+.howGoal>ul>li:nth-child(-n+2) {
+    margin-bottom: 50px;
+}
+
+.howGoalList {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.howGoal>ul>li img {
+    width: 80px;
+    margin-bottom: 5px;
+    padding: 14px;
+    border-radius: 15px;
+    background-color: #fff2aa;
+}
+
+.howGoal>ul>li::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    width: 300px;
+    height: 300px;
+    border: 1px solid #25b9f0;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.howGoal>ul>li:nth-child(2) img {
+    background-color: #f1c5ca;
+}
+
+.howGoal>ul>li:nth-child(n+2):nth-child(-n+3):after {
+    border-color: #9eb5c0;
+}
+
+.howGoal>ul>li:nth-child(3) img {
+    background-color: #ffdce5;
+}
+
+.howGoal>ul>li:nth-child(4) img {
+    background-color: #fce9af;
+}
+
+.howGoal h3 {
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.howGoal ul ul li {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.history {
+    margin-bottom: 80px;
+}
+
+.historyList {
+    position: relative;
+    width: 900px;
+    margin: 0 auto;
+}
+
+.history h2 {
+    margin-bottom: 75px;
+    font-size: 3rem;
+}
+
+.history h3 {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+
+.historyList>ul{
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.historyList>ul li {
+    float: left;
+    vertical-align: middle;
+}
+
+.historyList>ul li:nth-child(odd) {
+    padding-top: 100px;
+}
+
+.historyList>ul span {
+    display: none;
+}
+
+.historyList>ul ul {
+    display: none;
+}
+
+.historyLine {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 840px;
+    height: 4px;
+    margin: 0 auto;
+    background-image: url(../images/dotted_border.svg);
+}
+
+.historyLine>span {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    bottom: -3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #acacac;
+}
+
+.selectHistory {
+    position: absolute;
+    left: 0;
+    width: 1%;
+    height: 4px;
+    transition: width 0.5s;
+    z-index: 9999;
+    background-color: #00aeef;
+}
+
+.selectHistory span:first-child {
+    position: absolute;
+    display: inline-block;
+    left: 0px;
+    bottom: -3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00aeef;
+}
+
+.selectHistory span:last-child {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    bottom: -3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #00aeef;
+}
+
+.selectYear {
+    padding-bottom: 10px;
+    color: #00aeef;
+    border-bottom: 1px solid #00aeef;
+}
+
+.showHistory {
+    margin-top: 50px;
+    padding: 28px 80px;
+    border-radius: 50px;
+    background-color: #edf7fe;
+}
+
+.showHistory li {
+    margin-bottom: 12px;
+    font-size: 1.6rem;
+}
+
+.showHistory strong {
+    display: block;
+    width: 60px;
+    margin-bottom: 10px;
+    padding: 3px 0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 12px;
+    color: #fff;
+    background-color: #00aeef;
+}
+
+
+
+
+
+/* ========== 이곳에 메인영역 css 작성해주세요 ========== */
+/* 퀵버튼 */
+/* 퀵버튼 */
+.sideBtn {
+    position: fixed;
+    bottom: 220px;
+    right: 7%;
+    z-index: 50;
+}
+
+.sideBtn .quickBtnBox {
+    display: block;
+    width: 85px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sideBtn .quickBtnBox:last-child {
+    margin-bottom: 0;
+}
+
+.sideBtn .quickBtnBox:first-child {
+    visibility: hidden;
+}
+
+.quickBtn {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 50%;
+    line-height: 70px;
+    background-color: #00adef;
+    z-index: 100;
+}
+
+.quickBtn img {
+    width: 25px;
+}
+
+.quickBtnBox p {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.2rem;
+    color: #00adef;
+}
+
+
+
+/* ========== footer ========== */
+footer {
+    width: 100%;
+    height: 200px;
+    line-height: 2rem;
+    margin-top: 150px;
+    padding-top: 25px;
+    font-size: 1.3rem;
+    background-color: #202020;
+}
+
+.footLogoMenu {
+    position: relative;
+    height: 65px;
+}
+
+.footLogoMenu .footLogo {
+    width: 190px;
+    height: 65px;
+}
+
+.footLogoMenu>a {
+    float: left;
+    margin-right: 30px;
+}
+
+.footMenu li {
+    float: left;
+    line-height: 13px;
+    margin-top: 28px;
+    padding: 0 30px;
+    border-right: 1px solid #6f6f6f;
+}
+
+.footMenu li a {
+    font-weight: bold;
+    color: #fff;
+}
+
+.footMenu li:first-child {
+    padding-left: 0;
+}
+
+.footMenu li:last-child {
+    border-right: 0;
+}
+
+.org {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    float: right;
+    width: 190px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    transition: height 0.5s;
+    background-color: #202020;
+}
+
+
+.orgBtn {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #6f6f6f;
+    border-radius: 10px 10px 10px 10px;
+    background: none;
+}
+
+.org span {
+    color: #eee7e8;
+}
+
+.org span:first-child {
+    padding-right: 100px;
+}
+
+.siteList {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    height: 290px;
+    border: 1px solid #6f6f6f;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.siteList li {
+    padding: 15px 0 0 15px;
+}
+
+.siteList>li>a {
+    color: #ddd5d7;
+}
+
+.otherSite {
+    float: left;
+}
+
+.otherSite li {
+    float: left;
+}
+
+.otherSite img {
+    width: 80px;
+    margin-right: 15px;
+}
+
+.otherSite img:last-child {
+    margin-right: 28px;
+}
+
+.snsCopy .copyAddr {
+    float: left;
+}
+
+.copyAddr {
+    color: #686868;
+}
+
+.snsList {
+    float: right;
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sns li {
+    float: left;
+    margin-top: 21px;
+}
+
+.sns li img {
+    width: 35px;
+}
+
+
+/* ===== 1080px 이하 ===== */
+@media (max-width:1080px) {
+    .confix {
+        width: 100%;
+        min-width: 0;
+        padding: 0 2%;
+    }    
+
+    /*===== heaer =====*/
+    header {
+        height: 80px;
+        background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.6) 0%,
+                rgba(0, 0, 0, 0.0) 100%
+              );
+    }
+
+    .siteJoin {
+        display: none;
+    }
+
+    .logoMenu h1 img {
+        width: 50px;
+        margin-top: 5px;
+    }
+
+    .logoMenu h1 a:nth-child(1) {
+        display: none;
+    }
+
+    .logoMenu h1 a:nth-child(2) {
+        display: block;
+    }
+
+    .headerMenu {
+        display: none;
+    }    
+
+    .headMenuBtn {
+        display: block;
+    }
+    
+    .headMenuBtn span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        margin-bottom: 7px;
+        background-color: #d0cfd0;
+    }
+
+    .headMenuBtn {
+        display: block;
+    }
+
+    .langBtn {
+        display: none;
+    }
+    
+    .logoMenu {
+        padding-left: 1.111111111111111%;
+    }
+
+    .menuList {
+        display: none;
+    }
+
+    .searchBox2 {
+        display: none;
+    }
+
+    /* 메뉴 박스 */ 
+    .mediaMenu {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 550px;
+        padding: 25px;
+        z-index: 9999;
+        font-family: "GyeonggiTitle";
+        background-color: #121f2c;
+    }
+
+    .mediaMenu .logoClose {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mediaMenu .menuboxLogo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .mediaMenu .menuClose {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .mediaMenu .menuClose span {
+        position: absolute;
+        top: 50%;
+        width: 30px;
+        height: 2px;
+        background-color: white;
+    }
+
+    .mediaMenu .menuClose span:first-child {
+        transform: rotate(-45deg);
+    }
+
+    .mediaMenu .menuClose span:last-child {
+        transform: rotate(45deg);
+    }
+
+    .menuForm .menuSearch {
+        background-color: #3e4852;
+        width: 100%;
+        height: 45px;
+        line-height: 50px;
+        margin: 0 auto;
+        margin-top: 35px;
+        border-radius: 50px;
+        border-left: 0;
+        outline: none;
+    }
+    
+    input::-ms-clear,
+    input::-ms-reveal{
+        display:none;
+    }
+    input::-webkit-searchInMenu-decoration,
+    input::-webkit-searchInMenu-cancel-button,
+    input::-webkit-searchInMenu-results-button,
+    input::-webkit-searchInMenu-results-decoration{
+        display:none;
+    }
+    
+    .menuSearch .blindInMenu {
+        font-size: 0;
+    }
+    
+    .menuSearch .selectInMenu {
+        width: 70px;
+        height: 25px;
+        margin: 0 10px 0 20px;
+        border: 0;
+        outline: none;
+        color: white;
+        background-color: transparent;
+    }
+
+    .menuSearch .selectInMenu option {
+        color: #585858;
+    }
+    
+    .menuSearch .searchInMenu {
+        width: 300px;
+        height: 25px;
+        margin: 0;
+        border: 0;
+        border-left: 0;
+        outline: none;
+        color: white;
+        background-color: transparent;
+        /* font-size: 1rem; */
+    }
+    
+    .menuSearch button{
+        float: right;
+        cursor: pointer;
+    }
+    
+    .searchBtnInMenu {
+        width: 22px;
+        height: 22px;
+        margin: 11px 20px 0 0;
+        background: url(../images/search_icon_white.png) no-repeat center top / cover;
+        border: none;
+    }
+
+    .menuForm .loginJoin {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menuForm .loginJoin>a {
+        width: 49%;
+        height: 48px;
+        margin: 20px 0;
+        line-height: 48px;
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+    .menuForm .loginJoin>a:first-child {
+        margin-right: 2%;
+        border: 1px solid white;
+    }
+
+    .menuForm .loginJoin>a:first-child:hover {
+        color: #00adef;
+        border: 1px solid #00adef;
+    }
+
+    .menuForm .loginJoin>a:last-child {
+        border: 0;
+        background-color: #00adef;
+    }
+
+    .menuForm .loginJoin>a:last-child:hover {
+        color: #121f2c;
+    }
+
+    .menuBoxWrap .mediaGnb>li {
+        display: flex;
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        color: #858585;
+    }
+
+    .menuBoxWrap .mediaGnb>li:last-child {
+        margin-bottom: 0;
+    }
+
+    .menuBoxWrap .mediaGnb>li>p {
+        width: 35%;
+        padding-top: 25px;
+        padding-left: 25px;
+        border-radius: 10px 0 0 10px;
+        font-size: 1.6rem;
+        color: #7f7f7f;
+        background-color: #edf7fe;
+    }
+
+    .menuBoxWrap .mediaGnb .mediaSubMenu {
+        width: 65%;
+        border-radius: 0 10px 10px 0;
+        font-size: 1.8rem;
+        background-color: white;
+    }
+
+    .mediaGnb .mediaSubMenu a {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        padding-left: 25px;
+        font-size: 1.8rem;
+        line-height: 50px;
+        color: #585858;
+        /* border: 1px solid #000; */
+    }
+
+    .mediaGnb .mediaSubMenu li:first-child a {
+        line-height: 45px;
+        padding-top: 5px;
+        border-top-right-radius: 10px;
+    }
+
+    .mediaGnb .mediaSubMenu li:last-child a {
+        padding-bottom: 5px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .mediaGnb .mediaSubMenu a>img {
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+    }
+
+    .mediaGnb .mediaSubMenu a:hover {
+        background-color: #edf7fe;
+    }
+
+    .infoOrg {
+        display: none;
+    }
+
+
+
+    /*===== main =====*/
+    .topArea {
+        height: 250px;
+    }
+
+    .topHeading {
+        padding-top: 120px;
+    }
+
+    /* 퀵버튼 */
+    .sideBtn {
+        right: 2%;
+    }
+
+    .greetingsText {
+        padding: 30px 25% 60px 30px;
+    }
+
+    .greetingsText .personPhoto {
+        max-width: 330px;
+        width: 45%;
+    }
+
+    .quotesDeco:first-child {
+        left: 10px;
+    }
+
+    .greetingsText .dateName {
+        right: 27%;
+    }
+    
+    .missionImg>img {
+        object-fit: cover;
+        height: 235px;
+    }
+    .howGoal {
+        width: 570px;
+    }
+
+    .howGoal>ul>li {
+        width: 42%;
+        padding-bottom: 42%;
+    }
+
+    .howGoal>ul>li:nth-child(-n+2) {
+        margin-bottom: 45px;
+    }
+
+    .historyList {
+        width: 98%;
+    }
+
+    .historyLine {
+        width: 92%;
+    }
+
+    .selectHistory {
+        width: 1%;
+    }
+
+    /*===== footer =====*/
+    .footLogo {
+        display: none;
+    }
+
+    .otherSite {
+        display: none;
+    }
+
+    .org {
+        width: 150px;
+    }
+    
+    .org span:first-child {
+        padding-right: 50px;
+    }
+
+    .snsList {
+        width: 150px;
+    }
+    
+}
+
+
+
+
+
+/* ===== 768px 이하 ===== */
+@media (max-width: 767px) {
+    .confix {
+        padding: 0 4%
+    }
+    
+    /*===== header =====*/
+    /* 메뉴 박스 */ 
+    .mediaMenu {
+        width: 100%;
+        background-color: #121f2c;
+    }
+    
+    .menuSearch .selectInMenu {
+        width: 20%;
+    }
+    
+    .menuSearch .searchInMenu {
+        width: 50%;
+    }
+
+    .infoOrg {
+        display: flex;
+        margin-top: 25px;
+    }
+
+    .infoOrg .infoOrgBox {
+        width: 49%;
+        height: 46px;
+        border: 1px solid white;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: height 0.5s;
+    }
+
+    .infoOrg .infoOrgBox:first-child {
+        margin-right: 2%;
+    }
+
+    .infoOrg .infoOrgBox:first-child:hover {
+        height: 177px;
+    }
+
+    .infoOrg .infoOrgBox:last-child:hover {
+        height: 293px;
+    }
+
+    .infoOrg .infoOrgBtn {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 15px;
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+
+    .infoOrg .infoOrgList a {
+        display: block;
+        margin-top: 15px;
+        padding: 0 15px;
+        font-size: 1.4rem;
+    }
+
+    .infoOrg .infoOrgList>li:last-child>a {
+        margin-bottom: 15px;
+    }
+
+    .infoOrg .infoOrgList a:hover {
+        color: #00adef;
+    }
+
+    /*===== main ======*/
+    .topArea {
+        height: 200px;
+    }
+
+    .topHeading {
+        padding-top: 90px;
+    }
+
+    /* 퀵버튼 */
+    .sideBtn {
+        bottom: 170px;
+    }
+
+    .greetings {
+        margin-bottom: 100px;
+    }
+
+    .greetings h2 {
+        font-size: 2.6rem;
+    }
+
+    .greetingsText {
+        width: 100%;
+        padding: 10px 10px 50px 10px;
+    }
+
+    .quotesDeco {
+        width: 30px;
+    }
+    
+    .quotesDeco:first-child {
+        top: -17px;
+    }
+
+    .quotesDeco:last-child {
+        right: 10px;
+        bottom: -17px;
+    }
+
+    .greetingsText .dateName {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .greetingsText .personPhoto {
+        display: none;
+    }
+
+    .mission {
+        padding-bottom: 50px;
+        margin-bottom: 70px;
+    }
+
+    .mission h2 {
+        font-size: 2.6rem;
+    }
+
+    .mission h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .missionImg {
+        margin-bottom: 80px;
+    }
+
+    .verticalBorder {
+        display: none;
+    }
+
+    .missionImg strong {
+        width: 80%;
+        font-size: 2rem;
+    }
+
+    .missionGoal {
+        width: 100%;
+    }
+
+    .howGoal>ul>li::after {
+        width: 220px;
+        height: 220px;
+        transform: translate(-50%, -45%) rotate(-45deg);
+    }
+
+    .howGoal {
+        width: 100%;
+        padding-top: 50px;
+    }
+
+    .howGoal h2 {
+        top: 0;
+    }
+
+    .howGoal>ul>li img {
+        width: 65px;
+    }
+
+    .howGoal>ul>li {
+        float: none;
+        width: 100%;
+        height: 280px;
+    }
+
+    .howGoal>ul>li:nth-child(even) {
+        float: none;
+    }
+
+    .howGoal>ul>li:nth-child(-n+2) {
+        margin-bottom: 0;
+    }
+
+    .howGoal>ul>li:nth-child(n+3):nth-child(-n+3)::after {
+        border-color: #25b9f0;
+    }
+
+    .howGoal>ul>li:nth-child(4)::after {
+        border-color: #9eb5c0;
+    }
+
+    .historyList>ul {
+        flex-flow: column;
+        padding-left: 10px;
+    }
+
+    .historyList>ul li:nth-child(odd) {
+        padding-top: 10px;
+    }
+
+    .historyList>ul {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 20px;
+    }
+
+    .historyList>ul li {
+        float: none;
+        padding: 10px 0 10px 0;
+    }
+
+    .historyList li {
+        font-size: 1.6rem;
+    }
+
+    .historyList>ul strong {
+        display: block;
+        float: left;
+        width: 50px;
+        font-weight: bold;
+    }
+
+    .historyList>ul span {
+        display: block;
+        float: right;
+        width: calc(100% - 50px);
+    }
+
+    .historyLine {
+        top: 50%;
+        left: 10px;
+        width: 460px;
+        transform: translate(-50%) rotate(90deg);
+    }
+
+    .selectHistory {
+        width: 1%;
+    }
+
+
+    .showHistory {
+        position: absolute;
+        top: 40px;
+        left: 110px;
+        width: calc(100% - 120px);
+        transform: translateX(0);
+        padding: 20px;
+        text-align: center;
+    }
+
+    .showHistory li:last-child {
+        margin-bottom: 0;
+    }
+
+    .showHistory strong {
+        margin: 0 auto 5px;
+    }
+
+    .selectYear {
+        border: none;
+        padding-bottom: 0;
+    }
+
+    /*===== footer =====*/
+    .footLogoMenu {
+        display: none;
+    }
+
+    footer {
+        height: 150px;
+    }
+
+    .snsCopy {
+        width: 276px;
+        margin: 0 auto;
+    }
+
+    .snsList {
+        float: none;
+    }
+
+    .copyAddr {
+        width: 276px;
+        text-align: center;
+        transform: translateY(60px);
+    }
+
+    .copyAddr span:first-child {
+        display: none;
+    }
+
+    .snsList {
+        width: 140px;
+        margin: 0 auto;
+        transform: translateY(-50px);
+    }
+}
