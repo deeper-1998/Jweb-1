@@ -1,5 +1,15 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: GyeonggiTitle;
+    src: url(../font/Title_Medium.woff);
+}
+@font-face {
+    font-family: NanumSquareRound;
+    src: url(../font/NanumSquareRoundR.woff);
+}
+
+
 * {
     margin: 0;
     padding: 0;
