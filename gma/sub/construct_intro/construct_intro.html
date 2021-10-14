@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Discription" content="gma_construct_intro">
+    <meta name="Author" content="team">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/construct_intro.css" type="text/css">
+    <title>경기도미술관</title>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="confix">
+                <div class="siteJoin">
+                    <ul>
+                        <li><a href="../login/login.html">로그인</a></li>
+                        <li><a href="../join/join.html">회원가입</a></li>
+                    </ul>    
+                </div><!--siteJoin-->
+                <div class="logoMenu">
+                    <h1>
+                        <a href="../../index.html"><img src="./images/main_logo.svg" alt="mian_logo"></a>
+                        <a href="../../index.html"><img src="./images/main_simbol.svg" alt="main_logo"></a>
+                    </h1>
+                    <nav class="headerMenu">
+                        <ul class="gnb" onmouseover="menuHover()" onmouseleave="menuLeave()">
+                            <li>
+                                <a href="../introduction/introduction.html">소개</a>
+                                <ul class="subMenu">
+                                    <li><a href="../introduction/introduction.html">인사말</a></li>
+                                    <li><a href="../construct_intro/construct_intro.html">건축소개</a></li>
+                                    <li><a href="../facilitiesIntro/facilitiesIntro.html">편의시설</a></li>
+                                    <li><a href="../map/map.html">오시는길</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../exhidbition/exhidbition.html">전시</a>
+                                <ul class="subMenu">
+                                    <li><a href="../exhidbition/exhidbition.html">현재 전시</a></li>
+                                    <li><a href="../last_exhibition/last_exhibition.html">지난 전시</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../education/education.html">교육/행사</a>
+                                <ul class="subMenu">
+                                    <li><a href="../education/education.html">교육</a></li>
+                                    <li><a href="../event/event.html">행사</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../collection/collection.html">아카이브</a>
+                                <ul class="subMenu">
+                                    <li><a href="../collection/collection.html">소장품</a></li>
+                                    <li><a href="../publish_video/publish_video.html">자료</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../notice/notice.html">커뮤니티</a>
+                                <ul class="subMenu">
+                                    <li><a href="../notice/notice.html">공지사항</a></li>
+                                    <li><a href="../information/information.html">관람안내</a></li>
+                                    <li><a href="../FAQ/FAQ.html">자주하는 질문</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="headMenuBtn" onclick="mediaMenuHover()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="langBtn noDrag" onclick="langBtn()">
+                        <span id="langKor" class="kor">KOR</span>
+                        <span id="langEng" class="eng">ENG</span>
+                        <span id="togleBtn" class="togleBtn"></span>
+                    </div><!--langBtn-->
+                </div><!--logoMenu-->
+                <div class="mediaMenu">
+                    <div class="logoClose">
+                        <div class="menuboxLogo">
+                            <a href="../../index.html"><img src="./images/main_simbol.svg" alt="main_logo"></a>
+                        </div>
+                        <div class="menuClose" onclick="mediaMenuLeave()">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div><!--logoClose-->
+                    <div class="menuForm">
+                        <form action="#" method="POST" class="menuSearch">
+                            <select class="selectInMenu" id="choiceInMenu" name="choice" size="1">
+                                <option value="#" selected>전체</option>
+                                <option value="#">제목</option>
+                                <option value="#">내용</option>
+                            </select>
+                            <label id="searchInMenu" class="blindInMenu">search</label>
+                            <input type="search" name="search" class="searchInMenu" autocomplete="off" placeholder="검색어를 입력하세요">
+                            <button class="searchBtnInMenu" value="search"></button>
+                        </form><!-- menuSearch -->
+                        <div class="loginJoin">
+                            <a href="../login/login.html">로그인</a>
+                            <a href="../join/join.html">회원가입</a>
+                        </div>
+                    </div><!--menuForm-->
+                    <nav class="menuBoxWrap">
+                        <ul class="mediaGnb">
+                            <li>
+                                <p>소개</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../introduction/introduction.html">
+                                        인사말
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../construct_intro/construct_intro.html">
+                                        건축소개
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../facilitiesIntro/facilitiesIntro.html">
+                                        편의시설
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../map/map.html">
+                                        오시는길
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>전시</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../exhidbition/exhidbition.html">
+                                        현재 전시
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../last_exhibition/last_exhibition.html">
+                                        지난 전시
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>교육/행사</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../education/education.html">
+                                        교육
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../event/event.html">
+                                        행사
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>아카이브</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../collection/collection.html">
+                                        소장품
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../publish_video/publish_video.html">
+                                        자료
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>커뮤니티</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../notice/notice.html">
+                                        공지사항
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../information/information.html">
+                                        관람안내
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../FAQ/FAQ.html">
+                                        자주하는 질문
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="infoOrg">
+                        <div class="infoOrgBox">
+                            <div class="infoOrgBtn">
+                                <p>이용약관</p>
+                                <p>+</p>
+                            </div>
+                            <ul class="infoOrgList">
+                                <li><a href="#">개인정보취급방침</a></li>
+                                <li><a href="#">정보공개청구</a></li>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">경영공시</a></li>
+                            </ul>
+                        </div><!--infoMb-->
+                        <div class="infoOrgBox">
+                            <div class="infoOrgBtn">
+                                <p>관련기관</p>
+                                <p>+</p>
+                            </div>
+                            <ul class="infoOrgList">
+                                <li><a href="https://www.ggcf.kr/" target="_blank">경기문화재단</a></li>
+                                <li><a href="https://gjicp.ggcf.kr/" target="_blank">경기문화재연구원</a></li>
+                                <li><a href="https://musenet.ggcf.kr/" target="_blank">경기도박물관</a></li>
+                                <li><a href="https://njp.ggcf.kr/" target="_blank">백남준아트센터</a></li>
+                                <li><a href="https://silhak.ggcf.kr/" target="_blank">실학박물관</a></li>
+                                <li><a href="https://jgpm.ggcf.kr/" target="_blank">전곡선사박물관</a></li>
+                                <li><a href="https://gcm.ggcf.kr/" target="_blank">경기도어린이박물관</a></li>
+                                <li><a href="https://www.ggcf.kr/ngcm" target="_blank">경기북부어린이박물관</a></li>
+                            </ul>
+                        </div><!--orgMb-->    
+                    </div><!--infoOrg-->
+                </div><!--mediaMenu-->
+            </div><!--confix-->
+        </header>
+
+        <main>
+            <section>
+                <div class="topArea">
+                    <div class="confix">
+                        <div class="topHeading">
+                            <h2>건축소개</h2>
+                        </div><!--topHeading-->
+                        <form action="#" method="POST" class="searchBox2">
+                            <select class="select" id="choice" name="choice" size="1">
+                                <option value="#" selected>전체</option>
+                                <option value="#">전시</option>
+                                <option value="#">교육</option>
+                                <option value="#">기타 </option>
+                            </select>
+                            <label id="search" class="blind">search</label>
+                            <input type="search" name="search" class="search" autocomplete="off" placeholder="검색어를 입력하세요">
+                            <button class="searchBtn" value="search"></button>
+                        </form><!-- searchBox -->
+                        
+                        <ul class="menuList vBox">
+                            <li>소개</li>
+                            <li><img src="./images/next_w.svg" alt="화살표"></li>
+                            <li>건축소개</li>
+                        </ul>
+                    </div><!--confix-->
+                </div><!--topArea-->
+
+                <!-- 메인 컨텐츠 영역 소스 이 사이에 넣어주세요 -->
+                <div class="intro vBox">
+                    <div class="confix vBox">
+                        <div class="totalIntro">
+                            <img src="images/construct_1.jpg" alt="미술관건축이미지">
+                            <p>
+                                경기도미술관은 안산시 화랑유원지 내 평탄한 지형에 위치하여 시각적 개방성이 높고, 호수가 인접한 장소성을 가지고 있다. 평탄한 화랑유원지 주차장을 통해 마주치는 미술관의 서
+                                측은 주차 공간과 기계실 상부를 경사진 녹화 지붕(Bio-Top)으로 조성해 주변의 얕은 녹지 구릉과 통일성을 유지하고 있는데, 이는 주차장에 빼곡하게 들어선 자동차들이 줄 수 있는 
+                                시각적 부담을 덜어준다.
+                            </p>
+                        </div><!--totalIntro-->
+                        <div class="outsideIntro vBox">                           
+                            <img src="images/construct_2.jpg" alt="미술관건축이미지">
+                            <img src="images/construct_3.jpg" alt="미술관건축이미지">
+                            <img src="images/construct_4.jpg" alt="미술관건축이미지">
+                            <img class="textLogo" src="images/text_logo.png" alt="텍스트로고">
+                            <p>
+                                건물은 낮은 수평성을 강조하면서도 건물의 조형성과 미술관의 상징적인 표현을 위해
+                                수직적 요소가 더해진 거대한 반투명의 유리벽판(T.P.G)을 사용했다. 동서축으로 길게
+                                뻗은 유리벽판은 수변 위에 띄운 배의 돛대 형상을 하고 있다. 이는 해양도시 안산의
+                                이미지를 살리고, 건축물의 전체 볼륨과 공간의 기능(북측-전시공간, 남측-사무실)을
+                                양분하며 주변의 열린 지형에 미술관의 존재를 강하게 드러낸다.  
+                            </p>
+                            <a href="#">외부 사진 더보기</a>
+                            
+                            <!-- <div class="outsideIntroBg"></div> -->
+                        </div><!--outsideIntro-->
+                        <div class="insideIntro vBox">
+                            <img src="images/construct_5.jpg" alt="미술관건축이미지">
+                            <p>
+                                실내 공간은 1, 2층에 사무실과 수장고, 강당을 비롯해 전시실이 있으며 
+                                본격적인 전시공간은 2층에 있다. 부지가 습지임을 감안해 수장고는 1층에 배치되었다. 
+                                전시 공간은 순환 통로 및 가변 벽을 두어 다양한 동선을 활용하는 전시를 구사할 수 있게 하고, 특히 8.5m 높이의 천창에는 개패의 조정이 가능한 천창 시스템을 두어 자연채광을 자유롭게 조정할 수 있도록 했다. 국내 전시관 중 거의 최초로 시도된 천창 시스템으로 특기할 만한 점이다. 
+                            </p>
+                            <a href="#">실내 사진 더보기</a>
+                        </div>
+                        <div class="outtro vBox">
+                            
+                            <a href="#">실내 사진 더보기</a>
+                            <img src="images/construct_6.jpg" alt="미술관건축이미지">
+                            <p>
+                                경기도미술관은 이처럼 물과 빛의 요소를 적극 반영하고, 전시관의 새로운 모델을 제시한 현대 건축물로서 자연과 호흡하고 대중과 소통하며 경기도민 모두에게 열린 문화 공간이다.
+                            </p>
+                            <div class="constructInfo">
+                                <h2>건축정보</h2>
+                                <ul class="constructInfoList">
+                                    <li>
+                                        <h3>위치</h3>
+                                        <address>경기도 안산시 단원구 동산로 268</address>
+                                    </li>
+                                    <li>
+                                        <h3>지역지구</h3>
+                                        <strong>자연녹지지역</strong>
+                                    </li>
+                                    <li>
+                                        <h3>면적</h3>
+                                        <strong>
+                                            10,000.00㎡, 건축면적 5,942.04㎡
+                                            연면적 8,277.80㎡
+                                        </strong>
+                                    </li>
+                                    <li>
+                                        <h3>외부마감</h3>
+                                        <strong>하강석, 징크판넬</strong>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 메인 컨텐츠 영역 소스 이 사이에 넣어주세요 -->
+            </section>
+
+            <div class="sideBtn">
+                <div class="quickBtnBox">
+                    <div class="quickBtn">
+                        <img src="./images/toparrow.png" alt="topBtn">
+                    </div>
+                    <p>오디오 가이드</p>
+                </div><!--quickBtnBox-->
+                <div class="quickBtnBox topBtn">
+                    <div class="quickBtn">
+                        <img src="./images/toparrow.png" alt="topBtn">
+                    </div>
+                    <p>TOP</p>
+                </div><!--quickBtnBox-->
+            </div><!--sideBtn-->
+        </main>
+
+        <footer>
+            <div class="confix">
+                <div class="footLogoMenu vBox">
+                    <a class="footLogo" href="../../index.html"><img src="./images/main_logo.svg" alt="foot_logo"></a>
+                    <nav class="footMenu">
+                        <ul>
+                            <li><a href="#">개인정보취급방침</a></li>
+                            <li><a href="#">정보공개청구</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">경영공시</a></li>
+                        </ul>
+                    </nav>
+                    <div id="orgBg" class="org" style="height: 40px;">
+                        <button id="orgBtn" class="orgBtn" onclick="orgOpen()">
+                            <span>관련기관</span>
+                            <span>+</span>
+                        </button>
+                        <ul class="siteList">
+                            <li><a href="https://www.ggcf.kr/" target="_blank">경기문화재단</a></li>
+                            <li><a href="https://gjicp.ggcf.kr/" target="_blank">경기문화재연구원</a></li>
+                            <li><a href="https://musenet.ggcf.kr/" target="_blank">경기도박물관</a></li>
+                            <li><a href="https://njp.ggcf.kr/" target="_blank">백남준아트센터</a></li>
+                            <li><a href="https://silhak.ggcf.kr/" target="_blank">실학박물관</a></li>
+                            <li><a href="https://jgpm.ggcf.kr/" target="_blank">전곡선사박물관</a></li>
+                            <li><a href="https://gcm.ggcf.kr/" target="_blank">경기도어린이박물관</a></li>
+                            <li><a href="https://www.ggcf.kr/ngcm" target="_blank">경기북부어린이박물관</a></li>
+                        </ul>
+                    </div><!--org-->
+                </div><!--footLogoMenu-->
+
+                <div class="snsCopy">
+                    <ul class="otherSite">
+                        <li><a href="https://www.ggcf.kr/"><img src="./images/ggcf.svg" alt="ggcf"></a></li>
+                        <li><a href="https://www.gg.go.kr/"><img src="./images/gg.svg" alt="gg"></a></li>
+                    </ul>
+                    <div class="copyAddr">
+                        <span>(재)경기문화재단 경기도미술관</span>
+                        <address>(15385) 경기도 안산시 단원구 동산로 268 (초지동)</address>
+                        <span>COPYRIGHT &copy; GGCF. ALL RIGHTS RESERVED.</span> 
+                    </div><!--copyAddr-->
+                    <div class="sns">
+                        <ul class="snsList">
+                            <li><a href="https://www.facebook.com/ggmoma/"><img src="./images/facebook.png" alt="facebook"></a></li>
+                            <li><a href="https://blog.naver.com/gyeonggimoma"><img src="./images/naver.png" alt="naver"></a></li>
+                            <li><a href="https://www.youtube.com/user/ggcfkr"><img src="./images/youtube.png" alt="youtube"></a></li>
+                        </ul>
+                    </div><!--sns-->
+                </div><!--snsCopy-->
+            </div><!--confix-->
+        </footer>
+        <div class="menuBgBlur"></div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/construct_intro.js"></script>
+</body>
+</html>
