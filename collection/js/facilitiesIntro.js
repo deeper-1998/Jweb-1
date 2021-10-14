@@ -53,6 +53,7 @@ function menuLeave() {   //메뉴박스 drop Up
 //반응형 메뉴박스
 const mediaMenu = document.getElementsByClassName("mediaMenu");
 const menuBgBlur = document.querySelector(".menuBgBlur");
+const art = document.getElementsByClassName(".art");
 
 function mediaMenuHover() {   //메뉴박스 보이기
     mediaMenu[0].style.display = "block";
@@ -71,6 +72,9 @@ function mediaMenuLeave() {   //메뉴박스 가리기
 }
 //반응형 메뉴박스
 
+// if($(".mediaMenu").style.display == "block") {
+//     $(".collectList>.art>a").style.pointerEvents = "none";
+// }
 
 //퀵버튼 나타나기
 $(function() {

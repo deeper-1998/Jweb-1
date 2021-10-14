@@ -45,7 +45,7 @@ header {
             rgba(0, 0, 0, 0.6) 35px,
             rgba(0, 0, 0, 0.0) 100%
           ); 
-    z-index: 2;
+    z-index: 10;
     transition: top 0.5s;
 }
 
@@ -111,7 +111,7 @@ header {
     left: 0;
     width: 100vw;
     height: 100vw;
-    z-index: 1;
+    z-index: 2;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -120,7 +120,6 @@ header {
     width: 50%;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 25px;
 }
 
 .headerMenu .gnb {
@@ -970,6 +969,10 @@ footer {
     .collectList>.art:nth-child(3n) {
         margin-right: 0;
     }
+
+    /* .collectList>.art>a {
+        pointer-events: none;
+    } */
     
     /* 퀵버튼 */
     .sideBtn {
