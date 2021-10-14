@@ -1,7 +1,8 @@
+
 function langBtn() { // 언어토글버튼
-    const langBtn = document.getElementById("togleBtn");
-    const langKor = document.getElementById("langKor");
-    const langEng = document.getElementById("langEng");
+    let langBtn = document.getElementById("togleBtn");
+    let langKor = document.getElementById("langKor");
+    let langEng = document.getElementById("langEng");
     if (langBtn.style.transform == "translateX(-36px)") {
         langBtn.style.transform = "translateX(0px)"
         langKor.style.opacity = "1"
@@ -13,9 +14,100 @@ function langBtn() { // 언어토글버튼
     }
 }
 
-function orgOpen() { // 관련기관 펼치고닫기
-    const orgBg = document.getElementById("orgBg");
-    const orgBtn = document.getElementById("orgBtn");
+
+//pc 메인메뉴 drop
+const gnb = document.getElementsByClassName("gnb");
+const bg = document.getElementsByClassName("backBlur");
+const topHeading = document.getElementsByClassName("topHeading");
+const searchBox2 = document.getElementsByClassName("searchBox2");
+const menuList = document.getElementsByClassName("menuList");
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+//    이미지 바꿔주세요
+////////////////////////////////////////////////////////////////
+function menuHover() {   //메뉴박스 drop Down
+    gnb[0].style.height = "275px";
+    if (gnb[0].style.height == "275px") {
+        bg[0].style.background = "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))";
+        bg[0].style.backgroundPosition = "center top";
+        bg[0].style.backgroundSize = "cover";
+        // topHeading[0].style.visibility = "hidden"
+        // searchBox2[0].style.visibility = "hidden"
+        // menuList[0].style.visibility = "hidden"
+    }
+}
+
+function menuLeave() {   //메뉴박스 drop Up
+    gnb[0].style.height = "70px";
+    if (gnb[0].style.height == "70px") {
+        bg[0].style.background = "none";
+        bg[0].style.backgroundPosition = "center top";
+        bg[0].style.backgroundSize = "cover";
+        // topHeading[0].style.visibility = "visible"
+        // searchBox2[0].style.visibility = "visible"
+        // menuList[0].style.visibility = "visible"
+    }
+}
+//pc 메인메뉴 drop
+
+//반응형 메뉴박스
+const mediaMenu = document.getElementsByClassName("mediaMenu");
+const menuBgBlur = document.querySelector(".menuBgBlur");
+const mainLogo = document.querySelector(".logoMenu");
+function mediaMenuHover() {   //메뉴박스 보이기
+    mediaMenu[0].style.display = "block";
+    mediaMenu[0].style.transition = "display 1s";
+    if (mediaMenu[0].style.display == "block") {
+        menuBgBlur.style.display = "block";
+        menuBgBlur.style.height = document.body.scrollHeight + "px";
+    }
+    mainLogo.style.display = "none";
+}
+
+function mediaMenuLeave() {   //메뉴박스 가리기
+    mediaMenu[0].style.display = "none";
+    if (mediaMenu[0].style.display == "none") {
+        menuBgBlur.style.display = "none";
+    }
+    mainLogo.style.display = "block";
+}
+
+window.addEventListener("resize", function() {
+    if(window.innerWidth > 1080) {
+        mediaMenu[0].style.display = "none";
+        if (mediaMenu[0].style.display == "none") {
+            menuBgBlur.style.display = "none";
+        }
+        mainLogo.style.display = "block";
+    }
+}, false);
+//반응형 메뉴박스
+
+//퀵버튼 나타나기
+$(function() {
+    $(window).on("scroll", function() {
+        if($(this).scrollTop() > 300) {
+            $(".quickBtnBox").fadeIn("fast");
+        } else {
+            $(".quickBtnBox").fadeOut("fast");
+        }
+    });
+
+    $(".topBtn").on("click", function() {
+        $("html").animate({ "scrollTop": "0" }, 500)
+    })
+});
+//퀵버튼 나타나기
+
+
+//pc 관련기관 펼치고닫기
+function orgOpen() {
+    let orgBg = document.getElementById("orgBg");
+    let orgBtn = document.getElementById("orgBtn");
     if (orgBg.style.height == "40px") {
         orgBg.style.height = "330px";
         orgBg.style.backgroundColor = "#23262a";
@@ -28,94 +120,3 @@ function orgOpen() { // 관련기관 펼치고닫기
         orgBtn.style.transition = "border-radius 0s 0.4s";
     }
 }
-
-
-const slideList = document.querySelector("#slideList");
-const slideListImg = slideList.children;
-const slideBg = document.querySelector(".slideBanner");
-const slideStick = document.querySelector(".slideStick");
-const slideBtn = document.querySelector(".slideBtn");
-const slideArea = document.querySelector(".slideArea");
-
-const colorArr = ["#4d2378", "#42cd3e", "#b0b0b0", "#01476b", "#6289c7"];
-let stickMove = 0;
-let i = 0;
-const stickMoveAvg = (150 - 40) / (slideListImg.length - 1);
-
-slideListImg[0].style.maxWidth = "500px";
-if(window.innerWidth > 767) {
-    slideListImg[0].style.width = "25%";
-} else {
-    slideListImg[0].style.width = "207px";
-}
-
-slideListImg[0].style.paddingTop = "0";
-slideListImg[0].style.boxShadow = "5px 5px 10px rgba(0, 0, 0, 0.3)";
-
-
-console.log(slideListImg[0].style.width);
-function slideInterval() {
-    slideListImg[0].style.marginRight = "0";
-    slideList.style.left = "-" + (slideListImg[0].offsetWidth) + "px";
-    slideListImg[1].style.boxShadow = "5px 5px 10px rgba(0, 0, 0, 0.3)";
-    slideListImg[1].style.maxWidth = "500px";
-    if(window.innerWidth > 767) {
-        slideListImg[1].style.width = "25%";
-    } else {
-        slideListImg[1].style.width = "207px";
-    }
-    slideListImg[1].style.paddingTop = "0";
-    
-    if(stickMove < 110) {
-        i++;
-        slideArea.style.backgroundColor = colorArr[i];
-        stickMove += stickMoveAvg;
-    } else {
-        i = 0;
-        slideArea.style.backgroundColor = colorArr[i];
-        stickMove = 0;
-    }
-
-    slideStick.style.left = stickMove + "px";
-    
-    
-    slideBg.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(" + slideListImg[1].firstChild.src + ")"
-    setTimeout(function() {
-        slideListImg[0].style.marginRight = "3%";
-        if(window.innerWidth > 1080) {
-            slideListImg[0].style.paddingTop = "100px";    
-        } else if (window.innerWidth > 767) {
-            slideListImg[0].style.paddingTop = "4%";
-        } else {
-            slideListImg[0].style.marginRight = "3vw";
-            slideListImg[0].style.paddingTop = "25px";
-        }
-        slideListImg[0].style.maxWidth = "200px";
-        if(window.innerWidth > 767) {
-            slideListImg[0].style.width = "12%";
-        } else {
-            slideListImg[0].style.width = "110px";
-        }
-        
-        slideListImg[0].style.boxShadow = "none";
-        slideList.appendChild(slideListImg[0]);
-        slideList.style.transition = "none";
-        slideList.style.left = "0";
-    }, 1000);
-    slideList.style.transition = "all 1s";
-}
-
-
-let slideEvent = setInterval(slideInterval, 3000);
-
-let slideToggle = true;
-slideBtn.addEventListener("click", function() {
-    if(slideToggle) {
-        clearInterval(slideEvent);
-        slideToggle = false;
-    } else {
-        slideEvent = setInterval(slideInterval, 3000);
-        slideToggle = true;
-    }
-    
-}, false);
