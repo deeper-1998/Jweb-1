@@ -348,7 +348,7 @@ main h2 {
         width: 200px;
     } */
 
-        .topArea {
+    .topHeadingArea  {
             position: absolute;
             top: 0;
             left: 0;
@@ -358,7 +358,7 @@ main h2 {
             /* background-color: aqua; */
         }
 
-        .topArea>.topHeading {
+        .topHeadingArea>.topHeading {
             display: none;
             position: absolute;
             top: 30%;
@@ -606,7 +606,7 @@ main h2 {
             .bannerSwipeWrap ul{
                 display: grid;
                 grid-template-columns:  repeat(2, 1fr);
-                grid-auto-columns: minmax( auto 300px);
+                grid-auto-columns: minmax(auto, 300px);
                 grid-auto-rows: 275px;
                 grid-column-gap: 1rem;
                 grid-row-gap: 10px;
@@ -833,6 +833,10 @@ footer {
                 rgba(0, 0, 0, 0.0) 100%
               );
     }
+
+    .bg {
+        display: none;
+    } 
 
     .siteJoin {
         display: none;
@@ -1108,10 +1112,11 @@ footer {
     /* .topArea {
         height: 500px;
         } */
+        
 
-    .topHeading {
+    /* .topHeading {
         padding-top: 120px;
-    }
+    } */
 
     .noticeList li .noticeListWrap { 
         width: 100%;
@@ -1275,6 +1280,7 @@ footer {
 
     /*===== main ======*/
     
+
     .topAreaWrap {
         height: 400px;
     }
@@ -1293,10 +1299,14 @@ footer {
         height: 200px;
     }
 
+    .topHeadingArea>.topHeading {
+        top: 15%;
+        right: 5%;
+    }
+    
     .topHeading>p {
         margin-bottom: 20px;
     }
-        
 
         .bottomArea>.leftInfoArea {
             width: 100%; 

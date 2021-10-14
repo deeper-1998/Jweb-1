@@ -39,7 +39,7 @@ function menuHover() {   //메뉴박스 drop Down
 function menuLeave() {   //메뉴박스 drop Up
     gnb[0].style.height = "70px";
     if (gnb[0].style.height == "70px") {
-        bg[0].style.background = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/mainImg.jpg)"
+        bg[0].style.background = "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(images/mainImg.jpg)"
         bg[0].style.backgroundPosition = "center top"
         bg[0].style.backgroundSize = "cover"
         topHeading[0].style.visibility = "visible"
