@@ -45,7 +45,7 @@ header {
             rgba(0, 0, 0, 0.6) 35px,
             rgba(0, 0, 0, 0.0) 100%
           ); 
-    z-index: 2;
+    z-index: 10;
     transition: top 0.5s;
 }
 
@@ -111,7 +111,7 @@ header {
     left: 0;
     width: 100vw;
     height: 100vw;
-    z-index: 1;
+    z-index: 2;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -120,7 +120,6 @@ header {
     width: 50%;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 25px;
 }
 
 .headerMenu .gnb {
@@ -349,7 +348,6 @@ input::-webkit-search-results-decoration{
     width: 100%;
     max-width: 568px;
     margin-top: 50px;
-    margin-bottom: 10px;
 }
 
 .category li{
