@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: GyeonggiTitle;
+    src: url(../font/Title_Medium.woff);
+}
+@font-face {
+    font-family: NanumSquareRound;
+    src: url(../font/NanumSquareRoundR.woff);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +16,8 @@
 }
 
 html, body {
-    font: 10px 'NanumSquareRound';
+    font-family: 'NanumSquareRound';
+    font-size: 10px;
     color: #585858;
 }
 
@@ -28,6 +38,10 @@ ul, ol, li {
 a {
     text-decoration: none;
     display: inline-block;
+    color: #585858;
+}
+
+.topArea a, header a, footer a {
     color: #fff;
 }
 
@@ -38,12 +52,11 @@ h1 {
 h2 {
     font-family: 'GyeonggiTitle';
     font-size: 2rem;
-    text-align: center;
     font-weight: 400;
 }
 h3 {
     font-family: 'GyeonggiTitle';
-    font-size: 2.0rem;
+    font-size: 2rem;
 }
 
 strong {

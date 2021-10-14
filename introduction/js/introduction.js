@@ -1,7 +1,8 @@
+
 function langBtn() { // 언어토글버튼
-    const langBtn = document.getElementById("togleBtn");
-    const langKor = document.getElementById("langKor");
-    const langEng = document.getElementById("langEng");
+    let langBtn = document.getElementById("togleBtn");
+    let langKor = document.getElementById("langKor");
+    let langEng = document.getElementById("langEng");
     if (langBtn.style.transform == "translateX(-36px)") {
         langBtn.style.transform = "translateX(0px)"
         langKor.style.opacity = "1"
@@ -13,9 +14,100 @@ function langBtn() { // 언어토글버튼
     }
 }
 
-function orgOpen() { // 관련기관 펼치고닫기
-    const orgBg = document.getElementById("orgBg");
-    const orgBtn = document.getElementById("orgBtn");
+
+//pc 메인메뉴 drop
+const gnb = document.getElementsByClassName("gnb");
+const bg = document.getElementsByClassName("topArea");
+const topHeading = document.getElementsByClassName("topHeading");
+const searchBox2 = document.getElementsByClassName("searchBox2");
+const menuList = document.getElementsByClassName("menuList");
+
+
+
+
+
+////////////////////////////////////////////////////////////////
+//    이미지 바꿔주세요
+////////////////////////////////////////////////////////////////
+function menuHover() {   //메뉴박스 drop Down
+    gnb[0].style.height = "275px";
+    if (gnb[0].style.height == "275px") {
+        bg[0].style.background = "linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./images/header_img.jpg)"
+        bg[0].style.backgroundPosition = "center top"
+        bg[0].style.backgroundSize = "cover"
+        topHeading[0].style.visibility = "hidden"
+        searchBox2[0].style.visibility = "hidden"
+        menuList[0].style.visibility = "hidden"
+    }
+}
+
+function menuLeave() {   //메뉴박스 drop Up
+    gnb[0].style.height = "70px";
+    if (gnb[0].style.height == "70px") {
+        bg[0].style.background = "linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(./images/header_img.jpg)"
+        bg[0].style.backgroundPosition = "center top"
+        bg[0].style.backgroundSize = "cover"
+        topHeading[0].style.visibility = "visible"
+        searchBox2[0].style.visibility = "visible"
+        menuList[0].style.visibility = "visible"
+    }
+}
+//pc 메인메뉴 drop
+
+//반응형 메뉴박스
+const mediaMenu = document.getElementsByClassName("mediaMenu");
+const menuBgBlur = document.querySelector(".menuBgBlur");
+const mainLogo = document.querySelector(".logoMenu");
+function mediaMenuHover() {   //메뉴박스 보이기
+    mediaMenu[0].style.display = "block";
+    mediaMenu[0].style.transition = "display 1s";
+    if (mediaMenu[0].style.display == "block") {
+        menuBgBlur.style.display = "block";
+        menuBgBlur.style.height = document.body.scrollHeight + "px";
+    }
+    mainLogo.style.display = "none";
+}
+
+function mediaMenuLeave() {   //메뉴박스 가리기
+    mediaMenu[0].style.display = "none";
+    if (mediaMenu[0].style.display == "none") {
+        menuBgBlur.style.display = "none";
+    }
+    mainLogo.style.display = "block";
+}
+
+window.addEventListener("resize", function() {
+    if(window.innerWidth > 1080) {
+        mediaMenu[0].style.display = "none";
+        if (mediaMenu[0].style.display == "none") {
+            menuBgBlur.style.display = "none";
+        }
+        mainLogo.style.display = "block";
+    }
+}, false);
+//반응형 메뉴박스
+
+//퀵버튼 나타나기
+$(function() {
+    $(window).on("scroll", function() {
+        if($(this).scrollTop() > 300) {
+            $(".quickBtnBox").fadeIn("fast");
+        } else {
+            $(".quickBtnBox").fadeOut("fast");
+        }
+    });
+
+    $(".topBtn").on("click", function() {
+        $("html").animate({ "scrollTop": "0" }, 500)
+    })
+});
+//퀵버튼 나타나기
+
+
+//pc 관련기관 펼치고닫기
+function orgOpen() {
+    let orgBg = document.getElementById("orgBg");
+    let orgBtn = document.getElementById("orgBtn");
     if (orgBg.style.height == "40px") {
         orgBg.style.height = "330px";
         orgBg.style.backgroundColor = "#23262a";
@@ -28,37 +120,3 @@ function orgOpen() { // 관련기관 펼치고닫기
         orgBtn.style.transition = "border-radius 0s 0.4s";
     }
 }
-
-//연혁 클릭 이벤트
-let i = 0;
-const historyList = document.querySelector(".history ul");
-const selectHistory = document.querySelector(".selectHistory");
-const historyYear = historyList.children;
-const showHistory = document.querySelector(".showHistory");
-const moveAvg = 100 / (historyYear.length - 1);
-let selectYear = historyList.firstElementChild;
-function historyClick(e) {
-    if(e.target.parentNode.nodeName == "LI") {
-        selectYear.firstElementChild.className = '';
-        selectYear = e.target.parentNode;
-        selectYear.firstElementChild.className = "selectYear";
-        i = 0;
-        while(i < historyYear.length) {
-            if(selectYear == historyYear[i]) {
-                if(selectYear == historyList.firstElementChild) {
-                    selectHistory.style.width = moveAvg * i + + 1 +"%";    
-                } else {
-                    selectHistory.style.width = moveAvg * i + "%";
-                } 
-            }
-            i++;
-        }
-        let cloneYear = selectYear.lastElementChild.cloneNode(true);
-        showHistory.removeChild(showHistory.firstElementChild);
-        showHistory.appendChild(cloneYear);
-    }
-    
-}
-
-historyList.addEventListener("click", historyClick, false);
-
