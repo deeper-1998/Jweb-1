@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="Discription" content="login">
+    <meta name="Author" content="team">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+    <title>경기도미술관</title>
+</head>
+<body>
+    <div class="wrap">
+       <div class="leftBg">
+            <div class="mainLogo">
+                <h1><a href="../../index.html"><img src="images/join_logo.svg" alt="메인로고"></a></h1>
+            </div>
+       </div> 
+        
+       <div class="formArea">
+            <div class="rightForm">
+                <div class="login">
+                    <form action="#" name="login" method="POST">
+                        <fieldset>
+                            <legend>로그인</legend>
+                            <div class="langBtn noDrag" onclick="langBtn()">
+                                <span id="langKor" class="kor">KOR</span>
+                                <span id="langEng" class="eng">ENG</span>
+                                <span id="togleBtn" class="togleBtn"></span>
+                            </div><!--langBtn-->
+                            <p>
+                                경기도 미술관에 오신 것을 환영합니다.<br>
+                                가입하시면 다양한 서비스를 이용하실 수 있습니다.
+                            </p>
+                            <ul class="userInfo">
+                                <li>
+                                    <input type="text" id="userId" placeholder="이메일 아이디">
+                                </li>
+                                <li>
+                                    <input type="password" id="userPw" placeholder="비밀번호">
+                                </li>
+                            </ul>
+                            <label class="loginHold">
+                                <input type="checkbox" name="loginHold"><strong>로그인 상태 유지</strong>
+                            </label>
+                            <button type="submit">로그인</button>
+                        </fieldset>
+                    </form>
+                    <div class="joinFind">
+                        <strong><a href="../join/join.html">회원가입</a></strong>
+                        <div class="find">
+                            <a href="#">아이디 찾기</a>
+                            <a href="#">비밀번호 찾기</a>
+                        </div>
+                    </div>
+                    <div class="snsLogin">
+                        <h2>SNS 계정으로도 이용이 가능합니다.</h2>
+                        <ul class="snsList">
+                            <li><a href="#"><img src="images/naver.svg" alt="네이버"></a></li>
+                            <li><a href="#"><img src="images/kakao.svg" alt="카카오"></a></li>
+                            <li><a href="#"><img src="images/facebook.svg" alt="페이스북"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function langBtn() { // 언어토글버튼
+            let langBtn = document.getElementById("togleBtn");
+            let langKor = document.getElementById("langKor");
+            let langEng = document.getElementById("langEng");
+            if (langBtn.style.transform == "translateX(-36px)") {
+                langBtn.style.transform = "translateX(0px)"
+                langKor.style.opacity = "1"
+                langEng.style.opacity = "0"
+            } else {
+                langBtn.style.transform = "translateX(-36px)"
+                langKor.style.opacity = "0"
+                langEng.style.opacity = "1"
+            }
+        }
+    </script>
+</body>
+</html>
