@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Discription" content="gma_header_footer">
+    <meta name="Author" content="team">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="stylesheet" href="css/edu.css" type="text/css">
+    <title>경기도미술관</title>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="confix">
+                <div class="siteJoin">
+                    <ul>
+                        <li><a href="../sub/login/login.html">로그인</a></li>
+                        <li><a href="../sub/join/join.html">회원가입</a></li>
+                    </ul>    
+                </div><!--siteJoin-->
+                <div class="logoMenu">
+                    <h1>
+                        <a href="../../index.html"><img src="./images/main_logo.svg" alt="mian_logo"></a>
+                        <a href="../../index.html"><img src="./images/main_simbol.svg" alt="main_logo"></a>
+                    </h1>
+                    <nav class="headerMenu">
+                        <ul class="gnb" onmouseover="menuHover()" onmouseleave="menuLeave()">
+                            <li>
+                                <a href="../sub/introduction/introduction.html">소개</a>
+                                <ul class="subMenu">
+                                    <li><a href="../sub/introduction/introduction.html">인사말</a></li>
+                                    <li><a href="../sub/construct_intro/construct_intro.html">건축소개</a></li>
+                                    <li><a href="../sub/facilitiesIntro/facilitiesIntro.html">편의시설</a></li>
+                                    <li><a href="../sub/map/map.html">오시는길</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sub/exhidbition.exhidbition.html">전시</a>
+                                <ul class="subMenu">
+                                    <li><a href="../sub/exhidbition.exhidbition.html">현재 전시</a></li>
+                                    <li><a href="../sub/last_exhibition/last_exhibition.html">지난 전시</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sub/education/education.html">교육/행사</a>
+                                <ul class="subMenu">
+                                    <li><a href="../sub/education/education.html">교육</a></li>
+                                    <li><a href="../sub/edu/edu.html">행사</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sub/collection/collection.html">아카이브</a>
+                                <ul class="subMenu">
+                                    <li><a href="../sub/collection/collection.html">소장품</a></li>
+                                    <li><a href="..sub/publish_video/publish_video.html">자료</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="../sub/notice/notice.html">커뮤니티</a>
+                                <ul class="subMenu">
+                                    <li><a href="../sub/notice/notice.html">공지사항</a></li>
+                                    <li><a href="..sub/information/information.html">관람안내</a></li>
+                                    <li><a href="..sub/FAQ/FAQ.html">자주하는 질문</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="headMenuBtn" onclick="mediaMenuHover()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="langBtn noDrag" onclick="langBtn()">
+                        <span id="langKor" class="kor">KOR</span>
+                        <span id="langEng" class="eng">ENG</span>
+                        <span id="togleBtn" class="togleBtn"></span>
+                    </div><!--langBtn-->
+                </div><!--logoMenu-->
+                <div class="mediaMenu">
+                    <div class="logoClose">
+                        <div class="menuboxLogo">
+                            <a href="header_footer.html"><img src="./images/main_simbol.svg" alt="main_logo"></a>
+                        </div>
+                        <div class="menuClose" onclick="mediaMenuLeave()">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div><!--logoClose-->
+                    <div class="menuForm">
+                        <form action="#" method="POST" class="menuSearch">
+                            <select class="selectInMenu" id="choiceInMenu" name="choice" size="1">
+                                <option value="#" selected>전체</option>
+                                <option value="#">제목</option>
+                                <option value="#">내용</option>
+                            </select>
+                            <label id="searchInMenu" class="blindInMenu">search</label>
+                            <input type="search" name="search" class="searchInMenu" autocomplete="off" placeholder="검색어를 입력하세요">
+                            <button class="searchBtnInMenu" value="search"></button>
+                        </form><!-- menuSearch -->
+                        <div class="loginJoin">
+                            <a href="./sub/login/login.html">로그인</a>
+                            <a href=".sub/join/join.html">회원가입</a>
+                        </div>
+                    </div><!--menuForm-->
+                    <nav class="menuBoxWrap">
+                        <ul class="mediaGnb">
+                            <li>
+                                <p>소개</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../sub/introduction/introduction.html">
+                                        인사말
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/construct_intro/construct_intro.html">
+                                        건축소개
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/facilitiesIntro/facilitiesIntro.html">
+                                        편의시설
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/map/map.html">
+                                        오시는길
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>전시</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../sub/exhidbition.exhidbition.html">
+                                        현재 전시
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/last_exhibition/last_exhibition.html">
+                                        지난 전시
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>교육/행사</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../sub/education/education.html">
+                                        교육
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/edu/edu.html">
+                                        행사
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>아카이브</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../sub/collection/collection.html">
+                                        소장품
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/publish_video/publish_video.html">
+                                        자료
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>커뮤니티</p>
+                                <ul class="mediaSubMenu">
+                                    <li><a href="../sub/notice/notice.html">
+                                        공지사항
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/information/information.html">
+                                        관람안내
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                    <li><a href="../sub/FAQ/FAQ.html">
+                                        자주하는 질문
+                                        <img src="./images/next.png" alt="menuArrow" class="menuArrow">
+                                    </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="infoOrg">
+                        <div class="infoOrgBox">
+                            <div class="infoOrgBtn">
+                                <p>이용약관</p>
+                                <p>+</p>
+                            </div>
+                            <ul class="infoOrgList">
+                                <li><a href="#">개인정보취급방침</a></li>
+                                <li><a href="#">정보공개청구</a></li>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">경영공시</a></li>
+                            </ul>
+                        </div><!--infoMb-->
+                        <div class="infoOrgBox">
+                            <div class="infoOrgBtn">
+                                <p>관련기관</p>
+                                <p>+</p>
+                            </div>
+                            <ul class="infoOrgList">
+                                <li><a href="https://www.ggcf.kr/" target="_blank">경기문화재단</a></li>
+                                <li><a href="https://gjicp.ggcf.kr/" target="_blank">경기문화재연구원</a></li>
+                                <li><a href="https://musenet.ggcf.kr/" target="_blank">경기도박물관</a></li>
+                                <li><a href="https://njp.ggcf.kr/" target="_blank">백남준아트센터</a></li>
+                                <li><a href="https://silhak.ggcf.kr/" target="_blank">실학박물관</a></li>
+                                <li><a href="https://jgpm.ggcf.kr/" target="_blank">전곡선사박물관</a></li>
+                                <li><a href="https://gcm.ggcf.kr/" target="_blank">경기도어린이박물관</a></li>
+                                <li><a href="https://www.ggcf.kr/ngcm" target="_blank">경기북부어린이박물관</a></li>
+                            </ul>
+                        </div><!--orgMb-->    
+                    </div><!--infoOrg-->
+                </div><!--mediaMenu-->
+            </div><!--confix-->
+        </header>
+
+        <main>
+            <section>
+                <div class="topArea">
+                    <div class="confix">
+                        <div class="topHeading">
+                            <h2>교육</h2>
+                        </div><!--topHeading-->
+                        <form action="#" method="POST" class="searchBox2">
+                            <select class="select" id="choice" name="choice" size="1">
+                                <option value="#" selected>전체</option>
+                                <option value="#">제목</option>
+                                <option value="#">내용</option>
+                            </select>
+                            <label id="search" class="blind">search</label>
+                            <input type="search" name="search" class="search" autocomplete="off" placeholder="검색어를 입력하세요">
+                            <button class="searchBtn" value="search"></button>
+                        </form><!-- searchBox -->
+                        
+                        <ul class="menuList vBox">
+                            <li>교육/행사</li>
+                            <li><img src="./images/next_w.svg" alt="화살표"></li>
+                            <li>교육</li>
+                        </ul>
+                    </div><!--confix-->
+                </div><!--topArea-->
+                
+                <div class="eduSect">
+                    <div class="confix">
+                        <div class="eduNow">
+                            <h3>진행중인 교육</h3>
+                            <p class="count">총 6건</p>
+                        </div>
+                        <ul class="eduNowList">
+                            <li>
+                                <a href="#">
+                                    <div class="eduImg">
+                                        <img src="./images/education_program1.png" alt="학교연계 VR도슨팅 프로그램">
+                                    </div>
+                                    <div class="eduTxt">
+                                        <p class="eduSubH">2021 &lt;몸,짓,말&gt; 학교연계 VR도슨팅 프로그램</p>
+                                        <h4>손 안에 전시</h4>
+                                        <ul class="eduInfo">
+                                                <li>
+                                                    <p class="eduQ">신청기간</p>
+                                                    <p class="eduA">2021.09.02 ~ 2021.12.16</p>
+                                                </li>
+                                                <li>
+                                                    <p class="eduQ">일시</p>
+                                                    <p class="eduA">매주 화~금요일(공휴일 및 주말 제외)<br>
+                                                        11:00 ~ 11:40, 15:00 ~ 15:40</p>
+                                                </li>
+                                                <li>
+                                                    <p class="eduQ">대상</p>
+                                                    <p class="eduA">초등 5~6학년,중고등학생 학급단체</p>
+                                                </li>
+                                                <li>
+                                                    <p class="eduQ">참가비</p>
+                                                    <p class="eduA">무료</p>
+                                                </li>
+                                            </ul>
+                                            <div class="nomeat">
+                                                <p>* 비대면</p>  
+                                            </div>  
+                                    </div><!--eduTxt-->
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="eduImg">
+                                        <img src="./images/education_program2.jpg" alt="내가 만드는 전시">
+                                    </div>
+                                    <div class="eduTxt">
+                                        <p class="eduSubH">2021 교육나눔 진로탐색프로그램 - G뮤지엄스쿨</p>
+                                        <h4>내가 만드는 전시</h4>
+                                        <ul class="eduInfo">
+                                            <li>
+                                                <p class="eduQ">신청기간</p>
+                                                <p class="eduA">2021.05.04 ~ 2021.08.36</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">일시</p>
+                                                <p class="eduA">매주 화~금요일(공휴일 및 주말 제외)<br>
+                                                    11:00 ~ 11:40, 15:00 ~ 15:40</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">대상</p>
+                                                <p class="eduA">초등 5~6학년,중고등학생 학급단체</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">참가비</p>
+                                                <p class="eduA">무료</p>
+                                            </li>
+                                        </ul>
+                                        <div class="nomeat">
+                                            <p>* 비대면</p>  
+                                        </div>
+                                    </div><!--eduTxt-->
+                                    <div class="dateEnd">
+                                        <p>신청 마감</p>  
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="eduImg">
+                                        <img src="./images/education_program3.jpg" alt="미술관 사용법, 공원탐험">
+                                    </div>
+                                    <div class="eduTxt">
+                                        <p class="eduSubH">2021 학교연계 교육프로그램 - G뮤지엄스쿨</p>
+                                        <h4>미술관 사용법, 공원탐험</h4>
+                                        <ul class="eduInfo">
+                                            <li>
+                                                <p class="eduQ">신청기간</p>
+                                                <p class="eduA">2021.05.04 ~ 2021.08.31</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">진행기간</p>
+                                                <p class="eduA">2021.09.01 ~ 2021.12.17</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">일시</p>
+                                                <p class="eduA">매주 화~금요일(공휴일 및 주말 제외)<br>
+                                                    11:00 ~ 11:40, 15:00 ~ 15:40</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">대상</p>
+                                                <p class="eduA">초·중·고등학생 학급 단체(최대 30명)</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">참가비</p>
+                                                <p class="eduA">무료</p>
+                                            </li>
+                                        </ul>
+                                        <div class="nomeat">
+                                            <p>* 비대면<br>
+                                            (코로나19 상황에 따라 변동될 수 있습니다.)</p>
+                                        </div>
+                                    </div><!--eduTxt-->
+                                    <div class="dateEnd">
+                                        <p>신청 마감</p>  
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="eduImg">
+                                        <img src="./images/education_program4.png" alt="2021 《몸, 짓, 말》 비대면 활동지 프로그램">
+                                    </div>
+                                    <div class="eduTxt">
+                                        <p class="eduSubH">2021 《몸, 짓, 말》 비대면 활동지 프로그램</p>
+                                        <h4>몸,짓,말</h4>
+                                        <ul class="eduInfo">
+                                            <li>
+                                                <p class="eduQ">신청기간</p>
+                                                <p class="eduA">-</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">진행기간</p>
+                                                <p class="eduA">2021.07.01 ~ 2021.12.13</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">일시</p>
+                                                <p class="eduA">항시 활동 가능</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">대상</p>
+                                                <p class="eduA">누구나</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">참가비</p>
+                                                <p class="eduA">무료</p>
+                                            </li>
+                                        </ul>
+                                        <div class="nomeat">
+                                            <p>* 비대면</p>  
+                                        </div>  
+                                    </div><!--eduTxt-->
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="eduImg">
+                                        <img src="./images/education_program5.png" alt="성인 활동프로그램">
+                                    </div>
+                                    <div class="eduTxt">
+                                        <p class="eduSubH">성인 활동프로그램</p>
+                                        <h4>VR 도슨팅 프로그램</h4>
+                                        <ul class="eduInfo">
+                                            <li>
+                                                <p class="eduQ">신청기간</p>
+                                                <p class="eduA">-</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">진행기간</p>
+                                                <p class="eduA">2021.05.04 ~ 2021.11.19</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">일시</p>
+                                                <p class="eduA">매주 화,목요일(공휴일 및 주말 제외)<br>
+                                                    15:00 ~ 15:40</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">대상</p>
+                                                <p class="eduA">성인(최대 30명)</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">참가비</p>
+                                                <p class="eduA">무료</p>
+                                            </li>
+                                        </ul>
+                                        <div class="nomeat">
+                                            <p>* 비대면</p>  
+                                        </div>  
+                                    </div><!--eduTxt-->
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="eduImg">
+                                        <img src="./images/education_program6.png" alt="경기도미술관">
+                                    </div>
+                                    <div class="eduTxt">
+                                        <p class="eduSubH">경기도미술관</p>
+                                        <h4>2021 교육프로그램 안내</h4>
+                                        <ul class="eduInfo">
+                                            <li>
+                                                <p class="eduQ">신청기간</p>
+                                                <p class="eduA">-</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">진행기간</p>
+                                                <p class="eduA">2021.07.01 ~ 2021.12.13</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">일시</p>
+                                                <p class="eduA">항시 활동 가능</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">대상</p>
+                                                <p class="eduA">누구나</p>
+                                            </li>
+                                            <li>
+                                                <p class="eduQ">참가비</p>
+                                                <p class="eduA">무료</p>
+                                            </li>
+                                        </ul>
+                                        <div class="nomeat">
+                                            <p>* 비대면</p>  
+                                        </div>  
+                                    </div><!--eduTxt-->
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                        </ul><!--eduNowList-->
+
+                        <div class="eduPast">
+                            <h3>지난 교육</h3>
+                            <p class="count">총 15건</p>
+                        </div><!--eduPast-->
+                        <ul class="eduPastList">
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram1.png" alt="eduPast1">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram2.JPG" alt="eduPast2">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram3.JPG" alt="eduPast3">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram4.JPG" alt="eduPast4">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram5.JPG" alt="eduPast5">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram6.png" alt="eduPast6">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram7.JPG" alt="eduPast7">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram8.JPG" alt="eduPast8">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram9.png" alt="eduPast9">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram10.jpg" alt="eduPast10">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram11.jpg" alt="eduPast11">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram12.jpg" alt="eduPast12">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram1.png" alt="eduPast1">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram2.JPG" alt="eduPast2">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/education_endprogram3.JPG" alt="eduPast3">
+                                    <p class="moreView">자세히 보기</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!--confix-->
+                </div><!--eduSect-->
+            </section>
+
+            <div class="sideBtn">
+                <div class="quickBtnBox">
+                    <div class="quickBtn">
+                        <img src="./images/toparrow.png" alt="topBtn">
+                    </div>
+                    <p>오디오 가이드</p>
+                </div><!--quickBtnBox-->
+                <div class="quickBtnBox topBtn">
+                    <div class="quickBtn">
+                        <img src="./images/toparrow.png" alt="topBtn">
+                    </div>
+                    <p>TOP</p>
+                </div><!--quickBtnBox-->
+            </div><!--sideBtn-->
+        </main>
+
+        <footer>
+            <div class="confix">
+                <div class="footLogoMenu vBox">
+                    <a class="footLogo" href="../../index.html"><img src="./images/main_logo.svg" alt="foot_logo"></a>
+                    <nav class="footMenu">
+                        <ul>
+                            <li><a href="#">개인정보취급방침</a></li>
+                            <li><a href="#">정보공개청구</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">경영공시</a></li>
+                        </ul>
+                    </nav>
+                    <div id="orgBg" class="org" style="height: 40px;">
+                        <button id="orgBtn" class="orgBtn" onclick="orgOpen()">
+                            <span>관련기관</span>
+                            <span>+</span>
+                        </button>
+                        <ul class="siteList">
+                            <li><a href="https://www.ggcf.kr/" target="_blank">경기문화재단</a></li>
+                            <li><a href="https://gjicp.ggcf.kr/" target="_blank">경기문화재연구원</a></li>
+                            <li><a href="https://musenet.ggcf.kr/" target="_blank">경기도박물관</a></li>
+                            <li><a href="https://njp.ggcf.kr/" target="_blank">백남준아트센터</a></li>
+                            <li><a href="https://silhak.ggcf.kr/" target="_blank">실학박물관</a></li>
+                            <li><a href="https://jgpm.ggcf.kr/" target="_blank">전곡선사박물관</a></li>
+                            <li><a href="https://gcm.ggcf.kr/" target="_blank">경기도어린이박물관</a></li>
+                            <li><a href="https://www.ggcf.kr/ngcm" target="_blank">경기북부어린이박물관</a></li>
+                        </ul>
+                    </div><!--org-->
+                </div><!--footLogoMenu-->
+
+                <div class="snsCopy">
+                    <ul class="otherSite">
+                        <li><a href="https://www.ggcf.kr/"><img src="./images/ggcf.svg" alt="ggcf"></a></li>
+                        <li><a href="https://www.gg.go.kr/"><img src="./images/gg.svg" alt="gg"></a></li>
+                    </ul>
+                    <div class="copyAddr">
+                        <span>(재)경기문화재단 경기도미술관</span>
+                        <address>(15385) 경기도 안산시 단원구 동산로 268 (초지동)</address>
+                        <span>COPYRIGHT &copy; GGCF. ALL RIGHTS RESERVED.</span> 
+                    </div><!--copyAddr-->
+                    <div class="sns">
+                        <ul class="snsList">
+                            <li><a href="https://www.facebook.com/ggmoma/"><img src="./images/facebook.png" alt="facebook"></a></li>
+                            <li><a href="https://blog.naver.com/gyeonggimoma"><img src="./images/naver.png" alt="naver"></a></li>
+                            <li><a href="https://www.youtube.com/user/ggcfkr"><img src="./images/youtube.png" alt="youtube"></a></li>
+                        </ul>
+                    </div><!--sns-->
+                </div><!--snsCopy-->
+            </div><!--confix-->
+        </footer>
+        <div class="menuBgBlur"></div>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/facilitiesIntro.js"></script>
+</body>
+</html>
