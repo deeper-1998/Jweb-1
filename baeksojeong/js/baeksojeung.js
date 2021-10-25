@@ -1,12 +1,25 @@
 { // 헤더 관련 이벤트
     const header = document.querySelector('header');
     const gnb = document.querySelector('.gnb');
+    const mobileMenuBg = document.querySelector('.mobileMenuBg');
+    const mobileNav = document.querySelector('nav');
+    const mobileMenuBtnSpan = document.querySelectorAll('.mobileMenuBtn>span');
     let scrollCount;
 
     function scrollheader() {
         if(scrollCount < window.scrollY) {
             header.style.opacity = '0';
             header.style.zIndex = '-1';
+            if(window.innerWidth < 768) {
+                mobileNav.style.left = '-1000px';
+                mobileMenuBg.style.opacity = '0';
+                mobileMenuBg.style.height = '0vh';
+                mobileMenuBtnSpan[2].style.opacity = '1';
+                mobileMenuBtnSpan[0].style.transform = 'rotate(0deg)';
+                mobileMenuBtnSpan[0].style.top = '0px';
+                mobileMenuBtnSpan[1].style.transform = 'rotate(0deg)';
+            }
+            
         } else {
             header.style.opacity = '1';
             header.style.zIndex = '100';
