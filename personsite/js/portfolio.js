@@ -200,7 +200,7 @@
     }
 
     getCoin.addEventListener('mousedown', coinClick, false);
-    window.addEventListener('resize', function() {
+    window.innerWidth.addEventListener('resize', function() {
         namecardHide.width = namecard.clientWidth;
         namecardHide.height = namecard.clientHeight;
     }, false);
