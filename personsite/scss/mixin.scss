@@ -1,0 +1,49 @@
+ @mixin reponsive($break) {
+     @if $break == $break-tablet {
+         @media only screen and (min-width: $break-tablet - 1) {
+             @content;
+         }
+     }
+
+     @else if $break == $break-pc {
+         @media screen and (min-width: $break-pc - 1){
+             @content;
+         }
+     }
+ }
+
+ @mixin position-center($position) {
+     position: absolute;
+    @if $position == 'center' {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @else if $position == 'colum' {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @else if $position == 'row' {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+     
+ }
+
+ @mixin text-stroke {
+    text-shadow: -2px 0 $color-sub, 0 2px $color-sub, 2px 0 $color-sub, 0 -2px $color-sub;
+ }
+
+ @mixin box-stroke {
+    box-shadow: -2px 0 $color-sub, 0 2px $color-sub, 2px 0 $color-sub, 0 -2px $color-sub;
+ }
+
+
+ @mixin mobile-area {
+     width: $width-full;
+     padding: 0 5px;
+ }

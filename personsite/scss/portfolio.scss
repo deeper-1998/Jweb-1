@@ -1,0 +1,399 @@
+@import 'reset.scss';
+@import 'mixin.scss';
+
+.wrap {
+    width: $width-full;
+    max-width: 1920px;
+}
+
+.vBox::before, .vBox::after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+
+
+// ========== header ==========
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: $width-full;
+    height: 55px;
+    z-index: 500;
+    background-color: $color-main;
+
+    .personalInfo {
+        display: none;
+    }
+
+    .currentLocation {
+        display: none;
+    }
+
+    .scrollAnimation {
+        display: none;
+    }
+
+    @include reponsive(1080) {
+        width: 384px;
+        height: $height-full;
+        min-height: 700px;
+
+        .personalInfo {
+            display: block;
+        }
+
+        .currentLocation {
+            display: block;
+        }
+
+        .scrollAnimation {
+            display: block;
+        }
+    }
+
+    .headerMenuBtn {
+        position: absolute;
+        top: 15px;
+        left: 20px;
+        z-index: 250;
+        width: 30px;
+        height: 25px;
+        line-height: 0;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        @include reponsive(1080px) {
+            top: 30px;
+            left: 40px;
+        }
+    
+        span {
+            display: inline-block;
+            height: 3px;
+            margin-bottom: 8px;
+            background-color: $color-white;
+    
+            &:first-child {
+                width: 25px;
+            }
+    
+            &:nth-child(2) {
+                width: 18px;
+            }
+    
+            &:last-child {
+                width: 30px;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .personalInfo {
+        @include position-center(center);
+
+        li {
+            margin-bottom: 65px;
+            h2 {
+                margin-bottom: 3px;
+                font: {
+                    size: 14px;
+                }
+                color: $color-sub;
+            }
+
+            strong {
+                font: {
+                    size: $font-1_6rem;
+                    weight: normal;
+                }
+                color: $color-white;
+            }
+        }
+    }
+
+    .currentLocation {
+        @include position-center(colum); 
+        bottom: 40px;
+        line-height: 0;
+
+        strong {
+            font: {
+                size: $font-6_5rem;
+                weight: bold;
+            }
+            @include text-stroke;
+            color: $color-main;
+        }
+    }
+
+    .scrollAnimation {
+        position: absolute;
+        bottom: 25px;
+        right: 0;
+        z-index: 2100;
+        transform: translateX(50%);
+        width: 62px;
+        height: 80px;
+        border-radius: 31px;
+        background-color: $color-main;
+
+        .mouseStroke {
+            @include position-center(center);
+            @include box-stroke;
+            display: inline-block;
+            width: 35px;
+            height: 58px;
+            border-radius: 17px;
+        }
+
+        .mouseBall {
+            @include position-center(colum);
+            top: 17px;
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            border-radius: 4px;
+            transition: all 1.5s;
+            background-color: $color-sub;
+        }
+    }
+
+    .documentOpacity {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $width-full;
+        max-width: 1920px;
+        height: $height-full;
+        max-height: 1080px;
+        opacity: 0;
+        transition: opacity 0.5s;
+        background-color: rgba(0, 0, 0, 0.8);
+
+        @include reponsive(1080px) {
+            display: none;
+        }
+    }
+
+    nav {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: 200;
+        width: 100%;
+        height: $height-full;        
+        max-height: 1080px;
+        transition: left 0.5s;
+        background-color: $color-main;
+
+        @include reponsive(768px) {
+            width: 465px;
+        }
+
+        @include reponsive(1080px) {
+            width: 384px;       
+        }
+
+        
+        .gnb {
+            @include position-center(center);
+            li {
+                margin-bottom: 20px;
+                a {
+                    @include text-stroke;
+                    font : {
+                        size: $font-4rem;
+                        weight: bold
+                    }
+                    transition: color 0.5s;
+
+                    @include reponsive(768) {
+                        font: {
+                            size: $font-6_5rem;
+                        }
+                    }
+                    color: $color-main;
+
+                    &.select {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+}
+// ========== header ==========
+
+
+// ========== main ==========
+main {
+    float: right;
+    @include mobile-area;
+
+    .home {
+        position: relative;
+        @include mobile-area;
+        height: $height-full;
+        margin-top: 55px;
+
+        @include reponsive(1080) {
+            float: right;
+            width: calc(100vw - 384px);
+            margin: 0
+        }
+
+        h2 {
+            display: none;
+        }
+
+        .backToBottomBox {
+            @include position-center(colum);
+            top: 5%;
+            width: 100%;
+            max-width: 400px;
+            font: {
+                size: $font-2rem;
+                weight: bold;
+            }
+
+            @include reponsive(768) {
+                width: 760px;
+                max-width: none;
+                font: {
+                    size: $font-4rem;
+                }
+            }
+
+            @include reponsive(1080) {
+                width: 60%;
+                min-width: 696px;
+            }
+
+            .backToBottomBg {
+                width: 100%;
+                height: 100%;
+            }
+
+            .backToBottomMain {
+                padding-bottom: 5px;
+            }
+        }
+
+        .namecardScratch {
+            @include position-center(colum);
+            top: 40%;
+            width: 80%;
+            min-width: 310px;
+            max-width: 700px;
+            box-sizing: content-box;
+            // border: 1px solid black;
+
+            .scratchGuide {
+                display: none;
+
+                @include reponsive(1080) {
+                    @include position-center(colum);
+                    display: block;
+                    top: -40px;
+                    font: {
+                        size: $font-2_6rem;
+                        weight: bold;
+                    }
+                }
+            }
+
+            .clickGuide {
+                @include position-center(colum);
+                    top: -40px;
+                    font: {
+                        size: $font-1_4rem;
+                        weight: bold;
+                    }
+                @include reponsive(768) {
+                    font: {
+                        size: $font-2_6rem;
+                    }
+                }
+                @include reponsive(1080) {
+                    display: none;
+                }
+            }
+
+            .namecardHide {
+                transition: all 0.5s;
+            }
+
+            .namecard {
+                width: 100%;
+            }
+
+            .getCoin {
+                position: absolute;
+                left: 80%;
+                top: 10%;
+                transform: translateX(-50%);
+                width: 80px;
+            }
+        }
+    }
+
+    .introduce {
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 35px;
+        background-color: $color-gray;
+
+        .introText {
+            margin-bottom: 50px;
+            img {
+                display: block;
+                width: 170px;
+                margin: 35px auto;
+            }
+    
+            strong {
+                display: block;
+                margin-bottom: 35px;
+                font: {
+                    size: $font-2_6rem;
+                }
+            }
+    
+            p {
+                font: {
+                    size: $font-1_6rem;
+                }
+            }
+        }
+        
+
+        .profile, .education {
+            margin-bottom: 35px;
+
+            h3 {
+                margin-bottom: 25px;
+            }
+
+            li {
+                margin-bottom: 20px;
+    
+                h4 {
+                    float: left;
+                    width: 100px;
+                }
+                
+                span {
+                    display: inline-block;
+                    width: calc(100% - 120px);
+                    font: {
+                        size: $font-1_6rem;
+                    }
+                }
+            }
+        }
+    }
+}

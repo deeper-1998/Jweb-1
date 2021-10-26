@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Noto Sans KR";
+  font-size: 10px;
+  font-weight: normal;
+  scroll-behavior: smooth;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #41414c;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #41414c;
+}
+
+h3 {
+  font-size: 2.6rem;
+  color: #00adef;
+}
+
+h4 {
+  font-size: 1.6rem;
+  color: #00adef;
+}
+
+strong {
+  color: #00adef;
+}
+
+.wrap {
+  width: 100vw;
+  max-width: 1920px;
+}
+
+.vBox::before, .vBox::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 55px;
+  z-index: 500;
+  background-color: #41414c;
+}
+
+header .personalInfo {
+  display: none;
+}
+
+header .currentLocation {
+  display: none;
+}
+
+header .scrollAnimation {
+  display: none;
+}
+
+@media screen and (min-width: 1079px) {
+  header {
+    width: 384px;
+    height: 100vh;
+    min-height: 700px;
+  }
+  header .personalInfo {
+    display: block;
+  }
+  header .currentLocation {
+    display: block;
+  }
+  header .scrollAnimation {
+    display: block;
+  }
+}
+
+header .headerMenuBtn {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  z-index: 250;
+  width: 30px;
+  height: 25px;
+  line-height: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media screen and (min-width: 1079px) {
+  header .headerMenuBtn {
+    top: 30px;
+    left: 40px;
+  }
+}
+
+header .headerMenuBtn span {
+  display: inline-block;
+  height: 3px;
+  margin-bottom: 8px;
+  background-color: #fff;
+}
+
+header .headerMenuBtn span:first-child {
+  width: 25px;
+}
+
+header .headerMenuBtn span:nth-child(2) {
+  width: 18px;
+}
+
+header .headerMenuBtn span:last-child {
+  width: 30px;
+  margin-bottom: 0;
+}
+
+header .personalInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+header .personalInfo li {
+  margin-bottom: 65px;
+}
+
+header .personalInfo li h2 {
+  margin-bottom: 3px;
+  font-size: 14px;
+  color: #00adef;
+}
+
+header .personalInfo li strong {
+  font-size: 1.6rem;
+  font-weight: normal;
+  color: #fff;
+}
+
+header .currentLocation {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 40px;
+  line-height: 0;
+}
+
+header .currentLocation strong {
+  font-size: 6.5rem;
+  font-weight: bold;
+  text-shadow: -2px 0 #00adef, 0 2px #00adef, 2px 0 #00adef, 0 -2px #00adef;
+  color: #41414c;
+}
+
+header .scrollAnimation {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  z-index: 2100;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  width: 62px;
+  height: 80px;
+  border-radius: 31px;
+  background-color: #41414c;
+}
+
+header .scrollAnimation .mouseStroke {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: -2px 0 #00adef, 0 2px #00adef, 2px 0 #00adef, 0 -2px #00adef;
+          box-shadow: -2px 0 #00adef, 0 2px #00adef, 2px 0 #00adef, 0 -2px #00adef;
+  display: inline-block;
+  width: 35px;
+  height: 58px;
+  border-radius: 17px;
+}
+
+header .scrollAnimation .mouseBall {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 17px;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 4px;
+  -webkit-transition: all 1.5s;
+  transition: all 1.5s;
+  background-color: #00adef;
+}
+
+header .documentOpacity {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 1920px;
+  height: 100vh;
+  max-height: 1080px;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (min-width: 1079px) {
+  header .documentOpacity {
+    display: none;
+  }
+}
+
+header nav {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 200;
+  width: 100%;
+  height: 100vh;
+  max-height: 1080px;
+  -webkit-transition: left 0.5s;
+  transition: left 0.5s;
+  background-color: #41414c;
+}
+
+@media only screen and (min-width: 767px) {
+  header nav {
+    width: 465px;
+  }
+}
+
+@media screen and (min-width: 1079px) {
+  header nav {
+    width: 384px;
+  }
+}
+
+header nav .gnb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+header nav .gnb li {
+  margin-bottom: 20px;
+}
+
+header nav .gnb li a {
+  text-shadow: -2px 0 #00adef, 0 2px #00adef, 2px 0 #00adef, 0 -2px #00adef;
+  font-size: 4rem;
+  font-weight: bold;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #41414c;
+}
+
+@media only screen and (min-width: 767px) {
+  header nav .gnb li a {
+    font-size: 6.5rem;
+  }
+}
+
+header nav .gnb li a.select {
+  color: #fff;
+}
+
+main {
+  float: right;
+  width: 100vw;
+  padding: 0 5px;
+}
+
+main .home {
+  position: relative;
+  width: 100vw;
+  padding: 0 5px;
+  height: 100vh;
+  margin-top: 55px;
+}
+
+@media screen and (min-width: 1079px) {
+  main .home {
+    float: right;
+    width: calc(100vw - 384px);
+    margin: 0;
+  }
+}
+
+main .home h2 {
+  display: none;
+}
+
+main .home .backToBottomBox {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 5%;
+  width: 100%;
+  max-width: 400px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 767px) {
+  main .home .backToBottomBox {
+    width: 760px;
+    max-width: none;
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1079px) {
+  main .home .backToBottomBox {
+    width: 60%;
+    min-width: 696px;
+  }
+}
+
+main .home .backToBottomBox .backToBottomBg {
+  width: 100%;
+  height: 100%;
+}
+
+main .home .backToBottomBox .backToBottomMain {
+  padding-bottom: 5px;
+}
+
+main .home .namecardScratch {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 40%;
+  width: 80%;
+  min-width: 310px;
+  max-width: 700px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+main .home .namecardScratch .scratchGuide {
+  display: none;
+}
+
+@media screen and (min-width: 1079px) {
+  main .home .namecardScratch .scratchGuide {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    display: block;
+    top: -40px;
+    font-size: 2.6rem;
+    font-weight: bold;
+  }
+}
+
+main .home .namecardScratch .clickGuide {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -40px;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 767px) {
+  main .home .namecardScratch .clickGuide {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (min-width: 1079px) {
+  main .home .namecardScratch .clickGuide {
+    display: none;
+  }
+}
+
+main .home .namecardScratch .namecardHide {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+main .home .namecardScratch .namecard {
+  width: 100%;
+}
+
+main .home .namecardScratch .getCoin {
+  position: absolute;
+  left: 80%;
+  top: 10%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80px;
+}
+
+main .introduce {
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 35px;
+  background-color: #eaeaea;
+}
+
+main .introduce .introText {
+  margin-bottom: 50px;
+}
+
+main .introduce .introText img {
+  display: block;
+  width: 170px;
+  margin: 35px auto;
+}
+
+main .introduce .introText strong {
+  display: block;
+  margin-bottom: 35px;
+  font-size: 2.6rem;
+}
+
+main .introduce .introText p {
+  font-size: 1.6rem;
+}
+
+main .introduce .profile, main .introduce .education {
+  margin-bottom: 35px;
+}
+
+main .introduce .profile h3, main .introduce .education h3 {
+  margin-bottom: 25px;
+}
+
+main .introduce .profile li, main .introduce .education li {
+  margin-bottom: 20px;
+}
+
+main .introduce .profile li h4, main .introduce .education li h4 {
+  float: left;
+  width: 100px;
+}
+
+main .introduce .profile li span, main .introduce .education li span {
+  display: inline-block;
+  width: calc(100% - 120px);
+  font-size: 1.6rem;
+}
