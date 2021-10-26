@@ -236,7 +236,7 @@ main {
 
     .home {
         position: relative;
-        @include mobile-area;
+        width: 100%;
         height: $height-full;
         margin-top: 55px;
 

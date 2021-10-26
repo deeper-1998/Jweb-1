@@ -129,6 +129,7 @@
         namecardHide.style.top = namecardHide.style.left = 0;
         namecardHide.width = namecard.clientWidth;
         namecardHide.height = namecard.clientHeight;
+        namecardScratch.style.height = namecard.clientHeight + 'px';
         namecardHide.style.zIndex = '1';
         ctx.fillStyle = '#fff';
         ctx.fillRect(0, 0, namecard.clientWidth, namecard.clientHeight);
@@ -136,6 +137,8 @@
 
     window.addEventListener('load', namecardHideEvent, false);
 
+
+    getCoin.style.zIndex = '50';
 
     namecardScratch.style.position = 'absolute';
 
