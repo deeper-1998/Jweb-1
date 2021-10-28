@@ -645,6 +645,7 @@ main .skill .skillList li .gaugeBox .gaugeStick {
 }
 
 main .skill .skillList li .skillInfo {
+  display: none;
   position: absolute;
   top: 0;
   left: 110%;
@@ -676,6 +677,12 @@ main .skill .skillList li .skillInfo li span img {
 main .skill .skillList li .skillInfo li p {
   font-size: 1.6rem;
   font-weight: bold;
+}
+
+@media only screen and (min-width: 767px) {
+  main .skill .skillList li .skillInfo {
+    display: none;
+  }
 }
 
 main .renewal {
@@ -906,9 +913,15 @@ main .renewal .renewalList > li .modalData {
     text-align: center;
     font-size: 1.6rem;
     font-weight: 700;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
     color: #fff;
     border-radius: 17px;
     background-color: #00adef;
+  }
+  main .renewal .renewalList > li .modalData .goWebsite:hover {
+    color: #00adef;
+    background-color: #fff;
   }
   main .renewal .renewalList > li .modalData .pointInfo {
     clear: both;

@@ -526,6 +526,7 @@ main {
                 }
 
                 .skillInfo {
+                    display: none;
                     position: absolute;
                     top: 0;
                     left: 110%;
@@ -561,6 +562,10 @@ main {
                                 weight: bold;
                             }
                         }
+                    }
+
+                    @include reponsive(768) {
+                        display: none;
                     }
                 }
             }
@@ -788,9 +793,15 @@ main {
                                 size: $font-1_6rem;
                                 weight: 700;
                             }
+                            transition: all 0.5s;
                             color: $color-white;
                             border-radius: 17px;
                             background-color: $color-sub;
+
+                            &:hover {
+                                color: $color-sub;
+                                background-color: $color-white;
+                            }
                         }
         
                         .pointInfo {

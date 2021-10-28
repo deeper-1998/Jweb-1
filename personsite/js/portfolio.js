@@ -196,11 +196,11 @@ let noScroll;
             coinClickCount = coinClickCount == 0 ? 1 : 0;
             if(coinClickCount) {
                 getCoin.style.transition = 'none';
-                getCoin.setAttribute('src', 'images/Coin_get.png');
+                getCoin.setAttribute('src', './images/Coin_get.png');
                 document.addEventListener('mousemove', coinMove, false);
             } else {
                 document.removeEventListener('mousemove', coinMove, false);
-                getCoin.setAttribute('src', 'images/Coin.png');
+                getCoin.setAttribute('src', './images/Coin.png');
                 getCoin.style.transition = 'all 0.5s';
                 getCoin.style.top = '10%';
                 getCoin.style.left = '80%';
@@ -239,11 +239,14 @@ let noScroll;
     getCoin.addEventListener('mousedown', coinClick, false);
 
     const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+
     window.addEventListener('resize', function() {
-            namecardHide.width = namecard.clientWidth;
-            namecardHide.height = namecard.clientHeight;
-            ctx.fillStyle = '#fff';
-            ctx.fillRect(0, 0, namecard.clientWidth, namecard.clientHeight);
+        if(windowHeight != window.innerHeight) return false;
+        namecardHide.width = namecard.clientWidth;
+        namecardHide.height = namecard.clientHeight;
+        ctx.fillStyle = '#fff';
+        ctx.fillRect(0, 0, namecard.clientWidth, namecard.clientHeight);
     }, false);
 
     window.addEventListener('scroll', function() {
@@ -269,7 +272,7 @@ let noScroll;
     function skillScrollAnimation() {
         if(window.innerWidth < 768) {
             skillList.forEach(function(item, index) {
-                if(window.scrollY > window.pageYOffset + item.getBoundingClientRect().top - 400) {
+                if(window.scrollY > window.pageYOffset + item.getBoundingClientRect().top - 500) {
                     const gaugeBox = item.firstChild.nextSibling.nextSibling.nextSibling;
                     const gaugeStick = item.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.nextSibling.nextSibling;
                     const gaugePercent = item.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling;
@@ -293,6 +296,7 @@ let noScroll;
     const translateMargin = -200;
 
     function skillZoomAnimation() {
+        if(window.innerWidth < 768) return false;
         const headerHeight = window.innerWidth > 1199 ? 0 : 55;
         let i = 0;
         if(window.pageYOffset + skill.getBoundingClientRect().top - headerHeight < window.scrollY) {
