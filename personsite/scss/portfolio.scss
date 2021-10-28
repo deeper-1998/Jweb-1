@@ -13,7 +13,6 @@
 }
 
 
-
 // ========== header ==========
 header {
     position: fixed;
@@ -36,7 +35,7 @@ header {
         display: none;
     }
 
-    @include reponsive(1080) {
+    @include reponsive(1200) {
         width: 384px;
         height: $height-full;
         min-height: 700px;
@@ -47,6 +46,10 @@ header {
 
         .currentLocation {
             display: block;
+
+            strong {
+                transition: all 0.5s;
+            }
         }
 
         .scrollAnimation {
@@ -65,7 +68,7 @@ header {
         cursor: pointer;
         transition: all 0.5s;
 
-        @include reponsive(1080px) {
+        @include reponsive(1200px) {
             top: 30px;
             left: 40px;
         }
@@ -162,19 +165,18 @@ header {
     }
 
     .documentOpacity {
-        visibility: hidden;
         position: absolute;
         top: 0;
-        left: 0;
+        right: -100%;
         width: $width-full;
         max-width: 1920px;
         height: $height-full;
-        max-height: 1080px;
+        max-height: 1200px;
         opacity: 0;
         transition: opacity 0.5s;
         background-color: rgba(0, 0, 0, 0.8);
 
-        @include reponsive(1080px) {
+        @include reponsive(1200px) {
             display: none;
         }
     }
@@ -186,7 +188,7 @@ header {
         z-index: 200;
         width: 100%;
         height: $height-full;        
-        max-height: 1080px;
+        max-height: 1200px;
         transition: left 0.5s;
         background-color: $color-main;
 
@@ -194,7 +196,7 @@ header {
             width: 465px;
         }
 
-        @include reponsive(1080px) {
+        @include reponsive(1200px) {
             width: 384px;       
         }
 
@@ -218,6 +220,10 @@ header {
                     }
                     color: $color-main;
 
+                    &:hover {
+                        color: $color-white;
+                    }
+
                     &.select {
                         color: $color-white;
                     }
@@ -231,8 +237,19 @@ header {
 
 // ========== main ==========
 main {
-    float: right;
-    @include mobile-area;
+
+    section {
+
+        @include mobile-area;
+
+        @include reponsive(768) {
+            @include tablet-area;
+            h2 {
+                margin-bottom: 60px;
+            }
+        }
+        
+    }
 
     .home {
         position: relative;
@@ -240,10 +257,8 @@ main {
         height: $height-full;
         margin-top: 55px;
 
-        @include reponsive(1080) {
-            float: right;
-            width: calc(100vw - 384px);
-            margin: 0
+        @include reponsive(1200) {
+            @include pc-content-area;
         }
 
         h2 {
@@ -257,7 +272,6 @@ main {
             max-width: 400px;
             font: {
                 size: $font-2rem;
-                weight: bold;
             }
 
             @include reponsive(768) {
@@ -268,7 +282,7 @@ main {
                 }
             }
 
-            @include reponsive(1080) {
+            @include reponsive(1200) {
                 width: 60%;
                 min-width: 696px;
             }
@@ -295,10 +309,12 @@ main {
             .scratchGuide {
                 display: none;
 
-                @include reponsive(1080) {
+                @include reponsive(1200) {
                     @include position-center(colum);
                     display: block;
+                    width: 350px;
                     top: -40px;
+                    text-align: center;
                     font: {
                         size: $font-2_6rem;
                         weight: bold;
@@ -318,8 +334,7 @@ main {
                         size: $font-2_6rem;
                     }
                 }
-                @include reponsive(1080) {
-                    display: none;
+                @include reponsive(1200) {
                 }
             }
 
@@ -342,10 +357,22 @@ main {
     }
 
     .introduce {
-        width: 100%;
-        margin: 0 auto;
-        padding-bottom: 35px;
         background-color: $color-gray;
+
+        @include reponsive(768) {
+            padding-top: 90px;
+        }
+
+        @include reponsive(1200) {
+            @include pc-content-area;
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+
+        h3 {
+            margin-bottom: 35px;
+        }
+
 
         .introText {
             margin-bottom: 50px;
@@ -353,6 +380,15 @@ main {
                 display: block;
                 width: 170px;
                 margin: 35px auto;
+
+                @include reponsive(768) {
+                    float: right;
+                    margin: 0;
+                }
+
+                @include reponsive(1200) {
+                    margin: 0 0 50px 50px;
+                }
             }
     
             strong {
@@ -366,17 +402,14 @@ main {
             p {
                 font: {
                     size: $font-1_6rem;
+                    weight: bold;
                 }
             }
         }
         
 
-        .profile, .education {
+        ul {
             margin-bottom: 35px;
-
-            h3 {
-                margin-bottom: 25px;
-            }
 
             li {
                 margin-bottom: 20px;
@@ -391,6 +424,576 @@ main {
                     width: calc(100% - 120px);
                     font: {
                         size: $font-1_6rem;
+                    }
+                }
+            }
+        }
+
+        .profile {
+            @include reponsive(768) {
+                float: left;
+            }
+
+            @include reponsive(1200) {
+                width: 50%;
+            }
+        }
+
+        .education {
+            @include reponsive(768) {
+                float: right;
+            }
+
+            @include reponsive(1200) {
+                width: 50%;
+            }
+        }
+    }
+
+    .skill {
+        background-color: $color-white;
+
+        @include reponsive(768) {
+            overflow: hidden;
+        }
+        @include reponsive(1200) {
+            @include pc-content-area;
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+
+        .skillList {
+            width: 175px;
+            margin: 0 auto;
+
+            @include reponsive(768) {
+                width: auto;
+                margin: 0;
+            }
+            li {
+                width: 175px;
+                margin-top: 35px;
+                text-align: center;
+                transition: opacity 0.5s;
+
+                @include reponsive(768) {
+                    opacity: 0;
+                    float: left;
+                    margin-right: calc((100% - 175px * 3) / 2);
+
+                    &:nth-child(3n) {
+                        margin-right: 0;
+                    }
+                }
+
+                @include reponsive(1200) {
+                    margin-top: 0;
+                    margin-bottom: 60px;
+                }
+
+                img {
+                    width: 85%;
+                }
+
+                .gaugeBox {
+                    position: relative;
+                    width: 175px;
+                    height: 23px;
+                    margin: 30px auto 0;
+                    border-radius: 5px;
+                    border: 2px solid black;
+                    background-color: $color-white;
+
+
+                    .percent {
+                        @include position-center(colum);
+                        top: -30px;
+                        font: {
+                            size: $font-1_6rem;
+                            weight: bold;
+                        }
+                        color: $color-black;
+                    }
+
+                    .gaugeStick {
+                        display: block;
+                        width: 5%;
+                        height: 100%;
+                        transition: width 1s;
+                        border-radius: 5px;
+                        background-color: $color-sub;
+                    }
+                }
+
+                .skillInfo {
+                    position: absolute;
+                    top: 0;
+                    left: 110%;
+                    li {
+                        float: none;
+                        width: 240px;
+                        margin-bottom: 20px;
+                        opacity: 1;
+                        text-align: left;
+                        font: {
+                            family: $font-sub;
+                        }
+
+                        h3 {
+                            color: $color-point;
+                        }
+
+                        span {
+                            font: {
+                                size: $font-5rem;
+                            }
+                            color: $color-sub;
+
+                            img {
+                                width: 30px;
+                                margin-left: 10px;
+                            }
+                        }
+
+                        p {
+                            font: {
+                                size: $font-1_6rem;
+                                weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .renewal {
+        background-color: $color-gray;
+
+        strong {
+            display: block;
+            font: {
+                size: $font-2rem;
+            }
+        }
+
+        @include reponsive(768) {
+            @include tablet-area;
+
+            .slideOverflow {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+
+                .slideBtn {
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    width: 200px;
+                    height: 50px;
+                    z-index: 200;
+
+                    li {
+                        position: relative;
+                        float: left;
+                        width: 40px;
+                        height: 100%;
+                        cursor: pointer;
+
+                        &>span {
+                            position: absolute;
+                            display: inline-block;
+                            top: 15px;
+                            left: 0;
+                            width: 30px;
+                            height: 5px;
+                            transform: rotate(-45deg);
+                            background-color: $color-sub;
+
+                            &:last-child {
+                                top: 34px;
+                                transform: rotate(45deg);
+                            }
+                        }
+
+                        &:last-child {
+                            float: right;
+                            &>span {
+                                transform: rotate(45deg);
+
+                                &:last-child {
+                                    transform: rotate(-45deg);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            h2 {
+                margin-bottom: 0
+            }
+
+            strong {
+                margin-bottom: 60px;
+            }
+        }
+
+        @include reponsive(1200) {
+            @include pc-content-area;
+            padding-top: 90px;
+            padding-bottom: 90px;
+        }
+
+        .renewalList {
+            position: relative;
+            margin-top: 35px;
+
+            @include reponsive(768) {
+                position: relative;
+                width: 400%;
+                height: 100vh;
+                margin-top: 0px;
+                transition: all 0.5s;
+            }
+
+            &>li {
+                margin-bottom: 35px;
+
+                @include reponsive(768) {
+                    position: relative;
+                    float: left;
+                    width: 25%;
+                    height: 100vh;
+                    margin-bottom: 0;
+                    margin-right: 8.3%;
+                    transition: all 0.5s;
+                }
+
+                .imgOverflow {
+                    position: relative;
+                    width: 100%;
+                    overflow: hidden;
+                    margin-bottom: 25px;
+                    border: 1px solid $color-black;
+
+                    @include reponsive(768) {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: calc(100% - 320px);
+                        height: 100%;
+                        border: none;
+
+                        & + h3 {
+                            display: none;
+                        }
+                    }
+
+                    &::before {
+                        display: block;
+                        content: '';
+                        padding-top: 55%;
+                    }
+
+                    img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                    }
+
+                    .details {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        transition: opacity 0.5s;
+                        background-color: rgba($color: $color-main, $alpha: 0.9);
+
+                        
+                        @include reponsive(768) {
+                            display: none;
+                        }
+
+                        &:hover {
+                            opacity: 1;
+                        }
+
+                        span {
+                            @include position-center(center);
+                            @include text-stroke;
+                            display: block;
+                            font: {
+                                size: $font-2_6rem;
+                                weight: bold;
+                            }
+                            cursor: pointer;
+                            color: $color-main;
+
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+
+                h3 {
+                    font: {
+                        size: $font-2rem;
+                        weight: 700;
+                    }
+                    color: $color-black;
+
+                    @include reponsive(768) {
+
+                    }
+                }
+
+                .modalData {
+                    display: none;
+
+                    @include reponsive(768) {
+                        @include position-center(row);
+                        display: block;
+                        float: left;
+                        width: 320px;
+                        h3 {
+                            margin-bottom: 15px;
+                            color: $color-black;
+                            font: {
+                                size: $font-2_6rem;
+                                weight: 700;
+                            }
+                        }
+        
+                        p {
+                            word-break: keep-all;
+                            margin-bottom: 35px;
+                            font: {
+                                size: $font-1_6rem;
+                            }
+                            color: $color-black;
+                        }
+                        
+                        .goWebsite {
+                            width: 150px;
+                            height: 35px;
+                            line-height: 35px;
+                            text-align: center;
+                            font: {
+                                size: $font-1_6rem;
+                                weight: 700;
+                            }
+                            color: $color-white;
+                            border-radius: 17px;
+                            background-color: $color-sub;
+                        }
+        
+                        .pointInfo {
+                            clear: both;
+                            margin-bottom: 20px;
+        
+                            li {
+                                float: left;
+                                margin-right: 10px;
+                                padding: 2px 12px;
+                                font: {
+                                    size: $font-1_6rem;
+                                    weight: 700;
+                                }
+                                color: $color-white;
+                                border-radius: 14px;
+                                background-color: $color-sub;
+                            }    
+                        }
+        
+                        .modalInfo {
+                            margin-bottom: 20px;
+                            li {
+                                clear: both;
+                                margin-bottom: 10px;
+        
+                                &:nth-child(n+3) {
+                                    float: left;
+                                    clear: none;
+                                }
+        
+                                &:nth-child(3) {
+                                    margin-right: 20px;
+                                }
+        
+                                .useColor {
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: 20px;
+                                    margin-right: 10px;
+                                    border-radius: 10px;
+                                    border: 1px solid $color-white;
+                                    background-color: black;
+                                }
+        
+                                h4 {
+                                    float: left;
+                                    margin-right: 20px;
+                                    line-height: 100%;
+                                    color: $color-sub;
+                                    font: {
+                                        size: 20px;
+                                        weight: 700;
+                                    }
+                                }
+        
+                                span {
+                                    font: {
+                                        size: $font-1_6rem;
+                                    }
+                                    color: $color-black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .renewalModal {
+            @include position-center(center);
+            position: fixed;
+            width: $width-full;
+            height: $height-full;
+            width: 0px;
+            height: 0px;
+            opacity: 0;
+            padding: 45px 10px 0;
+            z-index: 300;
+            transition: all 0.5s;
+            background-color: rgba($color: $color-main, $alpha: 0.9);
+
+            .modalWrap {
+                @include position-center(center);
+                display: none;
+                width: 320px;
+                padding: 0 5px;
+                opacity: 0;
+                z-index: -200;
+
+                .exitBtn {
+                    position: absolute;
+                    bottom: 102%;
+                    right: 0;
+                    width: 30px;
+                    height: 30px;
+                    cursor: pointer;
+
+                    span {
+                        @include position-center(row);
+                        display: block;
+                        width: 100%;
+                        height: 3px;
+                        transform: rotate(45deg);
+                        background-color: $color-white;
+
+                        &:last-child {
+                            transform: rotate(-45deg);
+                        }
+                    }
+                }
+
+                h3 {
+                    margin-bottom: 15px;
+                    color: $color-white;
+                    font: {
+                        weight: 700;
+                    }
+                }
+
+                p {
+                    word-break: keep-all;
+                    margin-bottom: 35px;
+                    font: {
+                        size: $font-1_6rem;
+                    }
+                    color: $color-white;
+                }
+                
+                .goWebsite {
+                    width: 150px;
+                    height: 35px;
+                    line-height: 35px;
+                    text-align: center;
+                    font: {
+                        size: $font-1_6rem;
+                        weight: 700;
+                    }
+                    color: $color-white;
+                    border-radius: 17px;
+                    background-color: $color-sub;
+                }
+
+                .pointInfo {
+                    clear: both;
+                    margin-bottom: 20px;
+
+                    li {
+                        float: left;
+                        margin-right: 10px;
+                        padding: 2px 12px;
+                        font: {
+                            size: $font-1_6rem;
+                            weight: 700;
+                        }
+                        color: $color-white;
+                        border-radius: 14px;
+                        background-color: $color-sub;
+                    }    
+                }
+
+                .modalInfo {
+                    margin-bottom: 20px;
+                    li {
+                        clear: both;
+                        margin-bottom: 10px;
+
+                        &:nth-child(n+3) {
+                            float: left;
+                            clear: none;
+                        }
+
+                        &:nth-child(3) {
+                            margin-right: 20px;
+                        }
+
+                        .useColor {
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            margin-right: 10px;
+                            border-radius: 10px;
+                            border: 1px solid $color-white;
+                            background-color: black;
+                        }
+
+                        h4 {
+                            float: left;
+                            margin-right: 20px;
+                            line-height: 100%;
+                            color: $color-sub;
+                            font: {
+                                size: 20px;
+                                weight: 700;
+                            }
+                        }
+
+                        span {
+                            font: {
+                                size: $font-1_6rem;
+                            }
+                            color: $color-white;
+                        }
                     }
                 }
             }

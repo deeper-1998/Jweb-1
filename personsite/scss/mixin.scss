@@ -45,5 +45,17 @@
 
  @mixin mobile-area {
      width: 100%;
-     padding: 0 5px;
+     padding: 35px 5px;
+ }
+
+ @mixin tablet-area {
+     width: 100%;
+     padding: 90px 20px 90px;
+ }
+
+ @mixin pc-content-area {
+    float: right;
+    width: calc(100% - 384px);
+    margin: 0;
+    padding: 0 9%;
  }
