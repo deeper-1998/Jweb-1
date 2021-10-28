@@ -267,22 +267,23 @@ let noScroll;
     const renewal = document.querySelector('.renewal');
 
     function skillScrollAnimation() {
-        const windowWidth = window.innerWidth < 768 ? 400 : 600;
-        skillList.forEach(function(item, index) {
-            if(window.scrollY > window.pageYOffset + item.getBoundingClientRect().top - windowWidth) {
-                const gaugeBox = item.firstChild.nextSibling.nextSibling.nextSibling;
-                const gaugeStick = item.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.nextSibling.nextSibling;
-                const gaugePercent = item.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling;
-                gaugeStick.style.width = gaugeStick.getAttribute('percent');
-                const percentEvent = setInterval(function() {     
-                    const percentText = Math.floor((gaugeStick.clientWidth + 4) / ((gaugeBox.clientWidth + 4) / 100)) + '%';        
-                    gaugePercent.innerHTML = percentText;   
-                    
-                    if(percentText == gaugeStick.style.width) clearInterval(percentEvent);
-                }, 20);
-                return false;
-            }
-        });
+        if(window.innerWidth < 768) {
+            skillList.forEach(function(item, index) {
+                if(window.scrollY > window.pageYOffset + item.getBoundingClientRect().top - 400) {
+                    const gaugeBox = item.firstChild.nextSibling.nextSibling.nextSibling;
+                    const gaugeStick = item.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.nextSibling.nextSibling;
+                    const gaugePercent = item.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling;
+                    gaugeStick.style.width = gaugeStick.getAttribute('percent');
+                    const percentEvent = setInterval(function() {     
+                        const percentText = Math.floor((gaugeStick.clientWidth + 4) / ((gaugeBox.clientWidth + 4) / 100)) + '%';        
+                        gaugePercent.innerHTML = percentText;   
+                        
+                        if(percentText == gaugeStick.style.width) clearInterval(percentEvent);
+                    }, 20);
+                    return false;
+                }
+            });
+        }
     }
 
     let zoomCount = 0;
@@ -341,6 +342,16 @@ let noScroll;
                 item.style.transform = 'translate3d(-50%, -70%, ' + (zoomCount + (translateMargin * index)) +'px)';
                 if(item.style.transform == 'translate3d(-50%, -70%, 4px)') {
                     item.style.opacity = '1';
+                    const gaugeBox = item.firstChild.nextSibling.nextSibling.nextSibling;
+                    const gaugeStick = item.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.nextSibling.nextSibling;
+                    const gaugePercent = item.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling;
+                    gaugeStick.style.width = gaugeStick.getAttribute('percent');
+                    const percentEvent = setInterval(function() {     
+                        const percentText = Math.floor((gaugeStick.clientWidth + 4) / ((gaugeBox.clientWidth + 4) / 100)) + '%';        
+                        gaugePercent.innerHTML = percentText;   
+                        
+                        if(percentText == gaugeStick.style.width) clearInterval(percentEvent);
+                    }, 20);
                 } else if(item.style.transform == 'translate3d(-50%, -70%, 0px)') {
                     item.style.opacity = '0.3';
                 }
@@ -360,6 +371,16 @@ let noScroll;
                         item.style.opacity = '1';
                         item.style.position = 'static';
                         item.style.transform = 'translate3d(0, 0, 0)';
+                        const gaugeBox = item.firstChild.nextSibling.nextSibling.nextSibling;
+                        const gaugeStick = item.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling.nextSibling.nextSibling;
+                        const gaugePercent = item.firstChild.nextSibling.nextSibling.nextSibling.firstChild.nextSibling;
+                        gaugeStick.style.width = gaugeStick.getAttribute('percent');
+                        const percentEvent = setInterval(function() {     
+                            const percentText = Math.floor((gaugeStick.clientWidth + 4) / ((gaugeBox.clientWidth + 4) / 100)) + '%';        
+                            gaugePercent.innerHTML = percentText;   
+                            
+                            if(percentText == gaugeStick.style.width) clearInterval(percentEvent);
+                        }, 20);
                     });
 
                     skillInfo.forEach(function(item, index) {
